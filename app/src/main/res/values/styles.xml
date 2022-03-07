@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
   <style name="Animation.Design.BottomSheetDialog" parent="@style/Animation.AppCompat.Dialog">
     <item name="android:windowEnterAnimation">@anim/design_bottom_sheet_slide_in</item>
     <item name="android:windowExitAnimation">@anim/design_bottom_sheet_slide_out</item>
@@ -70,7 +70,7 @@
   <style name="Base.Theme.MaterialComponents.Light.DialogWhenLarge" parent="@style/Theme.MaterialComponents.Light" />
   <style name="Base.ThemeOverlay.MaterialComponents.Dialog" parent="@style/Base.V14.ThemeOverlay.MaterialComponents.Dialog" />
   <style name="Base.ThemeOverlay.MaterialComponents.Dialog.Alert" parent="@style/Base.V14.ThemeOverlay.MaterialComponents.Dialog.Alert" />
-  <style name="Base.V14.Theme.MaterialComponents" parent="@style/Base.V14.Theme.MaterialComponents.Bridge">
+  <style name="Base.V14.Theme.MaterialComponents" parent="@style/Base.V14.Theme.MaterialComponents.Bridge" tools:ignore="ResourceCycle">
     <item name="alertDialogTheme">@style/ThemeOverlay.MaterialComponents.Dialog.Alert</item>
     <item name="borderlessButtonStyle">@style/Widget.MaterialComponents.Button.TextButton</item>
     <item name="bottomAppBarStyle">@style/Widget.MaterialComponents.BottomAppBar</item>
@@ -146,7 +146,7 @@
     <item name="toolbarStyle">@style/Widget.MaterialComponents.Toolbar</item>
     <item name="viewInflaterClass">com.google.android.material.theme.MaterialComponentsViewInflater</item>
   </style>
-  <style name="Base.V14.Theme.MaterialComponents.Light" parent="@style/Base.V14.Theme.MaterialComponents.Light.Bridge">
+  <style name="Base.V14.Theme.MaterialComponents.Light" parent="@style/Base.V14.Theme.MaterialComponents.Light.Bridge" tools:ignore="ResourceCycle">
     <item name="alertDialogTheme">@style/ThemeOverlay.MaterialComponents.Dialog.Alert</item>
     <item name="borderlessButtonStyle">@style/Widget.MaterialComponents.Button.TextButton</item>
     <item name="bottomAppBarStyle">@style/Widget.MaterialComponents.BottomAppBar</item>
@@ -287,7 +287,7 @@
     <item name="enforceTextAppearance">true</item>
     <item name="iconEndPadding">0.0dip</item>
     <item name="iconStartPadding">0.0dip</item>
-    <item name="rippleColor">@color/mtrl_chip_ripple_color</item>
+    <item name="rippleColor">@color/colorAccent</item>
     <item name="textEndPadding">6.0dip</item>
     <item name="textStartPadding">8.0dip</item>
   </style>
@@ -645,7 +645,7 @@
     <item name="hintTextAppearance">@style/TextAppearance.Design.Hint</item>
     <item name="passwordToggleContentDescription">@string/password_toggle_content_description</item>
     <item name="passwordToggleDrawable">@drawable/design_password_eye</item>
-    <item name="passwordToggleTint">@color/design_tint_password_toggle</item>
+    <item name="passwordToggleTint">@color/colorAccent</item>
   </style>
   <style name="Widget.MaterialComponents.BottomAppBar" parent="@style/Widget.AppCompat.Toolbar">
     <item name="backgroundTint">@android:color/white</item>
@@ -660,17 +660,17 @@
     <item name="android:background">@android:color/white</item>
     <item name="enforceTextAppearance">true</item>
     <item name="itemHorizontalTranslationEnabled">false</item>
-    <item name="itemIconTint">@color/mtrl_bottom_nav_item_tint</item>
+    <item name="itemIconTint">@color/colorAccent</item>
     <item name="itemTextAppearanceActive">?textAppearanceCaption</item>
     <item name="itemTextAppearanceInactive">?textAppearanceCaption</item>
-    <item name="itemTextColor">@color/mtrl_bottom_nav_item_tint</item>
+    <item name="itemTextColor">@color/colorAccent</item>
   </style>
   <style name="Widget.MaterialComponents.BottomNavigationView.Colored" parent="@style/Widget.MaterialComponents.BottomNavigationView">
     <item name="android:background">?colorPrimary</item>
-    <item name="itemIconTint">@color/mtrl_bottom_nav_colored_item_tint</item>
+    <item name="itemIconTint">@color/colorAccent</item>
     <item name="itemTextAppearanceActive">?textAppearanceCaption</item>
     <item name="itemTextAppearanceInactive">?textAppearanceCaption</item>
-    <item name="itemTextColor">@color/mtrl_bottom_nav_colored_item_tint</item>
+    <item name="itemTextColor">@color/colorAccent</item>
   </style>
   <style name="Widget.MaterialComponents.BottomSheet.Modal" parent="@style/Widget.Design.BottomSheet.Modal" />
   <style name="Widget.MaterialComponents.Button" parent="@style/Widget.AppCompat.Button">
@@ -763,7 +763,6 @@
     <item name="itemIconPadding">@dimen/mtrl_navigation_item_icon_padding</item>
   </style>
   <style name="Widget.MaterialComponents.Snackbar" parent="@style/Widget.Design.Snackbar">
-    <item name="android:background">@drawable/mtrl_snackbar_background</item>
     <item name="android:layout_margin">@dimen/mtrl_snackbar_margin</item>
   </style>
   <style name="Widget.MaterialComponents.Snackbar.FullWidth" parent="@style/Widget.Design.Snackbar" />

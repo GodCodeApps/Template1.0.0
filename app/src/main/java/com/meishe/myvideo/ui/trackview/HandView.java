@@ -8,6 +8,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
+
 import com.meicam.sdk.NvsAudioClip;
 import com.meicam.sdk.NvsStreamingContext;
 import com.meicam.sdk.NvsTimelineAnimatedSticker;
@@ -89,8 +90,8 @@ public class HandView extends RelativeLayout {
                     double d = (double) (rawX - HandView.this.mDownX);
                     Double.isNaN(d);
                     int floor = (int) Math.floor(d + 0.5d);
-                    HandView.this.mDownX = rawX;
-                    HandView.this.leftHandleMove(floor, PixelPerMicrosecondUtil.lengthToDuration(floor));
+                    mDownX = rawX;
+                    leftHandleMove(floor, PixelPerMicrosecondUtil.lengthToDuration(floor));
                 }
                 return true;
             }
@@ -140,7 +141,7 @@ public class HandView extends RelativeLayout {
     /* access modifiers changed from: private */
     /* access modifiers changed from: public */
     private void leftHandleMove(int i, long j) {
-        double d=0;
+        double d = 0;
         double speed = 0;
         double d2;
         double trimIn = (double) this.mBaseUIClip.getTrimIn();
@@ -257,8 +258,8 @@ public class HandView extends RelativeLayout {
     /* access modifiers changed from: public */
     private void rightHandleMove(int i, long j) {
         long j2;
-        double inPoint=0;
-        double speed=0;
+        double inPoint = 0;
+        double speed = 0;
         double d;
         double trimOut = (double) this.mBaseUIClip.getTrimOut();
         double d2 = (double) j;

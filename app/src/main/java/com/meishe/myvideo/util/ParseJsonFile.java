@@ -2,7 +2,13 @@ package com.meishe.myvideo.util;
 
 import android.content.Context;
 import android.text.TextUtils;
+
 import com.google.gson.Gson;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
 
@@ -28,15 +34,28 @@ public class ParseJsonFile {
     /* JADX WARNING: Removed duplicated region for block: B:27:0x0058  */
     /* JADX WARNING: Removed duplicated region for block: B:33:0x0067 A[SYNTHETIC, Splitter:B:33:0x0067] */
     /* Code decompiled incorrectly, please refer to instructions dump. */
-    public static java.lang.String readAssetJsonFile(android.content.Context r7, java.lang.String r8) {
+    public static java.lang.String readAssetJsonFile(android.content.Context context, java.lang.String path) {
+        try {
+            InputStream is = context.getAssets().open(path);
+            BufferedReader br = new BufferedReader(new InputStreamReader(is));
+            StringBuffer stringBuffer = new StringBuffer();
+            String str = null;
+            while ((str = br.readLine()) != null) {
+                stringBuffer.append(str);
+            }
+            br.close();
+            return stringBuffer.toString();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         /*
         // Method dump skipped, instructions count: 114
         */
-        
+
 //本方法所在的代码反编译失败，请在反编译界面按照提示打开Ejb编译器，找到当前对应的类的相应方法，替换到这里，然后进行适当的代码修复工作
 
 //throw new UnsupportedOperationException("Method not decompiled: com.meishe.myvideo.util.ParseJsonFile.readAssetJsonFile(android.content.Context, java.lang.String):java.lang.String");
-        return r8;
+        return null;
     }
 
     /* JADX WARNING: Removed duplicated region for block: B:24:0x0053  */
@@ -46,7 +65,7 @@ public class ParseJsonFile {
         /*
         // Method dump skipped, instructions count: 109
         */
-        
+
 //本方法所在的代码反编译失败，请在反编译界面按照提示打开Ejb编译器，找到当前对应的类的相应方法，替换到这里，然后进行适当的代码修复工作
 
 //throw new UnsupportedOperationException("Method not decompiled: com.meishe.myvideo.util.ParseJsonFile.readSDJsonFile(android.content.Context, java.lang.String):java.lang.String");

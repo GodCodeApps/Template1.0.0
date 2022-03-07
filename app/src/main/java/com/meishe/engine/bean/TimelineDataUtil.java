@@ -549,7 +549,8 @@ public class TimelineDataUtil {
     public static void updateData(int i, String str) {
         TrackInfo trackInfo = getTrackInfo(i, str);
         if (trackInfo != null) {
-            for (ClipInfo clipInfo : trackInfo.getClipInfoList()) {
+            List<ClipInfo> clipInfoList = trackInfo.getClipInfoList();
+            for (ClipInfo clipInfo :clipInfoList ) {
                 clipInfo.loadData(clipInfo.getObject());
             }
         }

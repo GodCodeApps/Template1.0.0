@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<resources>
-  <style name="Base.V14.Theme.MaterialComponents" parent="@style/Base.V14.Theme.MaterialComponents.Bridge">
+<resources xmlns:tools="http://schemas.android.com/tools">
+  <style name="Base.V14.Theme.MaterialComponents" parent="@style/Base.V14.Theme.MaterialComponents.Bridge" tools:ignore="ResourceCycle">
     <item name="android:timePickerDialogTheme">@style/ThemeOverlay.MaterialComponents.Dialog</item>
     <item name="android:datePickerDialogTheme">@style/ThemeOverlay.MaterialComponents.Dialog</item>
     <item name="alertDialogTheme">@style/ThemeOverlay.MaterialComponents.Dialog.Alert</item>
@@ -24,7 +24,7 @@
     <item name="toolbarStyle">@style/Widget.MaterialComponents.Toolbar</item>
     <item name="viewInflaterClass">com.google.android.material.theme.MaterialComponentsViewInflater</item>
   </style>
-  <style name="Base.V14.Theme.MaterialComponents.Light" parent="@style/Base.V14.Theme.MaterialComponents.Light.Bridge">
+  <style name="Base.V14.Theme.MaterialComponents.Light" parent="@style/Base.V14.Theme.MaterialComponents.Light.Bridge" tools:ignore="ResourceCycle">
     <item name="android:timePickerDialogTheme">@style/ThemeOverlay.MaterialComponents.Dialog</item>
     <item name="android:datePickerDialogTheme">@style/ThemeOverlay.MaterialComponents.Dialog</item>
     <item name="alertDialogTheme">@style/ThemeOverlay.MaterialComponents.Dialog.Alert</item>
@@ -77,7 +77,7 @@
     <item name="enforceTextAppearance">true</item>
     <item name="iconEndPadding">0.0dip</item>
     <item name="iconStartPadding">0.0dip</item>
-    <item name="rippleColor">@color/mtrl_chip_ripple_color</item>
+    <item name="rippleColor">@color/colorAccent</item>
     <item name="textEndPadding">6.0dip</item>
     <item name="textStartPadding">8.0dip</item>
   </style>

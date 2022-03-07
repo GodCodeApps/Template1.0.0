@@ -3,7 +3,9 @@ package com.meishe.effect;
 import android.content.Context;
 import android.content.res.AssetManager;
 import android.graphics.BitmapFactory;
+
 import com.bumptech.glide.load.Key;
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -229,9 +231,6 @@ public class FileUtils {
                 inputStream = new FileInputStream(new File(str));
             } catch (FileNotFoundException e) {
                 e.printStackTrace();
-                return null;
-            } catch (IOException e2) {
-                e2.printStackTrace();
                 return null;
             }
         } else {

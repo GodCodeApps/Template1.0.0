@@ -327,7 +327,8 @@ public class EditorEngine implements EditOperater {
             Log.e(TAG, sb.toString());
             return true;
         }
-        MeicamVideoClip meicamVideoClip2 = (MeicamVideoClip) meicamVideoClip.clone();
+        MeicamVideoClip meicamVideoClip2 =new MeicamVideoClip();
+        meicamVideoClip2=meicamVideoClip;
         NvsVideoTrack videoTrackByIndex = getCurrentTimeline().getVideoTrackByIndex(i);
         boolean splitClip = videoTrackByIndex.splitClip(index, j);
         if (splitClip) {
@@ -338,11 +339,11 @@ public class EditorEngine implements EditOperater {
             meicamVideoClip.setData(clipByIndex, videoTrackByIndex.getIndex());
             int i2 = index + 1;
             NvsVideoClip clipByIndex2 = videoTrackByIndex.getClipByIndex(i2);
-            meicamVideoClip2.setObject(clipByIndex2);
-            meicamVideoClip2.setTrimIn(clipByIndex2.getTrimIn());
-            meicamVideoClip2.setInPoint(clipByIndex2.getInPoint());
-            meicamVideoClip2.setData(clipByIndex2, videoTrackByIndex.getIndex());
-            videoClipsInTrackIndex.add(i2, meicamVideoClip2);
+                meicamVideoClip2.setObject(clipByIndex2);
+                meicamVideoClip2.setTrimIn(clipByIndex2.getTrimIn());
+                meicamVideoClip2.setInPoint(clipByIndex2.getInPoint());
+                meicamVideoClip2.setData(clipByIndex2, videoTrackByIndex.getIndex());
+                videoClipsInTrackIndex.add(i2, meicamVideoClip2);
             TimelineDataUtil.refreshTransitionsAfterSplit(index);
         }
         return !splitClip;

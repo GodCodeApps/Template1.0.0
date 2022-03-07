@@ -53,7 +53,6 @@ public class EditDeNoiseView extends EditView<Boolean> {
                 } else {
                     EditDeNoiseView.this.mTextView.setText(R.string.open_denoise);
                 }
-                EditView.CallBack callBack = callBack;
                 if (callBack != null) {
                     callBack.onCallBack(Boolean.valueOf(z));
                 }

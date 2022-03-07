@@ -33,7 +33,7 @@ import com.meishe.engine.bean.MeicamWaterMark;
 import com.meishe.engine.bean.TimelineData;
 import com.meishe.engine.bean.background.MeicamStoryboardInfo;
 import com.meishe.engine.util.StoryboardUtil;
-import com.meishe.player.R;
+import com.meishe.myvideoapp.R;
 import com.meishe.player.common.utils.ImageConverter;
 import com.meishe.player.common.utils.ScreenUtils;
 import com.meishe.player.view.DrawRect;
@@ -1375,6 +1375,7 @@ public class VideoFragment extends Fragment {
 //本方法所在的代码反编译失败，请在反编译界面按照提示打开Ejb编译器，找到当前对应的类的相应方法，替换到这里，然后进行适当的代码修复工作
 
 //throw new UnsupportedOperationException("Method not decompiled: com.meishe.player.view.VideoFragment.checkInLiveWindow(java.util.List):boolean");
+        return false;
     }
 
     public boolean isDrawRectVisible() {

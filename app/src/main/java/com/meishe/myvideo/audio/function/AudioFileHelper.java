@@ -99,7 +99,7 @@ public class AudioFileHelper {
             this.mRandomAccessFile.writeBytes("WAVE");
             this.mRandomAccessFile.writeBytes("fmt ");
             this.mRandomAccessFile.writeInt(Integer.reverseBytes(16));
-            this.mRandomAccessFile.writeShort(Short.reverseBytes(1));
+            this.mRandomAccessFile.writeShort(Short.reverseBytes((short) 1));
             this.mRandomAccessFile.writeShort(Short.reverseBytes(s));
             this.mRandomAccessFile.writeInt(Integer.reverseBytes(sampleRate));
             this.mRandomAccessFile.writeInt(Integer.reverseBytes(((sampleRate * s2) * s) / 8));
