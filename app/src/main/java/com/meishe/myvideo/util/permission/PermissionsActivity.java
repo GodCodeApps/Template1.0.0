@@ -53,6 +53,7 @@ public class PermissionsActivity extends AppCompatActivity {
 
     @Override // androidx.core.app.ActivityCompat.OnRequestPermissionsResultCallback, androidx.fragment.app.FragmentActivity
     public void onRequestPermissionsResult(int i, @NonNull String[] strArr, @NonNull int[] iArr) {
+        super.onRequestPermissionsResult(i, strArr, iArr);
         int i2;
         if (i == 0) {
             int i3 = 0;

@@ -11,6 +11,7 @@ import android.os.Process;
 import android.text.TextUtils;
 import android.util.Log;
 import android.widget.Toast;
+
 import com.meicam.sdk.NvsRational;
 import com.meicam.sdk.NvsStreamingContext;
 import com.meicam.sdk.NvsTimeline;
@@ -20,12 +21,11 @@ import com.meishe.draft.util.DraftFileUtil;
 import com.meishe.engine.bean.TimelineData;
 import com.meishe.myvideo.edit.manager.OperateManager;
 import com.meishe.myvideo.util.engine.EditorEngine;
-import com.umeng.umcrash.UMCustomLogInfoBuilder;
+
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.PrintWriter;
 import java.io.StringWriter;
-import java.lang.Thread;
 import java.lang.reflect.Field;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -88,7 +88,7 @@ public class CrashHandler implements Thread.UncaughtExceptionHandler {
 
             public void run() {
                 Looper.prepare();
-                Toast.makeText(CrashHandler.this.mContext, "程序发生异常！", 1).show();
+                Toast.makeText(CrashHandler.this.mContext, "程序发生异常！", Toast.LENGTH_LONG).show();
                 Looper.loop();
             }
         }.start();
@@ -123,7 +123,7 @@ public class CrashHandler implements Thread.UncaughtExceptionHandler {
 
     public void collectDeviceInfo(Context context) {
         try {
-            PackageInfo packageInfo = context.getPackageManager().getPackageInfo(context.getPackageName(), 1);
+            PackageInfo packageInfo = context.getPackageManager().getPackageInfo(context.getPackageName(), PackageManager.GET_ACTIVITIES);
             if (packageInfo != null) {
                 this.paramsMap.put("versionName", packageInfo.versionName == null ? "null" : packageInfo.versionName);
                 this.paramsMap.put("versionCode", packageInfo.versionCode + "");
@@ -145,7 +145,7 @@ public class CrashHandler implements Thread.UncaughtExceptionHandler {
     private String saveCrashInfo2File(Throwable th) {
         StringBuffer stringBuffer = new StringBuffer();
         for (Map.Entry<String, String> entry : this.paramsMap.entrySet()) {
-            stringBuffer.append(entry.getKey() + "=" + entry.getValue() + UMCustomLogInfoBuilder.LINE_SEP);
+            stringBuffer.append(entry.getKey() + "=" + entry.getValue() + "\n");
         }
         StringWriter stringWriter = new StringWriter();
         PrintWriter printWriter = new PrintWriter(stringWriter);

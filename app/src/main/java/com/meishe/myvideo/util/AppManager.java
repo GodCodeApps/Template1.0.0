@@ -112,7 +112,7 @@ public class AppManager {
 
     public void safetyExitApp(Context context) {
         if (System.currentTimeMillis() - this.exitTime > 2000) {
-            Toast.makeText(context.getApplicationContext(), "再按一次退出程序", 0).show();
+            Toast.makeText(context.getApplicationContext(), "再按一次退出程序", Toast.LENGTH_SHORT).show();
             this.exitTime = System.currentTimeMillis();
             return;
         }

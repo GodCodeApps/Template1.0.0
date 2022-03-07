@@ -30,7 +30,8 @@ public class TimelineDataUtil {
             Log.e(TAG, "getStickerCaptionData: trackIndex is bigger than trackSize。 trackIndex = " + i + "  trackSize = " + size);
             return null;
         }
-        for (ClipInfo clipInfo : meicamTimelineVideoFxTrackList.get(i).getClipInfoList()) {
+        List<ClipInfo> clipInfoList = meicamTimelineVideoFxTrackList.get(i).getClipInfoList();
+        for (ClipInfo clipInfo :clipInfoList ) {
             if (clipInfo.getInPoint() == j) {
                 return clipInfo;
             }
@@ -45,7 +46,8 @@ public class TimelineDataUtil {
             Log.e(TAG, "getStickerCaptionData: trackIndex is bigger than trackSize。 trackIndex = " + i + "  trackSize = " + size);
             return null;
         }
-        for (ClipInfo clipInfo : meicamStickerCaptionTrackList.get(i).getClipInfoList()) {
+        List<ClipInfo> clipInfoList = meicamStickerCaptionTrackList.get(i).getClipInfoList();
+        for (ClipInfo clipInfo : clipInfoList) {
             if (clipInfo.getInPoint() == j) {
                 return clipInfo;
             }

@@ -1,5 +1,6 @@
 package com.meishe.myvideo.util.statusbar;
 
+import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
 import android.app.Activity;
 import android.content.Context;
@@ -8,7 +9,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
-import com.uc.crashsdk.export.LogType;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.reflect.Field;
@@ -38,7 +38,7 @@ public class StatusBarUtils {
     public static void setTranslucentStatus(Activity activity) {
         if (Build.VERSION.SDK_INT >= 21) {
             Window window = activity.getWindow();
-            window.getDecorView().setSystemUiVisibility(LogType.UNEXP_ANR);
+            window.getDecorView().setSystemUiVisibility(1280);
             window.addFlags(Integer.MIN_VALUE);
             window.setStatusBarColor(0);
         } else if (Build.VERSION.SDK_INT >= 19) {
@@ -52,7 +52,7 @@ public class StatusBarUtils {
     public static void setRootViewFitsSystemWindows(Activity activity, boolean z) {
         ViewGroup viewGroup;
         if (Build.VERSION.SDK_INT >= 19) {
-            ViewGroup viewGroup2 = (ViewGroup) activity.findViewById(16908290);
+            @SuppressLint("ResourceType") ViewGroup viewGroup2 = (ViewGroup) activity.findViewById(16908290);
             if (viewGroup2.getChildCount() > 0 && (viewGroup = (ViewGroup) viewGroup2.getChildAt(0)) != null) {
                 viewGroup.setFitsSystemWindows(z);
             }

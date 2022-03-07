@@ -4,7 +4,6 @@ import android.content.Context;
 import android.util.Log;
 import com.bumptech.glide.load.Key;
 import com.meishe.common.utils.Logger;
-import com.umeng.analytics.pro.b;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -20,7 +19,7 @@ public class FileUtil {
     public static List<String> getFilesAllName(String str) {
         File[] listFiles = new File(str).listFiles();
         if (listFiles == null) {
-            Logger.e(b.N, "empty directory");
+            Logger.e( "empty directory");
             return null;
         }
         ArrayList arrayList = new ArrayList();

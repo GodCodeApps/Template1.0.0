@@ -277,7 +277,8 @@ public class TimelineUtil {
 
     public static void setSitckerCaptionObject(NvsTimeline nvsTimeline) {
         for (MeicamStickerCaptionTrack meicamStickerCaptionTrack : TimelineData.getInstance().getMeicamStickerCaptionTrackList()) {
-            for (ClipInfo clipInfo : meicamStickerCaptionTrack.getClipInfoList()) {
+            List<ClipInfo> clipInfoList = meicamStickerCaptionTrack.getClipInfoList();
+            for (ClipInfo clipInfo :clipInfoList) {
                 if (clipInfo instanceof MeicamStickerClip) {
                     ((MeicamStickerClip) clipInfo).bindToTimeline(nvsTimeline);
                 } else if (clipInfo instanceof MeicamCaptionClip) {

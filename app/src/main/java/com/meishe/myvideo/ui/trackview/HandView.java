@@ -140,8 +140,8 @@ public class HandView extends RelativeLayout {
     /* access modifiers changed from: private */
     /* access modifiers changed from: public */
     private void leftHandleMove(int i, long j) {
-        double d;
-        double speed;
+        double d=0;
+        double speed = 0;
         double d2;
         double trimIn = (double) this.mBaseUIClip.getTrimIn();
         double d3 = (double) j;
@@ -257,8 +257,8 @@ public class HandView extends RelativeLayout {
     /* access modifiers changed from: public */
     private void rightHandleMove(int i, long j) {
         long j2;
-        double inPoint;
-        double speed;
+        double inPoint=0;
+        double speed=0;
         double d;
         double trimOut = (double) this.mBaseUIClip.getTrimOut();
         double d2 = (double) j;

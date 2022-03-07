@@ -29,6 +29,7 @@ public class NvsWaveformView extends View implements NvsWaveformDataGenerator.Wa
 
     /* access modifiers changed from: protected */
     public void onAttachedToWindow() {
+        super.onAttachedToWindow();
     }
 
     @Override // com.meicam.sdk.NvsWaveformDataGenerator.WaveformDataCallback

@@ -23,6 +23,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 public class MediaFragment extends BaseFragment implements OnTotalNumChange {
     public static final int GRIDITEMCOUNT = 4;
@@ -188,7 +189,8 @@ public class MediaFragment extends BaseFragment implements OnTotalNumChange {
             }
         }
         if (list.size() > list2.size()) {
-            for (Map.Entry entry : hashMap.entrySet()) {
+            Set<Map.Entry> entrySet = hashMap.entrySet();
+            for (Map.Entry entry : entrySet) {
                 if (((Integer) entry.getValue()).intValue() == 1 && !arrayList.contains(getDataByPath((String) entry.getKey()))) {
                     arrayList.add(getDataByPath((String) entry.getKey()));
                 }

@@ -4,14 +4,14 @@ import android.content.Context;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
+
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+
 import com.meicam.sdk.NvsStreamingContext;
 import com.meishe.myvideo.util.AppManager;
 import com.meishe.myvideo.util.Util;
 import com.meishe.myvideo.util.statusbar.StatusBarUtils;
-import com.umeng.analytics.MobclickAgent;
-import com.umeng.analytics.pro.m;
 
 public abstract class BaseActivity extends AppCompatActivity implements View.OnClickListener {
     private static final String TAG = "BaseActivity";
@@ -38,7 +38,8 @@ public abstract class BaseActivity extends AppCompatActivity implements View.OnC
     public abstract void initViews();
 
     /* access modifiers changed from: protected */
-    @Override // androidx.core.app.ComponentActivity, androidx.appcompat.app.AppCompatActivity, androidx.fragment.app.FragmentActivity
+    @Override
+    // androidx.core.app.ComponentActivity, androidx.appcompat.app.AppCompatActivity, androidx.fragment.app.FragmentActivity
     public void onCreate(@Nullable Bundle bundle) {
         super.onCreate(bundle);
         this.mStreamingContext = getStreamingContext();
@@ -74,14 +75,12 @@ public abstract class BaseActivity extends AppCompatActivity implements View.OnC
     @Override // androidx.fragment.app.FragmentActivity
     public void onResume() {
         super.onResume();
-        MobclickAgent.onResume(this);
     }
 
     /* access modifiers changed from: protected */
     @Override // androidx.fragment.app.FragmentActivity
     public void onPause() {
         super.onPause();
-        MobclickAgent.onPause(this);
     }
 
     /* access modifiers changed from: protected */
@@ -89,7 +88,7 @@ public abstract class BaseActivity extends AppCompatActivity implements View.OnC
         if (Build.VERSION.SDK_INT > 11 && Build.VERSION.SDK_INT < 19) {
             getWindow().getDecorView().setSystemUiVisibility(8);
         } else if (Build.VERSION.SDK_INT >= 19) {
-            getWindow().getDecorView().setSystemUiVisibility(m.a.f);
+//            getWindow().getDecorView().setSystemUiVisibility(m.a.f);
         }
     }
 

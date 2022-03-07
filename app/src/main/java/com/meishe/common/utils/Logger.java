@@ -3,10 +3,10 @@ package com.meishe.common.utils;
 import android.util.Log;
 
 public class Logger {
+    public static int LOGLEVEL = 0;
     public static boolean DEBUG = (LOGLEVEL > 3);
     public static boolean ERROR = false;
     public static boolean INFO = (LOGLEVEL > 2);
-    public static int LOGLEVEL = 0;
     private static final String TAG = "Logger";
     public static boolean VERBOSE = (LOGLEVEL > 4);
     public static boolean WARN = (LOGLEVEL > 1);

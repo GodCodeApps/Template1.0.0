@@ -8,13 +8,14 @@ import android.media.ThumbnailUtils;
 import android.net.Uri;
 import android.provider.MediaStore;
 import android.util.Log;
+
 import com.meicam.sdk.NvsAVFileInfo;
 import com.meicam.sdk.NvsStreamingContext;
 import com.meishe.engine.bean.CommonData;
 import com.meishe.engine.bean.MeicamVideoClip;
 import com.meishe.myvideo.application.MeiSheApplication;
 import com.meishe.myvideo.bean.MediaData;
-import com.umeng.analytics.pro.bb;
+
 import java.io.File;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -25,6 +26,7 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Locale;
 import java.util.Map;
+import java.util.Set;
 
 public class MediaUtils {
 
@@ -77,14 +79,14 @@ public class MediaUtils {
             public void run() {
                 final ArrayList arrayList = new ArrayList();
                 Uri uri = MediaStore.Images.Media.EXTERNAL_CONTENT_URI;
-                String[] strArr = {bb.d, "_data", "date_added", "_data", "_display_name"};
+                String[] strArr = {"_id", "_data", "date_added", "_data", "_display_name"};
                 String[] strArr2 = {"image/jpeg", "image/png", "image/jpg"};
                 Cursor query = activity.getContentResolver().query(uri, strArr, null, null, null);
                 if (query != null) {
                     while (query.moveToNext()) {
                         int columnIndex = query.getColumnIndex("_data");
                         int columnIndex2 = query.getColumnIndex("date_added");
-                        int i = query.getInt(query.getColumnIndexOrThrow(bb.d));
+                        int i = query.getInt(query.getColumnIndexOrThrow("_id"));
                         String string = query.getString(columnIndex);
                         Long valueOf = Long.valueOf(query.getLong(columnIndex2) * 1000);
                         String string2 = query.getString(query.getColumnIndexOrThrow(strArr[1]));
@@ -114,12 +116,12 @@ public class MediaUtils {
             public void run() {
                 final ArrayList arrayList = new ArrayList();
                 Uri uri = MediaStore.Video.Media.EXTERNAL_CONTENT_URI;
-                String[] strArr = {bb.d, bb.d, "_data", "duration", "_size", "date_added", "_display_name", "date_modified"};
+                String[] strArr = {"_id", "_id", "_data", "duration", "_size", "date_added", "_display_name", "date_modified"};
                 String[] strArr2 = {"video/mp4", "video/3gp", "video/aiv", "video/rmvb", "video/vob", "video/flv", "video/mkv", "video/mov", "video/mpg"};
                 Cursor query = activity.getContentResolver().query(uri, strArr, null, null, "date_added DESC ");
                 if (query != null) {
                     while (query.moveToNext()) {
-                        int i = query.getInt(query.getColumnIndex(bb.d));
+                        int i = query.getInt(query.getColumnIndex("_id"));
                         String string = query.getString(query.getColumnIndexOrThrow(strArr[2]));
                         String path = SdkVersionUtils.checkedAndroid_Q() ? SdkVersionUtils.getPath(i) : string;
                         long j = query.getLong(query.getColumnIndex("duration"));
@@ -222,7 +224,8 @@ public class MediaUtils {
         }
         ArrayList arrayList2 = new ArrayList();
         ArrayList arrayList3 = new ArrayList();
-        for (Map.Entry entry : linkedHashMap.entrySet()) {
+        Set<Map.Entry> entrySet = linkedHashMap.entrySet();
+        for (Map.Entry entry : entrySet) {
             MediaData mediaData2 = new MediaData();
             mediaData2.setData(getIntTime((String) entry.getKey()));
             arrayList3.add(mediaData2);
@@ -277,7 +280,7 @@ public class MediaUtils {
     }
 
     public static Uri getMediaUri(Cursor cursor, Uri uri) {
-        return Uri.withAppendedPath(uri, cursor.getString(cursor.getColumnIndex(bb.d)));
+        return Uri.withAppendedPath(uri, cursor.getString(cursor.getColumnIndex("_id")));
     }
 
     public static MeicamVideoClip mediaInfoToMeicamClip(MediaData mediaData) {

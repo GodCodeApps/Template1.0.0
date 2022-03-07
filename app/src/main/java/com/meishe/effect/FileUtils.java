@@ -223,7 +223,7 @@ public class FileUtils {
     }
 
     public static String readFile(String str, AssetManager assetManager) {
-        InputStream inputStream;
+        InputStream inputStream = null;
         if (assetManager == null) {
             try {
                 inputStream = new FileInputStream(new File(str));
@@ -235,11 +235,21 @@ public class FileUtils {
                 return null;
             }
         } else {
-            inputStream = assetManager.open(str);
+            try {
+                inputStream = assetManager.open(str);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
-        byte[] bArr = new byte[inputStream.available()];
-        inputStream.read(bArr);
-        inputStream.close();
-        return new String(bArr, Key.STRING_CHARSET_NAME);
+        try {
+            byte[] bArr = new byte[inputStream.available()];
+            inputStream.read(bArr);
+            inputStream.close();
+            return new String(bArr, Key.STRING_CHARSET_NAME);
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return str;
     }
 }

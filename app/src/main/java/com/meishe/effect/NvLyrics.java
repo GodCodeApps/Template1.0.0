@@ -21,6 +21,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 public class NvLyrics {
     public static final String POSITION_COORDINATE = "position";
@@ -71,7 +72,8 @@ public class NvLyrics {
             List a2 = (!this.i.booleanValue() || !judgeIspostFixFile(str2, "lrc").booleanValue()) ? Constants.a(str2) : Constants.a(this.c, str2.substring(8));
             if (a2 != null) {
                 for (int i2 = 0; i2 < a2.size(); i2++) {
-                    for (Map.Entry entry : ((Map) a2.get(i2)).entrySet()) {
+                    Set<Map.Entry> entrySet = ((Map) a2.get(i2)).entrySet();
+                    for (Map.Entry entry : entrySet) {
                         new HashMap();
                         lrcMusicInfo lrcmusicinfo = new lrcMusicInfo();
                         lrcmusicinfo.setMusicText(((String) entry.getValue()).toString());
@@ -205,6 +207,7 @@ public class NvLyrics {
 //本方法所在的代码反编译失败，请在反编译界面按照提示打开Ejb编译器，找到当前对应的类的相应方法，替换到这里，然后进行适当的代码修复工作
 
 //throw new UnsupportedOperationException("Method not decompiled: com.meishe.effect.NvLyrics.render(int, boolean, int, int, int, boolean):int");
+        return r15;
     }
 
     public void resume() {

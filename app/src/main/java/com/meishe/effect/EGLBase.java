@@ -28,7 +28,7 @@ public class EGLBase {
 
         EglSurface(EGLBase eGLBase, int i, int i2) {
             this.a = eGLBase;
-            this.b = this.a.a((EGLBase) i, i2);
+            this.b = this.a.a(i, i2);
             this.c = i;
             this.d = i2;
         }
@@ -141,9 +141,10 @@ public class EGLBase {
             } else {
                 throw new RuntimeException("surface was null");
             }
-        } catch (IllegalArgumentException | RuntimeException e) {
+        } catch (RuntimeException e) {
             Log.e("EGLBase", "createOffscreenSurface", e);
         }
+        return eGLSurface;
     }
 
     /* access modifiers changed from: private */

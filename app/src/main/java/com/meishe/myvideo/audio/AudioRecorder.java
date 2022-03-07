@@ -170,7 +170,6 @@ public class AudioRecorder implements RecorderCallback, AudioFileListener {
             public void run() {
                 if (AudioRecorder.this.mAudioStatusListener != null) {
                     AudioStatusListener audioStatusListener = AudioRecorder.this.mAudioStatusListener;
-                    short[] sArr = sArr;
                     audioStatusListener.onRecordData(sArr, sArr.length);
                 }
             }
@@ -291,7 +290,6 @@ public class AudioRecorder implements RecorderCallback, AudioFileListener {
             /* class com.meishe.myvideo.audio.AudioRecorder.AnonymousClass5 */
 
             public void run() {
-                int i = i;
                 String str = i != 0 ? i != 1 ? i != 3 ? "未知错误" : "当前应用没有录音权限或者录音功能被占用" : "Recorder.read() 过程中发生错误" : "启动或录音时抛出异常Exception";
                 if (AudioRecorder.this.mAudioStatusListener != null) {
                     AudioRecorder.this.mAudioStatusListener.onRecordError(i, str);

@@ -7,11 +7,11 @@ import android.widget.EditText;
 public class SoftKeyboardUtil {
     public static void showInput(Context context, EditText editText) {
         editText.requestFocus();
-        ((InputMethodManager) context.getSystemService("input_method")).showSoftInput(editText, 1);
+        ((InputMethodManager) context.getSystemService(Context.INPUT_METHOD_SERVICE)).showSoftInput(editText, 1);
     }
 
     public static void hideInput(Context context, EditText editText) {
-        InputMethodManager inputMethodManager = (InputMethodManager) context.getSystemService("input_method");
+        InputMethodManager inputMethodManager = (InputMethodManager) context.getSystemService(Context.INPUT_METHOD_SERVICE);
         if (editText != null && inputMethodManager != null) {
             inputMethodManager.hideSoftInputFromWindow(editText.getWindowToken(), 0);
         }

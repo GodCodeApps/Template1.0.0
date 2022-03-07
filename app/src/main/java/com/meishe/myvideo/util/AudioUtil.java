@@ -8,12 +8,14 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.util.Log;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.loader.app.LoaderManager;
 import androidx.loader.content.CursorLoader;
 import androidx.loader.content.Loader;
+
 import com.meishe.myvideo.bean.MusicInfo;
-import com.umeng.analytics.pro.bb;
+
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -23,7 +25,7 @@ public class AudioUtil {
     private static final int AUDIO_DURATION = 500;
     private static final String DURATION = "duration";
     private static final String ORDER_BY = "_id DESC";
-    private static final String[] PROJECTION = {bb.d, "_data", "mime_type", "width", "height", "duration", "_size", "title", "artist"};
+    private static final String[] PROJECTION = {"_id", "_data", "mime_type", "width", "height", "duration", "_size", "title", "artist"};
     private static final Uri QUERY_URI = MediaStore.Files.getContentUri("external");
     private static final String TAG = "AudioUtil";
     private AppCompatActivity mContext;
@@ -139,44 +141,38 @@ public class AudioUtil {
             String[] list = context.getAssets().list("music");
             if (list != null) {
                 for (String str : list) {
-                    try {
-                        if (isSupport(str).booleanValue()) {
-                            MusicInfo musicInfo = new MusicInfo();
-                            musicInfo.setIsAsset(true);
-                            musicInfo.setFilePath("assets:/music/" + str);
-                            musicInfo.setExoplayerPath("asset:/music/" + str);
-                            musicInfo.setLrcPath("assets:/music/" + str.substring(0, str.lastIndexOf(".")) + ".lrc");
-                            StringBuilder sb = new StringBuilder();
-                            sb.append("music/");
-                            sb.append(str);
-                            musicInfo.setAssetPath(sb.toString());
-                            String substring = str.substring(0, str.lastIndexOf("."));
-                            MediaMetadataRetriever mediaMetadataRetriever = new MediaMetadataRetriever();
-                            Log.d(TAG, "str: " + musicInfo.getFilePath());
-                            try {
-                                AssetFileDescriptor openFd = context.getAssets().openFd(musicInfo.getAssetPath());
-                                mediaMetadataRetriever.setDataSource(openFd.getFileDescriptor(), openFd.getStartOffset(), openFd.getLength());
-                                mediaMetadataRetriever.extractMetadata(7);
-                                String extractMetadata = mediaMetadataRetriever.extractMetadata(2);
-                                if (extractMetadata == null || extractMetadata.isEmpty()) {
-                                    extractMetadata = "null";
-                                }
-                                String extractMetadata2 = mediaMetadataRetriever.extractMetadata(9);
-                                Log.e("===>", "assets: mp3 duration: " + extractMetadata2);
-                                musicInfo.setTitle(substring);
-                                musicInfo.setArtist(extractMetadata);
-                                musicInfo.setDuration((long) (Integer.valueOf(extractMetadata2).intValue() * 1000));
-                                musicInfo.setTrimOut(musicInfo.getDuration());
-                                musicInfo.setTrimIn(0);
-                                arrayList.add(musicInfo);
-                            } catch (Exception e2) {
-                                e2.printStackTrace();
+                    if (isSupport(str).booleanValue()) {
+                        MusicInfo musicInfo = new MusicInfo();
+                        musicInfo.setIsAsset(true);
+                        musicInfo.setFilePath("assets:/music/" + str);
+                        musicInfo.setExoplayerPath("asset:/music/" + str);
+                        musicInfo.setLrcPath("assets:/music/" + str.substring(0, str.lastIndexOf(".")) + ".lrc");
+                        StringBuilder sb = new StringBuilder();
+                        sb.append("music/");
+                        sb.append(str);
+                        musicInfo.setAssetPath(sb.toString());
+                        String substring = str.substring(0, str.lastIndexOf("."));
+                        MediaMetadataRetriever mediaMetadataRetriever = new MediaMetadataRetriever();
+                        Log.d(TAG, "str: " + musicInfo.getFilePath());
+                        try {
+                            AssetFileDescriptor openFd = context.getAssets().openFd(musicInfo.getAssetPath());
+                            mediaMetadataRetriever.setDataSource(openFd.getFileDescriptor(), openFd.getStartOffset(), openFd.getLength());
+                            mediaMetadataRetriever.extractMetadata(7);
+                            String extractMetadata = mediaMetadataRetriever.extractMetadata(2);
+                            if (extractMetadata == null || extractMetadata.isEmpty()) {
+                                extractMetadata = "null";
                             }
+                            String extractMetadata2 = mediaMetadataRetriever.extractMetadata(9);
+                            Log.e("===>", "assets: mp3 duration: " + extractMetadata2);
+                            musicInfo.setTitle(substring);
+                            musicInfo.setArtist(extractMetadata);
+                            musicInfo.setDuration((long) (Integer.valueOf(extractMetadata2).intValue() * 1000));
+                            musicInfo.setTrimOut(musicInfo.getDuration());
+                            musicInfo.setTrimIn(0);
+                            arrayList.add(musicInfo);
+                        } catch (Exception e2) {
+                            e2.printStackTrace();
                         }
-                    } catch (IOException e3) {
-                        e = e3;
-                        e.printStackTrace();
-                        return arrayList;
                     }
                 }
             }

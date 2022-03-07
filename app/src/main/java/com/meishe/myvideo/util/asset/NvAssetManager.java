@@ -379,7 +379,7 @@ public class NvAssetManager implements NvHttpRequest.NvHttpRequestListener, NvsA
 
     public ArrayList<NvAssetInfo> getUsableAssets(int i, int i2, int i3) {
         ArrayList<NvAssetInfo> arrayList = this.assetDict.get(String.valueOf(i));
-        AnonymousClass2 r0 = new Comparator<NvAssetInfo>() {
+        Comparator r0 = new Comparator<NvAssetInfo>() {
             /* class com.meishe.myvideo.util.asset.NvAssetManager.AnonymousClass2 */
 
             public int compare(NvAssetInfo nvAssetInfo, NvAssetInfo nvAssetInfo2) {
@@ -784,6 +784,7 @@ public class NvAssetManager implements NvHttpRequest.NvHttpRequestListener, NvsA
         } catch (Exception e) {
             e.printStackTrace();
         }
+        return null;
     }
 
     private String getAssetDownloadDir(int i) {

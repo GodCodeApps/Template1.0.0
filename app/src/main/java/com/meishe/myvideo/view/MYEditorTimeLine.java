@@ -15,7 +15,9 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+
 import androidx.recyclerview.widget.LinearLayoutManager;
+
 import com.meicam.sdk.NvsTimeline;
 import com.meicam.sdk.NvsVideoClip;
 import com.meicam.sdk.NvsVideoTrack;
@@ -33,6 +35,7 @@ import com.meishe.myvideo.util.PixelPerMicrosecondUtil;
 import com.meishe.myvideo.util.ScreenUtils;
 import com.meishe.myvideo.view.MYEditorTimelineSpanView;
 import com.meishe.myvideoapp.R;
+
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
@@ -235,7 +238,8 @@ public class MYEditorTimeLine extends RelativeLayout implements PixelPerMicrosec
             editorTimelineTransitionAdapter.setOnClickTransitionListener(new EditorTimelineTransitionAdapter.OnClickTransitionListener() {
                 /* class com.meishe.myvideo.view.MYEditorTimeLine.AnonymousClass4 */
 
-                @Override // com.meishe.myvideo.adapter.EditorTimelineTransitionAdapter.OnClickTransitionListener
+                @Override
+                // com.meishe.myvideo.adapter.EditorTimelineTransitionAdapter.OnClickTransitionListener
                 public void onClickTransition(int i, EditorTimelineTransitionAdapter.TransitionData transitionData) {
                     if (MYEditorTimeLine.this.mOnSelectItemListener != null) {
                         MYEditorTimeLine.this.mOnSelectItemListener.onSelectTransition(i, transitionData);
@@ -322,7 +326,8 @@ public class MYEditorTimeLine extends RelativeLayout implements PixelPerMicrosec
                 this.mNvsMultiThumbnailSequenceView.setOnScrollChangeListenser(new MultiThumbnailSequenceView.OnScrollChangeListener() {
                     /* class com.meishe.myvideo.view.MYEditorTimeLine.AnonymousClass6 */
 
-                    @Override // com.meishe.myvideo.ui.trackview.MultiThumbnailSequenceView.OnScrollChangeListener
+                    @Override
+                    // com.meishe.myvideo.ui.trackview.MultiThumbnailSequenceView.OnScrollChangeListener
                     public void onScrollChanged(MultiThumbnailSequenceView multiThumbnailSequenceView, int i, int i2) {
                         if (i2 != MYEditorTimeLine.this.mOldDx || i != MYEditorTimeLine.this.mNewDx) {
                             MYEditorTimeLine.this.mOldDx = i2;
@@ -364,10 +369,10 @@ public class MYEditorTimeLine extends RelativeLayout implements PixelPerMicrosec
                             }
                             if (MYEditorTimeLine.this.isFinishScroll()) {
                                 MYEditorTimeLine.this.handleStop();
-                                AnonymousClass7.this.handler.removeMessages(-1000);
+                                handler.removeMessages(-1000);
                                 return;
                             }
-                            AnonymousClass7.this.handler.sendMessageDelayed(AnonymousClass7.this.handler.obtainMessage(-1000, view), MYEditorTimeLine.TIME_DELAY);
+                            handler.sendMessageDelayed(handler.obtainMessage(-1000, view), MYEditorTimeLine.TIME_DELAY);
                         }
                     };
 

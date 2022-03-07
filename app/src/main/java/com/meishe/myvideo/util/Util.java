@@ -7,6 +7,7 @@ import android.graphics.PointF;
 import android.os.Process;
 import android.text.TextUtils;
 import android.view.View;
+
 import com.meicam.sdk.NvsAVFileInfo;
 import com.meicam.sdk.NvsSize;
 import com.meicam.sdk.NvsStreamingContext;
@@ -19,7 +20,7 @@ import com.meishe.common.utils.Logger;
 import com.meishe.myvideo.bean.NvAssetInfo;
 import com.meishe.myvideo.interfaces.TipsButtonClickListener;
 import com.meishe.myvideo.view.CommonDialog;
-import com.uc.crashsdk.export.LogType;
+
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
@@ -149,7 +150,6 @@ public class Util {
             @Override // com.meishe.myvideo.view.CommonDialog.OnBtnClickListener
             public void OnRightBtnClicked(View view) {
                 commonDialog.dismiss();
-                TipsButtonClickListener tipsButtonClickListener = tipsButtonClickListener;
                 if (tipsButtonClickListener != null) {
                     tipsButtonClickListener.onTipsButtoClick(view);
                 }
@@ -194,7 +194,7 @@ public class Util {
         } else if (i == 8) {
             point.set((compileVideoRes * 4) / 3, compileVideoRes);
         } else {
-            point.set(LogType.UNEXP_ANR, 720);
+            point.set(1280, 720);
         }
         nvsVideoResolution.imageWidth = point.x;
         nvsVideoResolution.imageHeight = point.y;

@@ -18,7 +18,8 @@ import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
 import androidx.annotation.Nullable;
-import com.meishe.player.R;
+
+import com.meishe.myvideoapp.R;
 import com.meishe.player.common.utils.ImageConverter;
 import java.util.ArrayList;
 import java.util.List;

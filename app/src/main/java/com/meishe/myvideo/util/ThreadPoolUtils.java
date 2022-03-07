@@ -23,7 +23,7 @@ public class ThreadPoolUtils {
     }
 
     public static ExecutorService newCachedThreadPool(String str) {
-        return new ThreadPoolExecutor(0, (int) ActivityChooserView.ActivityChooserViewAdapter.MAX_ACTIVITY_COUNT_UNLIMITED, 60, TimeUnit.SECONDS, new SynchronousQueue(), new NameThreadFactory(str));
+        return new ThreadPoolExecutor(0, (int)Integer.MAX_VALUE, 60, TimeUnit.SECONDS, new SynchronousQueue(), new NameThreadFactory(str));
     }
 
     public static ExecutorService newSingleThreadExecutor(String str) {

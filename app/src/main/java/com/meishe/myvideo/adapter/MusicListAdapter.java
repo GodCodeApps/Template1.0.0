@@ -12,7 +12,7 @@ import com.meishe.myvideoapp.R;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MusicListAdapter extends RecyclerView.Adapter<ViewHolder> {
+public class MusicListAdapter extends RecyclerView.Adapter<MusicListAdapter.ViewHolder> {
     private OnItemClickListener mClickListener;
     private Context mContext;
     private List<MusicInfo> mMusicDataList = new ArrayList();

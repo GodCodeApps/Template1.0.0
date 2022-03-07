@@ -18,7 +18,7 @@ import com.meishe.myvideoapp.R;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ManageListAdapter extends RecyclerView.Adapter<DraftViewHolder> {
+public class ManageListAdapter extends RecyclerView.Adapter<ManageListAdapter.DraftViewHolder> {
     private boolean checkAble;
     private SparseArray<Boolean> checkArray = new SparseArray<>();
     private Context mContext;

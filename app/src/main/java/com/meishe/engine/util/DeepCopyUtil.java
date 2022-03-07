@@ -23,5 +23,6 @@ public class DeepCopyUtil {
 //本方法所在的代码反编译失败，请在反编译界面按照提示打开Ejb编译器，找到当前对应的类的相应方法，替换到这里，然后进行适当的代码修复工作
 
 //throw new UnsupportedOperationException("Method not decompiled: com.meishe.engine.util.DeepCopyUtil.deepClone(java.io.Serializable):java.lang.Object");
+        return null;
     }
 }

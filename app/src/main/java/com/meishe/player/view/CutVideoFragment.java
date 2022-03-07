@@ -15,9 +15,11 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.SeekBar;
 import android.widget.TextView;
+
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+
 import com.meicam.sdk.NvsLiveWindowExt;
 import com.meicam.sdk.NvsStreamingContext;
 import com.meicam.sdk.NvsTimeline;
@@ -26,8 +28,8 @@ import com.meishe.common.utils.Logger;
 import com.meishe.common.utils.TimeFormatUtil;
 import com.meishe.engine.data.CutData;
 import com.meishe.engine.util.StoryboardUtil;
-import com.meishe.player.R;
-import com.meishe.player.view.CutRectLayout;
+import com.meishe.myvideoapp.R;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -486,10 +488,11 @@ public class CutVideoFragment extends Fragment {
         /*
         // Method dump skipped, instructions count: 563
         */
-        
+
 //本方法所在的代码反编译失败，请在反编译界面按照提示打开Ejb编译器，找到当前对应的类的相应方法，替换到这里，然后进行适当的代码修复工作
 
 //throw new UnsupportedOperationException("Method not decompiled: com.meishe.player.view.CutVideoFragment.computeScale(float, float):double");
+        return 0;
     }
 
     public boolean isInRect(FloatPoint floatPoint, FloatPoint floatPoint2, FloatPoint floatPoint3, FloatPoint floatPoint4, FloatPoint floatPoint5) {

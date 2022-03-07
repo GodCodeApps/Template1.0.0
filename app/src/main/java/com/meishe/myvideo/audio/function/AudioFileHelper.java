@@ -115,7 +115,7 @@ public class AudioFileHelper {
     }
 
     private void close(long j) throws IOException {
-        RandomAccessFile randomAccessFile;
+        RandomAccessFile randomAccessFile = null;
         try {
             if (this.mRandomAccessFile == null) {
                 onSaveFileFailure("File save error exception occurs");

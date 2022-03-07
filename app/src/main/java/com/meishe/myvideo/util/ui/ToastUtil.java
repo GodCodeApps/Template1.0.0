@@ -30,7 +30,7 @@ public class ToastUtil {
 
     public static void showShortToast(Context context, int i) {
         if (!TextUtils.isEmpty(context.getResources().getString(i))) {
-            Toast.makeText(context, i, 0).show();
+            Toast.makeText(context, i, Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -61,7 +61,7 @@ public class ToastUtil {
     public static void showToast(Context context, String str) {
         if (context != null && !TextUtils.isEmpty(str)) {
             if (mTextToast == null) {
-                mTextToast = Toast.makeText(context, "", 0);
+                mTextToast = Toast.makeText(context, "", Toast.LENGTH_SHORT);
             }
             mTextToast.setText(str);
             mTextToast.show();

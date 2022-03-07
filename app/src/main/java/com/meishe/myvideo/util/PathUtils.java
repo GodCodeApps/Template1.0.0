@@ -14,6 +14,7 @@ import java.util.zip.ZipEntry;
 import java.util.zip.ZipFile;
 
 public class PathUtils {
+    private static String SDK_FILE_ROOT_DIRECTORY = ("MYVideo" + File.separator);
     private static String ASSET_DOWNLOAD_DIRECTORY = (SDK_FILE_ROOT_DIRECTORY + "Asset");
     private static String ASSET_DOWNLOAD_DIRECTORY_ANIMATEDSTICKER = (ASSET_DOWNLOAD_DIRECTORY + File.separator + "AnimatedSticker");
     private static String ASSET_DOWNLOAD_DIRECTORY_ARSCENE = (ASSET_DOWNLOAD_DIRECTORY + File.separator + "ArScene");
@@ -41,7 +42,6 @@ public class PathUtils {
     private static String AUDIO_RECORD_DIRECTORY = (SDK_FILE_ROOT_DIRECTORY + "AudioRecord");
     private static String CRASH_LOG_DIRECTORY = (SDK_FILE_ROOT_DIRECTORY + "Log");
     private static final String IMAGE_BACKGROUND_FOLDER = "imageBackground";
-    private static String SDK_FILE_ROOT_DIRECTORY = ("MYVideo" + File.separator);
     private static final String TAG = "com.meishe.myvideo.util.PathUtils";
     private static String VIDEO_CONVERT_DIRECTORY = (SDK_FILE_ROOT_DIRECTORY + "VideoConvert");
     private static String VIDEO_FREEZR_DIRECTORY = (SDK_FILE_ROOT_DIRECTORY + "VideoFreeze");

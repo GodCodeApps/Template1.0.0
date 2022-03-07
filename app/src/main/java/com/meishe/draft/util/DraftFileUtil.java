@@ -4,9 +4,10 @@ import android.content.Context;
 import android.os.Environment;
 import android.text.TextUtils;
 import android.util.Log;
+
 import com.meishe.common.utils.Logger;
 import com.meishe.draft.data.DraftFileData;
-import com.umeng.umcrash.UMCustomLogInfoBuilder;
+
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
 import java.io.BufferedReader;
@@ -63,7 +64,6 @@ public class DraftFileUtil {
             bufferedInputStream = null;
             close(bufferedInputStream);
             close(bufferedOutputStream);
-            throw th;
         }
     }
 
@@ -184,7 +184,7 @@ public class DraftFileUtil {
                         String readLine = bufferedReader2.readLine();
                         if (readLine != null) {
                             sb.append(readLine);
-                            sb.append(UMCustomLogInfoBuilder.LINE_SEP);
+                            sb.append("/");
                         } else {
                             String sb2 = sb.toString();
                             close(null);
@@ -253,8 +253,8 @@ public class DraftFileUtil {
             close(null);
             close(inputStreamReader);
             close(bufferedReader);
-            throw th;
         }
+        return str;
     }
 
     public static void deleteFolder(String str) {
@@ -307,10 +307,11 @@ public class DraftFileUtil {
         /*
         // Method dump skipped, instructions count: 118
         */
-        
+
 //本方法所在的代码反编译失败，请在反编译界面按照提示打开Ejb编译器，找到当前对应的类的相应方法，替换到这里，然后进行适当的代码修复工作
 
 //throw new UnsupportedOperationException("Method not decompiled: com.meishe.draft.util.DraftFileUtil.saveToSDCard(java.lang.String, java.lang.String, java.lang.String, java.lang.String):java.lang.String");
+        return r3;
     }
 
     public static void renameFile(String str, String str2) {
@@ -351,7 +352,6 @@ public class DraftFileUtil {
                 fileInputStream = fileInputStream2;
                 th = th3;
                 close(fileInputStream);
-                throw th;
             }
         } catch (Exception e3) {
             e = e3;
@@ -359,6 +359,7 @@ public class DraftFileUtil {
             close(fileInputStream);
             return -1;
         }
+        return 0;
     }
 
     public static String getPrintSize(long j) {

@@ -1980,7 +1980,7 @@ public class DraftEditActivity extends BaseActivity implements NvsStreamingConte
     }
 
     public void showBeautyView(MeicamVideoClip meicamVideoClip) {
-        ArrayList<? extends Fragment> arrayList = new ArrayList<>();
+        ArrayList<Fragment> arrayList = new ArrayList<>();
         BeautyFragment beautyFragment = new BeautyFragment();
         Bundle bundle = new Bundle();
         bundle.putSerializable(BeautyShapeFragment.MRICAMVIDEOCLIP, meicamVideoClip);
@@ -1994,7 +1994,7 @@ public class DraftEditActivity extends BaseActivity implements NvsStreamingConte
     }
 
     private void showWaterView(int i) {
-        ArrayList<? extends Fragment> arrayList = new ArrayList<>();
+        ArrayList< Fragment> arrayList = new ArrayList<>();
         this.mWaterFragment = new WaterFragment();
         arrayList.add(this.mWaterFragment);
         this.mWaterEffectFragment = new WaterEffectFragment();
@@ -2026,7 +2026,7 @@ public class DraftEditActivity extends BaseActivity implements NvsStreamingConte
     /* access modifiers changed from: public */
     private void showTransitionView(int i) {
         hideBottomView();
-        ArrayList<? extends Fragment> arrayList = new ArrayList<>();
+        ArrayList< Fragment> arrayList = new ArrayList<>();
         arrayList.add(new TransitionGeneralFragment(this.mTargetTransitionIndex, this));
         arrayList.add(new Transition3DFragment(this.mTargetTransitionIndex, this));
         arrayList.add(new TransitionEffectFragment(this.mTargetTransitionIndex, this));

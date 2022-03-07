@@ -96,7 +96,7 @@ public class StoryboardUtil {
             return null;
         }
         for (int i = 0; i < elementsByTagName.getLength(); i++) {
-            Node namedItem = elementsByTagName.item(i).getAttributes().getNamedItem(GlideExecutor.DEFAULT_SOURCE_EXECUTOR_NAME);
+            Node namedItem = elementsByTagName.item(i).getAttributes().getNamedItem("source");
             if (!(namedItem == null || ":1".equals(namedItem.getNodeValue()))) {
                 return namedItem.getNodeValue();
             }

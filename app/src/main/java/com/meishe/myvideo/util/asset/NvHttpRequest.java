@@ -11,7 +11,6 @@ import com.meishe.myvideo.MSApi;
 import com.meishe.myvideo.application.MeiSheApplication;
 import com.meishe.myvideo.bean.down.AssetListDownResponse;
 import com.meishe.myvideo.util.ThreadPoolUtils;
-import com.umeng.analytics.pro.b;
 import java.io.File;
 import java.io.IOException;
 import java.security.KeyManagementException;
@@ -89,7 +88,6 @@ public class NvHttpRequest {
 
                 @Override // com.example.net.interfaces.NetListener
                 public void onFaile(String str) {
-                    NvHttpRequestListener nvHttpRequestListener = nvHttpRequestListener;
                     if (nvHttpRequestListener != null) {
                         nvHttpRequestListener.onGetAssetListFailed(str, i);
                     }
@@ -138,43 +136,43 @@ public class NvHttpRequest {
         } else {
             hashMap.put("lang", "en");
         }
-        if (i == 1) {
-            hashMap.put(b.x, String.valueOf(1));
-        } else if (i == 2) {
-            hashMap.put(b.x, String.valueOf(2));
-        } else if (i == 3) {
-            hashMap.put(b.x, String.valueOf(3));
-        } else if (i == 4) {
-            hashMap.put(b.x, String.valueOf(4));
-        } else if (i == 5 || i == 25 || i == 26) {
-            hashMap.put(b.x, String.valueOf(5));
-        } else if (i == 12) {
-            hashMap.put(b.x, String.valueOf(4));
-        } else if (i == 8) {
-            hashMap.put(b.x, String.valueOf(8));
-        } else if (i == 9) {
-            hashMap.put(b.x, String.valueOf(9));
-        } else if (i == 10) {
-            hashMap.put(b.x, String.valueOf(10));
-        } else if (i == 11) {
-            hashMap.put(b.x, String.valueOf(11));
-        } else if (i == 13) {
-            hashMap.put(b.x, String.valueOf(13));
-        } else if (i == 6) {
-            hashMap.put(b.x, String.valueOf(6));
-        } else if (i == 15) {
-            hashMap.put(b.x, String.valueOf(14));
-        } else if (i == 16) {
-            hashMap.put(b.x, String.valueOf(15));
-        } else if (i == 18) {
-            hashMap.put(b.x, String.valueOf(2));
-        } else if (i == 19) {
-            hashMap.put(b.x, String.valueOf(2));
-        } else if (i == 20) {
-            hashMap.put(b.x, String.valueOf(2));
-        } else if (i == 21) {
-            hashMap.put(b.x, String.valueOf(2));
-        }
+//        if (i == 1) {
+//            hashMap.put(b.x, String.valueOf(1));
+//        } else if (i == 2) {
+//            hashMap.put(b.x, String.valueOf(2));
+//        } else if (i == 3) {
+//            hashMap.put(b.x, String.valueOf(3));
+//        } else if (i == 4) {
+//            hashMap.put(b.x, String.valueOf(4));
+//        } else if (i == 5 || i == 25 || i == 26) {
+//            hashMap.put(b.x, String.valueOf(5));
+//        } else if (i == 12) {
+//            hashMap.put(b.x, String.valueOf(4));
+//        } else if (i == 8) {
+//            hashMap.put(b.x, String.valueOf(8));
+//        } else if (i == 9) {
+//            hashMap.put(b.x, String.valueOf(9));
+//        } else if (i == 10) {
+//            hashMap.put(b.x, String.valueOf(10));
+//        } else if (i == 11) {
+//            hashMap.put(b.x, String.valueOf(11));
+//        } else if (i == 13) {
+//            hashMap.put(b.x, String.valueOf(13));
+//        } else if (i == 6) {
+//            hashMap.put(b.x, String.valueOf(6));
+//        } else if (i == 15) {
+//            hashMap.put(b.x, String.valueOf(14));
+//        } else if (i == 16) {
+//            hashMap.put(b.x, String.valueOf(15));
+//        } else if (i == 18) {
+//            hashMap.put(b.x, String.valueOf(2));
+//        } else if (i == 19) {
+//            hashMap.put(b.x, String.valueOf(2));
+//        } else if (i == 20) {
+//            hashMap.put(b.x, String.valueOf(2));
+//        } else if (i == 21) {
+//            hashMap.put(b.x, String.valueOf(2));
+//        }
         return hashMap;
     }
 
@@ -204,7 +202,6 @@ public class NvHttpRequest {
                     if (file.exists()) {
                         file.delete();
                     }
-                    NvHttpRequestListener nvHttpRequestListener = nvHttpRequestListener;
                     if (nvHttpRequestListener != null) {
                         nvHttpRequestListener.onDonwloadAssetFailed(str, i, str5);
                     }

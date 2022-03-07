@@ -1,5 +1,6 @@
 package com.meishe.myvideo.view.editview;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.util.AttributeSet;
 import android.view.View;
@@ -30,6 +31,7 @@ public class BottomControlView extends EditControlView {
     public <T> void show(String str, EditView.CallBack<T> callBack) {
     }
 
+    @SuppressLint("RestrictedApi")
     public BottomControlView(Context context) {
         super(context);
         setBackgroundColor(SupportMenu.CATEGORY_MASK);

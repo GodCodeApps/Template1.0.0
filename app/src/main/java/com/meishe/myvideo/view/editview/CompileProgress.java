@@ -1,15 +1,15 @@
 package com.meishe.myvideo.view.editview;
 
 import android.content.Context;
-import android.content.res.TypedArray;
 import android.graphics.Canvas;
+import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Point;
 import android.graphics.RectF;
 import android.util.AttributeSet;
 import android.view.View;
+
 import androidx.annotation.Nullable;
-import com.meishe.myvideo.R;
 
 public class CompileProgress extends View {
     private Point center;
@@ -49,14 +49,12 @@ public class CompileProgress extends View {
         this.maxProgress = 100;
         this.minProgress = 0;
         this.mContext = context;
-        TypedArray obtainStyledAttributes = context.obtainStyledAttributes(attributeSet, R.styleable.CompileProgress);
-        this.progress = obtainStyledAttributes.getInteger(2, 0);
-        this.maxProgress = obtainStyledAttributes.getInteger(0, 100);
-        this.minProgress = obtainStyledAttributes.getInteger(1, 0);
-        this.progressWidth = obtainStyledAttributes.getInteger(5, 20);
-        this.progressColor = obtainStyledAttributes.getColor(4, -16735512);
-        this.progressBackColor = obtainStyledAttributes.getColor(3, 0);
-        obtainStyledAttributes.recycle();
+        this.progress = 0;
+        this.maxProgress = 100;
+        this.minProgress = 0;
+        this.progressWidth = 20;
+        this.progressColor = Color.parseColor("#ff4a4a4a");
+        this.progressBackColor = Color.parseColor("#fffc2b55");
         init();
     }
 
@@ -82,7 +80,7 @@ public class CompileProgress extends View {
 
     public static int getProgressDefaultSize(int i, int i2) {
         int size;
-        return (View.MeasureSpec.getMode(i2) != 1073741824 || (size = View.MeasureSpec.getSize(i2)) <= i) ? i : size;
+        return (MeasureSpec.getMode(i2) != MeasureSpec.EXACTLY || (size = MeasureSpec.getSize(i2)) <= i) ? i : size;
     }
 
     /* access modifiers changed from: protected */

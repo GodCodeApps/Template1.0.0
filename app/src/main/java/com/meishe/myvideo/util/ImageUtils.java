@@ -91,6 +91,7 @@ public class ImageUtils {
 //本方法所在的代码反编译失败，请在反编译界面按照提示打开Ejb编译器，找到当前对应的类的相应方法，替换到这里，然后进行适当的代码修复工作
 
 //throw new UnsupportedOperationException("Method not decompiled: com.meishe.myvideo.util.ImageUtils.getImageBase64Str(java.lang.String):java.lang.String");
+        return r3;
     }
 
     public static String zipBase64(String str) {

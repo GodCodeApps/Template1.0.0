@@ -8,6 +8,7 @@ import android.graphics.PointF;
 import android.os.Handler;
 import android.text.TextUtils;
 import android.util.Log;
+
 import com.meicam.sdk.NvsAudioClip;
 import com.meicam.sdk.NvsAudioTrack;
 import com.meicam.sdk.NvsColor;
@@ -65,7 +66,7 @@ import com.meishe.myvideo.util.ui.ToastUtil;
 import com.meishe.myvideo.view.MYEditorTimeLine;
 import com.meishe.myvideoapp.R;
 import com.meishe.player.view.VideoFragment;
-import com.uc.crashsdk.export.LogType;
+
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -544,11 +545,11 @@ public class EditorEngine implements EditOperater {
             i3 = i4;
         } else if (i == 1) {
             i2 = 720;
-            i3 = LogType.UNEXP_ANR;
+            i3 = 1280;
         } else if (i == 2) {
             i2 = 720;
         } else if (i == 4) {
-            i2 = LogType.UNEXP_ANR;
+            i2 = 1280;
         } else if (i == 8) {
             i2 = 720;
             i3 = 960;
@@ -766,7 +767,7 @@ public class EditorEngine implements EditOperater {
         L_0x0047:
             return
         */
-        
+
 //本方法所在的代码反编译失败，请在反编译界面按照提示打开Ejb编译器，找到当前对应的类的相应方法，替换到这里，然后进行适当的代码修复工作
 
 //throw new UnsupportedOperationException("Method not decompiled: com.meishe.myvideo.util.engine.EditorEngine.setTimelineAdjustEffect(float, java.lang.String, java.lang.String):void");
@@ -1565,7 +1566,6 @@ public class EditorEngine implements EditOperater {
                         while (true) {
                             if (i >= audioTrackByIndex3.getClipCount()) {
                                 continue;
-                                break;
                             }
                             NvsAudioClip clipByIndex5 = audioTrackByIndex3.getClipByIndex(i);
                             if (this.mNvsAudioClip.getOutPoint() >= clipByIndex5.getInPoint()) {

@@ -23,7 +23,6 @@ public class DialogUtil {
             @Override // com.meishe.myvideo.view.CommonDialog.OnBtnClickListener
             public void OnRightBtnClicked(View view) {
                 commonDialog.dismiss();
-                CommonDialog.TipsButtonClickListener tipsButtonClickListener = tipsButtonClickListener;
                 if (tipsButtonClickListener != null) {
                     tipsButtonClickListener.onTipsRightButtonClick(view);
                 }
@@ -32,7 +31,6 @@ public class DialogUtil {
             @Override // com.meishe.myvideo.view.CommonDialog.OnBtnClickListener
             public void OnLeftBtnClicked(View view) {
                 commonDialog.dismiss();
-                CommonDialog.TipsButtonClickListener tipsButtonClickListener = tipsButtonClickListener;
                 if (tipsButtonClickListener != null) {
                     tipsButtonClickListener.onTipsLeftButtonClick(view);
                 }
@@ -60,7 +58,6 @@ public class DialogUtil {
             @Override // com.meishe.myvideo.view.CommonDialog.OnBtnClickListener
             public void OnRightBtnClicked(View view) {
                 commonDialog.dismiss();
-                CommonDialog.TipsButtonClickListener tipsButtonClickListener = tipsButtonClickListener;
                 if (tipsButtonClickListener != null) {
                     tipsButtonClickListener.onTipsRightButtonClick(view);
                 }
@@ -69,7 +66,6 @@ public class DialogUtil {
             @Override // com.meishe.myvideo.view.CommonDialog.OnBtnClickListener
             public void OnLeftBtnClicked(View view) {
                 commonDialog.dismiss();
-                CommonDialog.TipsButtonClickListener tipsButtonClickListener = tipsButtonClickListener;
                 if (tipsButtonClickListener != null) {
                     tipsButtonClickListener.onTipsLeftButtonClick(view);
                 }

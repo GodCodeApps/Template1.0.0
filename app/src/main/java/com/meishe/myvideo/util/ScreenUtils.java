@@ -12,7 +12,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
-import com.uc.crashsdk.export.LogType;
 
 public class ScreenUtils {
     public static int mScreenRealHeight;
@@ -190,7 +189,7 @@ public class ScreenUtils {
         }
         if (Build.VERSION.SDK_INT >= 21) {
             Window window = activity.getWindow();
-            window.getDecorView().setSystemUiVisibility(LogType.UNEXP_ANR);
+            window.getDecorView().setSystemUiVisibility(1280);
             window.addFlags(Integer.MIN_VALUE);
             window.setStatusBarColor(0);
             return;

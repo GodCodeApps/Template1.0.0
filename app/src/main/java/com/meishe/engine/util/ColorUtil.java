@@ -2,7 +2,6 @@ package com.meishe.engine.util;
 
 import android.graphics.Color;
 import com.meicam.sdk.NvsColor;
-import com.umeng.analytics.pro.ax;
 
 public class ColorUtil {
     public static final int BLACK_MAGIC_COLOR = Color.parseColor("#805c00fc");
@@ -14,7 +13,7 @@ public class ColorUtil {
     public static final int SOUL_COLOR = Color.parseColor("#8000abfc");
     public static final int WAVE_COLOR = Color.parseColor("#50f8fc00");
     public static final int ZOOM_COLOR = Color.parseColor("#800B1746");
-    public static String[] code = {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9", ax.at, "b", "c", ax.au, "e", "f"};
+    public static String[] code = {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "a", "b", "c", "d", "e", "f"};
 
     public static NvsColor colorStringtoNvsColor(String str) {
         if (str == null) {

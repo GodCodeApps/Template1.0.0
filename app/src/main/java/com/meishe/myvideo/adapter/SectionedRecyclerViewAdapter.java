@@ -148,11 +148,11 @@ public abstract class SectionedRecyclerViewAdapter<H extends RecyclerView.ViewHo
         int i2 = this.sectionForPosition[i];
         int i3 = this.positionWithinSection[i];
         if (isSectionHeaderPosition(i)) {
-            onBindSectionHeaderViewHolder(viewHolder, i2);
+            onBindSectionHeaderViewHolder((H) viewHolder, i2);
         } else if (isSectionFooterPosition(i)) {
-            onBindSectionFooterViewHolder(viewHolder, i2);
+            onBindSectionFooterViewHolder((F) viewHolder, i2);
         } else {
-            onBindItemViewHolder(viewHolder, i2, i3);
+            onBindItemViewHolder((VH) viewHolder, i2, i3);
         }
     }
 

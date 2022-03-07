@@ -326,7 +326,7 @@ public class BaseItemView extends RelativeLayout {
         } else {
             i3 = 100;
         }
-        super.onMeasure(View.MeasureSpec.makeMeasureSpec(i3, 1073741824), View.MeasureSpec.makeMeasureSpec(this.mViewHeight, 1073741824));
+        super.onMeasure(View.MeasureSpec.makeMeasureSpec(i3, MeasureSpec.EXACTLY), View.MeasureSpec.makeMeasureSpec(this.mViewHeight, 1073741824));
     }
 
     public int getBackgroundColorByTrackType(String str) {

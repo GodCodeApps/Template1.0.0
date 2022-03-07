@@ -11,7 +11,6 @@ import com.google.gson.internal.Streams;
 import com.google.gson.reflect.TypeToken;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.umeng.analytics.pro.b;
 import java.io.IOException;
 import java.util.LinkedHashMap;
 import java.util.Map;
@@ -35,7 +34,7 @@ public final class RuntimeTypeAdapterFactory<T> implements TypeAdapterFactory {
     }
 
     public static <T> RuntimeTypeAdapterFactory<T> of(Class<T> cls) {
-        return new RuntimeTypeAdapterFactory<>(cls, b.x);
+        return new RuntimeTypeAdapterFactory<>(cls, "");
     }
 
     public RuntimeTypeAdapterFactory<T> registerSubtype(Class<? extends T> cls, String str) {

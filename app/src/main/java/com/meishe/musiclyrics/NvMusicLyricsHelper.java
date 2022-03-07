@@ -11,6 +11,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -147,7 +148,8 @@ public class NvMusicLyricsHelper {
                     int i2 = -1;
                     int i3 = -1;
                     while (i < list.size()) {
-                        for (Map.Entry entry : ((Map) list.get(i)).entrySet()) {
+                        Set<Map.Entry > entrySet = ((Map) list.get(i)).entrySet();
+                        for (Map.Entry entry :entrySet ) {
                             MusicCaptionInfo musicCaptionInfo = new MusicCaptionInfo();
                             musicCaptionInfo.setCaptionText(((String) entry.getValue()).toString());
                             musicCaptionInfo.setCaptionStartTime(Long.valueOf(((Long) entry.getKey()).toString()).longValue() * 1000);
