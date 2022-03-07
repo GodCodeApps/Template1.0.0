@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@drawable/compound_bold_bg" android:layout_width="@dimen/dp87" android:layout_height="@dimen/dp53"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:orientation="vertical" android:id="@+id/rl_more" android:visibility="gone" android:layout_width="@dimen/dp87" android:layout_height="@dimen/dp53">
+        <ImageView android:background="@mipmap/ic_more" android:layout_width="@dimen/dp20" android:layout_height="@dimen/dp20" android:layout_marginTop="@dimen/dp8" android:layout_centerHorizontal="true" />
+        <RelativeLayout android:background="@color/text_bg_color" android:layout_width="fill_parent" android:layout_height="@dimen/dp17" android:layout_alignParentBottom="true">
+            <TextView android:textSize="@dimen/sp10" android:textColor="@color/white_8" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/more" android:layout_centerInParent="true" />
+        </RelativeLayout>
+    </RelativeLayout>
+    <RelativeLayout android:id="@+id/cardView" android:layout_width="@dimen/dp87" android:layout_height="@dimen/dp53">
+        <ImageView android:id="@+id/iv_compound_caption" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_margin="@dimen/dp1" android:layout_centerInParent="true" />
+        <View android:id="@+id/view_border" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </RelativeLayout>
+</RelativeLayout>

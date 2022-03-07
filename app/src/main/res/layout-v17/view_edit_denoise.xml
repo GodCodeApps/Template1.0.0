@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/menu_bg" android:layout_width="fill_parent" android:layout_height="70.0dip" android:layout_marginStart="45.5dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <Switch android:id="@+id/switch_view" android:layout_width="wrap_content" android:layout_height="fill_parent" android:thumb="@drawable/switch_thumb" android:layout_centerVertical="true" android:track="@drawable/switch_track" android:paddingEnd="@dimen/switch_hint_text_margin_end" android:layout_alignParentEnd="true" />
+    <TextView android:textSize="@dimen/switch_hint_text_size" android:textColor="@color/switch_text_hint_color" android:gravity="center|right" android:id="@+id/switch_hint" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_centerVertical="true" android:layout_marginEnd="@dimen/switch_hint_text_margin_end" android:layout_toStartOf="@id/switch_view" />
+</RelativeLayout>

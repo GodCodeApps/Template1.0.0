@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/menu_bg" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@+id/rl_confirm_root" android:layout_width="fill_parent" android:layout_height="@dimen/dp36" android:layout_below="@id/rl_seek_container">
+        <View android:background="@color/menu_divide_color" android:layout_width="fill_parent" android:layout_height="@dimen/dp0p2" android:layout_alignParentTop="true" />
+        <TextView android:textSize="@dimen/sp14" android:textColor="@color/white_8" android:id="@+id/tv_content" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" />
+        <ImageView android:id="@+id/iv_confirm" android:background="@mipmap/ic_confirm" android:layout_width="@dimen/dp23" android:layout_height="@dimen/dp23" android:layout_marginRight="@dimen/dp13" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+</RelativeLayout>

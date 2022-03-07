@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.meishe.myvideo.ui.trackview.MYScrollView android:id="@+id/track_view_vertical_scroll" android:scrollbars="none" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:id="@+id/linear_scroll" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <com.meishe.myvideo.ui.trackview.MYHorizontalScrollView android:id="@+id/track_view_horizontal_scroll" android:scrollbars="none" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                        <RelativeLayout android:orientation="vertical" android:id="@+id/track_view_horizontal_layout" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                            <RelativeLayout android:orientation="horizontal" android:id="@+id/ll_add_voice" android:background="@color/add_voice_bg_color" android:layout_width="fill_parent" android:layout_height="34.0dip" android:layout_marginTop="@dimen/track_view_real_margin_top">
+                                <ImageView android:id="@+id/image_audio" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@mipmap/bg_add_audio" />
+                                <TextView android:textColor="@color/white_8" android:layout_gravity="center_vertical" android:id="@+id/tv_add" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp10" android:text="+" android:layout_centerVertical="true" />
+                                <TextView android:textSize="@dimen/sp10" android:textColor="@color/white_8" android:layout_gravity="center_vertical" android:id="@+id/tv_music_desc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:text="@string/add_voice" android:layout_toRightOf="@id/tv_add" android:layout_centerVertical="true" />
+                            </RelativeLayout>
+                            <FrameLayout android:id="@+id/track_view_vertical_parent" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                        </RelativeLayout>
+                    </com.meishe.myvideo.ui.trackview.MYHorizontalScrollView>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </com.meishe.myvideo.ui.trackview.MYScrollView>
+</LinearLayout>

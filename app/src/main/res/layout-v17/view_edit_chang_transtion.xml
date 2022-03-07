@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/menu_bg" android:layout_width="fill_parent" android:layout_height="@dimen/dp261"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="@dimen/dp45" android:layout_below="@id/rl_seek_container">
+        <View android:background="@color/menu_divide_color" android:layout_width="fill_parent" android:layout_height="@dimen/dp0p2" android:layout_alignParentBottom="true" />
+        <TextView android:textSize="@dimen/sp14" android:textColor="@color/white_8" android:gravity="center_vertical" android:id="@+id/tv_content" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/dp13" />
+        <ImageView android:id="@+id/iv_confirm" android:background="@mipmap/ic_confirm" android:layout_width="@dimen/dp25" android:layout_height="@dimen/dp25" android:layout_marginRight="@dimen/dp15" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@+id/real_seek_first" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="57.0dip">
+        <TextView android:textSize="@dimen/sp10" android:textColor="@color/white_8" android:gravity="center" android:id="@+id/start_text_first" android:layout_width="@dimen/dp40" android:layout_height="wrap_content" android:text="@string/view_change_transtion_in" android:layout_centerVertical="true" android:layout_marginStart="@dimen/dp30" />
+        <SeekBar android:id="@+id/seek_bar_first" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp36" android:maxHeight="2.5dip" android:progressDrawable="@drawable/edit_seek_bar" android:thumb="@drawable/edit_seek_bar_ball" android:layout_centerVertical="true" android:layout_toStartOf="@id/end_text_first" android:layout_toEndOf="@id/start_text_first" />
+        <TextView android:textSize="@dimen/sp10" android:textColor="@color/white_8" android:gravity="center" android:id="@+id/end_text_first" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="10" android:layout_centerVertical="true" android:layout_marginStart="-7.5dip" android:layout_marginEnd="@dimen/dp40" android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp50" android:layout_below="@id/real_seek_first">
+        <TextView android:textSize="@dimen/sp10" android:textColor="@color/white_8" android:gravity="center" android:id="@+id/start_text_second" android:layout_width="@dimen/dp40" android:layout_height="wrap_content" android:text="@string/view_change_transtion_out" android:layout_centerVertical="true" android:layout_marginStart="@dimen/dp30" />
+        <SeekBar android:id="@+id/seek_bar_second" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp36" android:maxHeight="2.5dip" android:progressDrawable="@drawable/edit_seek_bar" android:thumb="@drawable/edit_seek_bar_ball" android:layout_centerVertical="true" android:layout_toStartOf="@id/end_text_second" android:layout_toEndOf="@id/start_text_second" />
+        <TextView android:textSize="@dimen/sp10" android:textColor="@color/white_8" android:gravity="center" android:id="@+id/end_text_second" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="10" android:layout_centerVertical="true" android:layout_marginStart="-7.5dip" android:layout_marginEnd="@dimen/dp40" android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+</LinearLayout>

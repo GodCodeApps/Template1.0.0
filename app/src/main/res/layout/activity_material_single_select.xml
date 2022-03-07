@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/material_select_bg" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.meishe.myvideo.view.CustomTitleBar android:id="@+id/title_bar" android:layout_width="fill_parent" android:layout_height="64.0dip" app:layout_constraintTop_toTopOf="parent" />
+        <LinearLayout android:orientation="vertical" android:id="@+id/single_contain" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+        <TextView android:textSize="16.0sp" android:textColor="@color/start_edit_text" android:gravity="center" android:layout_gravity="bottom" android:id="@+id/tv_single_start" android:background="@color/start_edit_bg" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="48.0dip" android:layout_margin="@dimen/dp15" android:text="@string/start_marking" />
+    </LinearLayout>
+    <TextView android:textSize="8.0sp" android:textColor="@color/white_8" android:ellipsize="end" android:gravity="right" android:id="@+id/albumTipsText" android:visibility="gone" android:layout_width="100.0dip" android:layout_height="wrap_content" android:layout_marginTop="39.0dip" android:layout_marginRight="10.0dip" android:singleLine="true" android:layout_alignParentRight="true" />
+</RelativeLayout>

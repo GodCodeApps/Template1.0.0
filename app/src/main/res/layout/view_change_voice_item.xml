@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@android:color/transparent" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@+id/image_layout" android:background="@drawable/shape_corn_half_corners_up" android:layout_width="@dimen/edit_change_voice_item_size" android:layout_height="@dimen/edit_change_voice_image_height">
+        <ImageView android:id="@+id/icon" android:layout_width="@dimen/dp31" android:layout_height="@dimen/dp31" android:layout_marginTop="@dimen/dp5" android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+    <RelativeLayout android:background="@drawable/shape_corn_half_corners_bottom" android:layout_width="@dimen/edit_change_voice_item_size" android:layout_height="@dimen/edit_change_voice_item_text_layout_height" android:layout_below="@id/image_layout">
+        <TextView android:textSize="@dimen/edit_change_voice_item_text_size" android:textColor="@color/white_8" android:ellipsize="end" android:gravity="center" android:id="@+id/name" android:layout_width="fill_parent" android:layout_height="fill_parent" android:singleLine="true" android:layout_centerInParent="true" android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+    <ImageView android:id="@+id/image_cover" android:background="@mipmap/bg_recouse_select" android:layout_width="@dimen/edit_change_voice_item_size" android:layout_height="@dimen/edit_change_voice_item_size" />
+</RelativeLayout>

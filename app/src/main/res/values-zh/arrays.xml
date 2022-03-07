@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string-array name="music_fragment_title">
+    <item>@string/music_local_music</item>
+    <item>@string/music_my_music</item>
+  </string-array>
+  <string-array name="select_image">
+    <item>图片</item>
+  </string-array>
+  <string-array name="select_media">
+    <item>所有内容</item>
+    <item>视频</item>
+    <item>图片</item>
+  </string-array>
+</resources>

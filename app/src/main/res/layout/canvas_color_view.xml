@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/black" android:layout_width="fill_parent" android:layout_height="@dimen/dp160"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:id="@+id/ll_middle_menu" android:layout_width="fill_parent" android:layout_height="@dimen/dp37" android:layout_below="@id/ll_menu_top">
+        <ImageView android:layout_gravity="center_vertical" android:background="@mipmap/ic_multi_trans" android:layout_width="@dimen/dp17" android:layout_height="@dimen/dp17" android:layout_marginLeft="@dimen/dp10" />
+        <TextView android:textSize="@dimen/sp10" android:textColor="@color/white_8" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp10" android:text="@string/apply_all_clip" />
+    </LinearLayout>
+    <com.meishe.myvideo.view.MYMultiColorView android:id="@+id/multi_color_view" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp13" android:layout_marginTop="@dimen/dp33" />
+    <View android:background="@color/menu_divide_color" android:layout_width="fill_parent" android:layout_height="@dimen/dp0p2" android:layout_marginTop="@dimen/dp15" />
+    <RelativeLayout android:id="@+id/bottom_layout" android:layout_width="fill_parent" android:layout_height="@dimen/dp44">
+        <TextView android:textSize="@dimen/sp10" android:textColor="@color/white_8" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/sub_menu_canvas_color" android:layout_centerInParent="true" />
+        <ImageView android:id="@+id/iv_confirm" android:background="@mipmap/ic_confirm" android:layout_width="@dimen/dp19" android:layout_height="@dimen/dp19" android:layout_marginRight="@dimen/dp15" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+</LinearLayout>

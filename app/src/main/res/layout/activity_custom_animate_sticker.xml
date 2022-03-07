@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.meishe.myvideo.view.CustomTitleBar android:id="@+id/title_bar" android:layout_width="fill_parent" android:layout_height="64.0dip" app:layout_constraintTop_toTopOf="parent" />
+    <RelativeLayout android:id="@+id/middleLayout" android:background="@color/animate_sticker_middle_bg" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <RelativeLayout android:id="@+id/customImageLayout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true">
+            <ImageView android:id="@+id/customAnimateImage" android:layout_width="wrap_content" android:layout_height="wrap_content" android:scaleType="fitCenter" android:layout_centerInParent="true" />
+        </RelativeLayout>
+        <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignLeft="@id/customImageLayout" android:layout_alignTop="@id/customImageLayout">
+            <com.meishe.myvideo.view.CustomStickerDrawRect android:id="@+id/customDrawRect" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </RelativeLayout>
+    </RelativeLayout>
+    <RelativeLayout android:id="@+id/bottomLayout" android:background="@color/animate_sticker_bottom_bg" android:layout_width="fill_parent" android:layout_height="146.0dip">
+        <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="13.0dip" android:layout_alignParentTop="true" android:layout_centerHorizontal="true">
+            <RelativeLayout android:id="@+id/freeMode" android:layout_width="wrap_content" android:layout_height="72.0dip">
+                <ImageView android:id="@+id/imageFree" android:background="@mipmap/custom_free_select" android:layout_width="45.0dip" android:layout_height="45.0dip" />
+                <TextView android:textSize="@dimen/sp12" android:textColor="#ff4a90e2" android:id="@+id/freeText" android:layout_width="wrap_content" android:layout_height="27.0dip" android:layout_marginTop="8.0dip" android:text="@string/free" android:layout_below="@id/imageFree" android:layout_centerHorizontal="true" />
+            </RelativeLayout>
+            <RelativeLayout android:id="@+id/circleMode" android:layout_width="wrap_content" android:layout_height="72.0dip" android:layout_marginLeft="77.0dip">
+                <ImageView android:id="@+id/imageCircle" android:background="@mipmap/custom_circle" android:layout_width="45.0dip" android:layout_height="45.0dip" />
+                <TextView android:textSize="12.0sp" android:textColor="#ff909293" android:id="@+id/circleText" android:layout_width="wrap_content" android:layout_height="27.0dip" android:layout_marginTop="8.0dip" android:text="@string/circle" android:layout_below="@id/imageCircle" android:layout_centerHorizontal="true" />
+            </RelativeLayout>
+            <RelativeLayout android:id="@+id/squareMode" android:layout_width="wrap_content" android:layout_height="72.0dip" android:layout_marginLeft="77.0dip">
+                <ImageView android:id="@+id/imageSquare" android:background="@mipmap/custom_square" android:layout_width="45.0dip" android:layout_height="45.0dip" />
+                <TextView android:textSize="@dimen/sp12" android:textColor="#ff909293" android:id="@+id/squareText" android:layout_width="wrap_content" android:layout_height="27.0dip" android:layout_marginTop="8.0dip" android:text="@string/square" android:layout_below="@id/imageSquare" android:layout_centerHorizontal="true" />
+            </RelativeLayout>
+        </LinearLayout>
+        <View android:background="#1affffff" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_above="@id/customStickerFinish" />
+        <ImageView android:id="@+id/customStickerFinish" android:background="@mipmap/ic_finish" android:layout_width="25.0dip" android:layout_height="20.0dip" android:layout_margin="15.0dip" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+</LinearLayout>

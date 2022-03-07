@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.meishe.myvideoapp"
+    android:compileSdkVersionCodename="10"
+    android:installLocation="auto">
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.ACCESS_NOTIFICATION_POLICY" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <application
+        android:name="com.meishe.myvideo.application.MeiSheApplication"
+        android:allowBackup="false"
+        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:supportsRtl="false"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name="com.meishe.myvideo.activity.FullPreviewActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:theme="@style/TranslucentFullScreenTheme" />
+        <activity
+            android:name="com.meishe.myvideo.activity.MaterialSelectActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/TranslucentFullScreenTheme" />
+        <activity
+            android:name="com.meishe.myvideo.activity.SelectMusicActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/TranslucentFullScreenTheme" />
+        <activity
+            android:name="com.meishe.myvideo.activity.CompileActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/TranslucentFullScreenTheme" />
+        <activity
+            android:name="com.meishe.myvideo.activity.SettingActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/TranslucentFullScreenTheme" />
+        <activity
+            android:name="com.meishe.myvideo.activity.CustomAnimateStickerActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/TranslucentFullScreenTheme" />
+        <activity
+            android:name="com.meishe.myvideo.activity.FeedBackActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/TranslucentFullScreenTheme" />
+        <activity
+            android:name="com.meishe.myvideo.downLoad.AssetDownloadActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/TranslucentFullScreenTheme" />
+        <activity
+            android:name="com.meishe.myvideo.activity.MaterialSingleSelectActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/TranslucentFullScreenTheme" />
+        <activity
+            android:name="com.meishe.myvideo.activity.DraftEditActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/TranslucentFullScreenTheme" />
+        <activity
+            android:name="com.meishe.myvideo.activity.ClipCuttingActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseAnimationTheme" />
+        <activity
+            android:name="com.meishe.myvideo.activity.MainWebViewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseAnimationTheme" />
+        <activity
+            android:name="com.meishe.myvideo.activity.MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseAnimationTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.meishe.myvideo.util.permission.PermissionsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullScreenTheme" />
+    </application>
+</manifest>

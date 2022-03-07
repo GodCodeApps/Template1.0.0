@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="#ff242728" android:layout_width="fill_parent" android:layout_height="74.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ImageView android:id="@+id/music_image" android:background="@mipmap/ic_music_single_btn" android:layout_width="49.0dip" android:layout_height="49.0dip" android:layout_centerVertical="true" />
+        <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:layout_marginTop="15.0dip" android:layout_toLeftOf="@id/music_play_btn" android:layout_toRightOf="@id/music_image">
+            <TextView android:textSize="@dimen/sp12" android:textColor="@color/white_8" android:ellipsize="end" android:id="@+id/music_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" />
+            <TextView android:textSize="@dimen/sp12" android:textColor="#ff909293" android:ellipsize="end" android:id="@+id/music_author" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3.0dip" android:maxLines="1" />
+        </LinearLayout>
+        <ImageButton android:id="@+id/music_play_btn" android:background="@mipmap/ic_music_play" android:layout_width="36.0dip" android:layout_height="36.0dip" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <View android:background="#12ffffff" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_alignParentBottom="true" />
+</RelativeLayout>

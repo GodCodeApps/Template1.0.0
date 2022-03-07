@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="#00000000" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:orientation="vertical" android:background="@drawable/privacy_statement_dailog_style" android:layout_width="273.0dip" android:layout_height="wrap_content" android:layout_centerInParent="true" android:layout_centerVertical="true">
+        <TextView android:textSize="@dimen/dp15" android:textColor="@color/black" android:gravity="center" android:id="@+id/statementTitle" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp23" android:text="@string/privacy_statement" />
+        <TextView android:textSize="@dimen/sp14" android:textColor="@color/black" android:id="@+id/statementContent" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="29.0dip" android:layout_marginTop="@dimen/dp26" android:layout_marginRight="29.0dip" android:layout_below="@id/statementTitle" />
+        <LinearLayout android:orientation="horizontal" android:id="@+id/bottomLayout" android:layout_width="fill_parent" android:layout_height="40.0dip" android:layout_marginTop="@dimen/dp26" android:layout_below="@id/statementContent">
+            <TextView android:textSize="@dimen/sp16" android:textColor="#ff333333" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@+id/notUsedButton" android:layout_width="0.0dip" android:layout_height="40.0dip" android:text="@string/not_used" android:layout_weight="1.0" />
+            <TextView android:textSize="@dimen/sp16" android:textColor="@color/white" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@+id/agreeButton" android:background="@color/btn_agree" android:layout_width="0.0dip" android:layout_height="40.0dip" android:text="@string/agree" android:layout_weight="1.0" />
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

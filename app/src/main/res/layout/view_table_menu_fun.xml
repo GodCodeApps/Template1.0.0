@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:background="@drawable/menu_table_item_bg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="@dimen/dp64" android:minHeight="@dimen/dp64"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:id="@+id/menu_icon" android:layout_width="@dimen/dp20" android:layout_height="@dimen/dp20" app:layout_constraintBottom_toTopOf="@id/menu_tittle" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+    <TextView android:textSize="@dimen/sp10" android:textColor="@color/white_8" android:gravity="center" android:id="@+id/menu_tittle" android:background="@drawable/menu_table_fun_bg" android:layout_width="0.0dip" android:layout_height="@dimen/dp17" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

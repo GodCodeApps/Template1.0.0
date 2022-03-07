@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <androidx.recyclerview.widget.RecyclerView android:id="@+id/music_rv" android:layout_width="fill_parent" android:layout_height="fill_parent" android:overScrollMode="never" />
+    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@+id/no_music_btn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="96.0dip" android:layout_centerHorizontal="true">
+        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@mipmap/icon_no_music" />
+        <TextView android:textSize="12.0sp" android:textColor="#80ffffff" android:layout_width="wrap_content" android:layout_height="21.0dip" android:layout_marginTop="@dimen/dp7" android:minWidth="0.0dip" android:text="@string/noneMusic" android:textAllCaps="false" />
+    </LinearLayout>
+</RelativeLayout>

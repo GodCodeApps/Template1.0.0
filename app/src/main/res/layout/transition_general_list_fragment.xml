@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@+id/ll_top_container" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp12" android:layout_marginTop="@dimen/dp25">
+        <TextView android:textSize="@dimen/sp10" android:textColor="@color/white_8" android:gravity="center_vertical" android:id="@+id/trans_general_toAll" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp12" android:text="@string/apply_all_clip" android:shadowColor="@color/black" android:drawableLeft="@mipmap/ic_multi_trans" android:drawablePadding="@dimen/dp13" android:drawableStart="@mipmap/ic_multi_trans" />
+        <RelativeLayout android:id="@+id/rl_seek_container" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="10.0sp" android:textColor="@color/white_8" android:gravity="center" android:id="@+id/start_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp36" android:layout_marginRight="-7.5dip" android:text="0" android:layout_centerVertical="true" />
+            <SeekBar android:id="@+id/seek_bar" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxHeight="2.5dip" android:max="1000000" android:progress="1000000" android:progressDrawable="@drawable/edit_seek_bar" android:thumb="@drawable/edit_seek_bar_ball" android:layout_toLeftOf="@id/end_text" android:layout_toRightOf="@id/start_text" android:layout_centerVertical="true" />
+            <TextView android:textSize="10.0sp" android:textColor="@color/white_8" android:gravity="center" android:id="@+id/end_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="-7.5dip" android:layout_marginRight="@dimen/dp36" android:text="1" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        </RelativeLayout>
+    </LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView android:id="@+id/recyclerView" android:layout_width="fill_parent" android:layout_height="@dimen/dp60" android:layout_marginTop="@dimen/dp70" />
+</RelativeLayout>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="wrap_content" android:layout_height="@dimen/track_view_real_height"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@+id/track_drag_left_hand" android:background="@mipmap/ic_thumbnail_left_hand" android:layout_width="@dimen/editor_timeline_view_hand_width" android:layout_height="fill_parent" />
+    <ImageView android:id="@+id/track_drag_right_hand" android:background="@mipmap/ic_thumbnail_right_hand" android:layout_width="@dimen/editor_timeline_view_hand_width" android:layout_height="fill_parent" android:layout_alignParentRight="true" />
+    <View android:id="@+id/track_drag_view" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_toLeftOf="@id/track_drag_right_hand" android:layout_toRightOf="@id/track_drag_left_hand" />
+</RelativeLayout>

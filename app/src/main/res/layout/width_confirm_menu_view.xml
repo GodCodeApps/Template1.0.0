@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@+id/rl_with_confirm_menu" android:layout_width="fill_parent" android:layout_height="@dimen/dp140">
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@+id/ll_top_seek_menu" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp12">
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@+id/ll_apply_to_all_and_reset" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <ImageView android:layout_gravity="center_vertical" android:id="@+id/iv_apply_all" android:background="@mipmap/ic_multi_trans" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp10" />
+                <TextView android:textSize="@dimen/sp10" android:textColor="@color/white_8" android:layout_gravity="center_vertical" android:id="@+id/tv_apply_all" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp12" android:text="@string/apply_all_clip" />
+                <View android:layout_gravity="center_vertical" android:id="@+id/reset_left_line" android:background="#ff979797" android:layout_width="@dimen/dp1" android:layout_height="@dimen/dp15" android:layout_marginLeft="@dimen/dp5" />
+                <TextView android:textSize="@dimen/sp10" android:textColor="@color/white_8" android:layout_gravity="center_vertical" android:id="@+id/tv_reset" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp5" android:text="@string/adjust_reset" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@+id/ll_reset" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <TextView android:textSize="@dimen/sp10" android:textColor="@color/white_8" android:layout_gravity="center_vertical" android:id="@+id/tv_timeline_reset" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp17" android:layout_marginRight="@dimen/dp5" android:text="@string/adjust_reset" />
+            </LinearLayout>
+            <com.meishe.myvideo.view.MYSeekBarView android:layout_gravity="center_vertical" android:id="@+id/view_seek_bar" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        </LinearLayout>
+        <androidx.recyclerview.widget.RecyclerView android:id="@+id/width_confirm_menu_recycleView" android:layout_width="fill_parent" android:layout_height="@dimen/dp70" android:layout_marginTop="@dimen/dp36" />
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="@dimen/dp36" android:layout_below="@id/width_confirm_menu_recycleView">
+            <View android:background="@color/menu_divide_color" android:layout_width="fill_parent" android:layout_height="@dimen/dp0p2" android:layout_alignParentTop="true" />
+            <TextView android:textSize="@dimen/sp14" android:textColor="@color/white_8" android:id="@+id/tv_content" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" />
+            <ImageView android:id="@+id/iv_confirm" android:background="@mipmap/ic_confirm" android:padding="@dimen/dp6" android:layout_width="@dimen/dp23" android:layout_height="@dimen/dp23" android:layout_marginRight="@dimen/dp13" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        </RelativeLayout>
+    </RelativeLayout>
+</LinearLayout>

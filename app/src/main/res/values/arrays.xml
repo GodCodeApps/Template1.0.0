@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <array name="main_menu_icon">
+    <item>@mipmap/main_menu_ic_theme</item>
+    <item>@mipmap/main_menu_ic_edit</item>
+    <item>@mipmap/main_menu_ic_filter</item>
+    <item>@mipmap/main_menu_ic_fx</item>
+    <item>@mipmap/main_menu_ic_sticker</item>
+    <item>@mipmap/main_menu_ic_caption</item>
+    <item>@mipmap/main_menu_ic_com_caption</item>
+    <item>@mipmap/main_menu_ic_water_mark</item>
+    <item>@mipmap/main_menu_ic_music</item>
+    <item>@mipmap/main_menu_ic_dubbing</item>
+    <item>@mipmap/main_menu_ic_pic_in_pic</item>
+    <item>@mipmap/main_menu_ic_background</item>
+    <item>@mipmap/main_menu_ic_adjust</item>
+    <item>@mipmap/main_menu_ic_ratio</item>
+  </array>
+  <string-array name="main_menu_name">
+    <item>@string/main_menu_name_theme</item>
+    <item>@string/main_menu_name_edit</item>
+    <item>@string/main_menu_name_filter</item>
+    <item>@string/main_menu_name_fx</item>
+    <item>@string/main_menu_name_sticker</item>
+    <item>@string/main_menu_name_caption</item>
+    <item>@string/main_menu_name_com_caption</item>
+    <item>@string/main_menu_name_water_mark</item>
+    <item>@string/main_menu_name_music</item>
+    <item>@string/main_menu_name_dubbing</item>
+    <item>@string/main_menu_name_picture_in_picture</item>
+    <item>@string/main_menu_name_background</item>
+    <item>@string/main_menu_name_adjust</item>
+    <item>@string/main_menu_name_ratio</item>
+  </string-array>
+  <string-array name="menu_tab_caption">
+    <item>@string/menu_tab_caption_decorate</item>
+    <item>@string/menu_tab_caption_colour</item>
+    <item>@string/menu_tab_caption_contour</item>
+    <item>@string/menu_tab_caption_font</item>
+    <item>@string/menu_tab_caption_space</item>
+    <item>@string/menu_tab_caption_location</item>
+  </string-array>
+  <array name="menu_tab_filter_and_adjust_effect_icon">
+    <item>@mipmap/main_menu_ic_filter</item>
+    <item>@mipmap/main_menu_ic_adjust</item>
+  </array>
+  <string-array name="menu_tab_filter_and_adjust_effect_name">
+    <item>@string/sub_menu_name_edit_filter</item>
+    <item>@string/sub_menu_name_edit_adjust</item>
+  </string-array>
+  <array name="menu_tab_pic_in_pic_icon">
+    <item>@mipmap/main_menu_ic_pic_in_pic</item>
+  </array>
+  <string-array name="menu_tab_pic_in_pic_name">
+    <item>@string/sub_pic_in_menu_add_pic</item>
+  </string-array>
+  <string-array name="menu_tab_stickers">
+    <item>@string/fragment_menu_table_all</item>
+    <item>@string/fragment_menu_table_custom</item>
+  </string-array>
+  <array name="menu_tab_watermark_effect_icon">
+    <item>@mipmap/main_menu_ic_water_mark</item>
+    <item>@mipmap/ic_water_effect</item>
+  </array>
+  <string-array name="menu_tab_watermark_effect_name">
+    <item>@string/menu_tab_watermark_effect_mosaic</item>
+    <item>@string/menu_tab_watermark_effect_blur</item>
+  </string-array>
+  <string-array name="menu_tab_watermark_name">
+    <item>@string/sub_menu_tab_watermark</item>
+    <item>@string/sub_menu_tab_watermark_effect</item>
+  </string-array>
+  <string-array name="music_fragment_title">
+    <item>@string/music_local_music</item>
+    <item>@string/music_my_music</item>
+  </string-array>
+  <string-array name="permissions_tips">
+    <item>@string/prompt</item>
+    <item>Please open the relevant permissions (camera, microphone, storage)</item>
+  </string-array>
+  <string-array name="select_image">
+    <item>Image</item>
+  </string-array>
+  <string-array name="select_media">
+    <item>All</item>
+    <item>Video</item>
+    <item>Image</item>
+  </string-array>
+  <array name="sub_adjust_menu_icon">
+    <item>@drawable/adjust_brightness_bg</item>
+    <item>@drawable/adjust_contrast_bg</item>
+    <item>@drawable/adjust_saturation_bg</item>
+    <item>@drawable/adjust_highlight_bg</item>
+    <item>@drawable/adjust_shadow_bg</item>
+    <item>@drawable/adjust_temperature_bg</item>
+    <item>@drawable/adjust_tint_bg</item>
+    <item>@drawable/adjust_black_point_bg</item>
+    <item>@drawable/adjust_degree_bg</item>
+    <item>@drawable/adjust_amount_bg</item>
+  </array>
+  <string-array name="sub_adjust_menu_name">
+    <item>@string/adjust_brightness</item>
+    <item>@string/adjust_contrast</item>
+    <item>@string/adjust_saturation</item>
+    <item>@string/adjust_highlight</item>
+    <item>@string/adjust_shadow</item>
+    <item>@string/adjust_temperature</item>
+    <item>@string/adjust_tint</item>
+    <item>@string/adjust_black_point</item>
+    <item>@string/adjust_degree</item>
+    <item>@string/adjust_amount</item>
+  </string-array>
+  <array name="sub_background_menu_icon">
+    <item>@mipmap/ic_canvas_color</item>
+    <item>@mipmap/ic_canvas_style</item>
+    <item>@mipmap/ic_canvas_blur</item>
+  </array>
+  <string-array name="sub_background_menu_name">
+    <item>@string/sub_menu_canvas_color</item>
+    <item>@string/sub_menu_canvas_style</item>
+    <item>@string/sub_menu_canvas_blur</item>
+  </string-array>
+  <array name="sub_caption_menu_icon">
+    <item>@mipmap/main_menu_ic_sticker</item>
+    <item>@mipmap/main_menu_ic_caption</item>
+    <item>@mipmap/main_menu_ic_com_caption</item>
+  </array>
+  <string-array name="sub_caption_menu_name">
+    <item>@string/sub_menu_caption_sticker</item>
+    <item>@string/sub_menu_caption</item>
+    <item>@string/sub_menu_caption_compound_caption</item>
+  </string-array>
+  <array name="sub_comb_effect_menu_icon">
+    <item>@mipmap/main_menu_ic_sticker</item>
+    <item>@mipmap/main_menu_ic_caption</item>
+    <item>@mipmap/main_menu_ic_com_caption</item>
+  </array>
+  <string-array name="sub_comb_effect_menu_name">
+    <item>@string/main_menu_name_sticker</item>
+    <item>@string/main_menu_name_caption</item>
+    <item>@string/main_menu_name_com_caption</item>
+  </string-array>
+  <array name="sub_comb_voice_menu_icon">
+    <item>@mipmap/main_menu_ic_music</item>
+    <item>@mipmap/main_menu_ic_dubbing</item>
+    <item>@mipmap/main_menu_ic_analysis</item>
+  </array>
+  <string-array name="sub_comb_voice_menu_name">
+    <item>@string/sub_add_voice_music</item>
+    <item>@string/sub_menu_name_record</item>
+    <item>@string/sub_menu_name_analysis</item>
+  </string-array>
+  <array name="sub_edit_audio_menu_icon">
+    <item>@mipmap/sub_menu_icon_edit_divide</item>
+    <item>@mipmap/sub_menu_icon_edit_speed</item>
+    <item>@mipmap/sub_menu_icon_edit_volume</item>
+    <item>@mipmap/sub_menu_icon_edit_copy</item>
+    <item>@mipmap/sub_menu_icon_edit_delete</item>
+    <item>@mipmap/sub_menu_icon_edit_transtion</item>
+    <item>@mipmap/sub_menu_icon_edit_voice</item>
+  </array>
+  <string-array name="sub_edit_audio_menu_name">
+    <item>@string/sub_menu_audio_edit_divide</item>
+    <item>@string/sub_menu_audio_edit_speed</item>
+    <item>@string/sub_menu_audio_edit_volume</item>
+    <item>@string/sub_menu_audio_edit_copy</item>
+    <item>@string/sub_menu_audio_edit_delete</item>
+    <item>@string/sub_menu_audio_transition</item>
+    <item>@string/sub_menu_audio_edit_change_voice</item>
+  </string-array>
+  <array name="sub_edit_caption_menu_icon">
+    <item>@mipmap/sub_menu_icon_edit_copy</item>
+    <item>@mipmap/sub_menu_icon_edit_copy</item>
+    <item>@mipmap/sub_menu_icon_edit_delete</item>
+  </array>
+  <string-array name="sub_edit_caption_menu_name">
+    <item>@string/sub_menu_caption_edit_style</item>
+    <item>@string/sub_menu_caption_edit_copy</item>
+    <item>@string/sub_menu_caption_edit_delete</item>
+  </string-array>
+  <array name="sub_edit_compound_caption_menu_icon">
+    <item>@mipmap/sub_menu_icon_edit_copy</item>
+    <item>@mipmap/sub_menu_icon_edit_delete</item>
+  </array>
+  <string-array name="sub_edit_compound_caption_menu_name">
+    <item>@string/sub_menu_compound_caption_edit_copy</item>
+    <item>@string/sub_menu_compound_caption_edit_delete</item>
+  </string-array>
+  <array name="sub_edit_effect_menu_icon">
+    <item>@mipmap/sub_menu_icon_edit_copy</item>
+    <item>@mipmap/sub_menu_icon_edit_delete</item>
+  </array>
+  <string-array name="sub_edit_effect_menu_name">
+    <item>@string/sub_menu_effect_edit_copy</item>
+    <item>@string/sub_menu_effect_edit_delete</item>
+  </string-array>
+  <array name="sub_edit_menu_icon">
+    <item>@mipmap/sub_menu_icon_edit_divide</item>
+    <item>@mipmap/sub_menu_icon_edit_delete</item>
+    <item>@mipmap/main_menu_ic_filter</item>
+    <item>@mipmap/main_menu_ic_adjust</item>
+    <item>@mipmap/sub_menu_icon_edit_opacity</item>
+    <item>@mipmap/sub_menu_icon_edit_rotation</item>
+    <item>@mipmap/sub_menu_name_edit_cut</item>
+    <item>@mipmap/sub_menu_icon_edit_mirror</item>
+    <item>@mipmap/sub_menu_icon_edit_copy</item>
+    <item>@mipmap/sub_menu_icon_edit_beauty</item>
+  </array>
+  <string-array name="sub_edit_menu_name">
+    <item>@string/sub_menu_name_edit_divide</item>
+    <item>@string/sub_menu_name_edit_delete</item>
+    <item>@string/sub_menu_name_edit_filter</item>
+    <item>@string/sub_menu_name_edit_adjust</item>
+    <item>@string/sub_menu_name_edit_opacity</item>
+    <item>@string/sub_menu_name_edit_rotation</item>
+    <item>@string/sub_menu_name_edit_cut</item>
+    <item>@string/sub_menu_name_edit_mirror</item>
+    <item>@string/sub_menu_name_edit_copy</item>
+    <item>@string/sub_menu_name_edit_beauty</item>
+  </string-array>
+  <array name="sub_edit_sticker_menu_icon">
+    <item>@mipmap/sub_menu_icon_edit_copy</item>
+    <item>@mipmap/sub_menu_icon_edit_delete</item>
+    <item>@mipmap/sub_menu_icon_edit_mirror</item>
+  </array>
+  <string-array name="sub_edit_sticker_menu_name">
+    <item>@string/sub_menu_sticker_edit_copy</item>
+    <item>@string/sub_menu_sticker_edit_delete</item>
+    <item>@string/sub_menu_sticker_edit_mirror</item>
+  </string-array>
+  <array name="sub_edit_video_menu_icon">
+    <item>@mipmap/sub_menu_icon_edit_divide</item>
+    <item>@mipmap/sub_menu_icon_edit_speed</item>
+    <item>@mipmap/sub_menu_icon_edit_volume</item>
+    <item>@mipmap/sub_menu_icon_edit_delete</item>
+    <item>@mipmap/main_menu_ic_filter</item>
+    <item>@mipmap/main_menu_ic_adjust</item>
+    <item>@mipmap/sub_menu_icon_edit_opacity</item>
+    <item>@mipmap/sub_menu_icon_edit_rotation</item>
+    <item>@mipmap/sub_menu_name_edit_cut</item>
+    <item>@mipmap/sub_menu_icon_edit_mirror</item>
+    <item>@mipmap/sub_menu_icon_edit_copy</item>
+    <item>@mipmap/sub_menu_icon_edit_reverse</item>
+    <item>@mipmap/sub_menu_icon_edit_freeze_frame</item>
+    <item>@mipmap/sub_menu_icon_edit_beauty</item>
+  </array>
+  <string-array name="sub_edit_video_menu_name">
+    <item>@string/sub_menu_name_edit_divide</item>
+    <item>@string/sub_menu_name_edit_speed</item>
+    <item>@string/sub_menu_name_edit_volume</item>
+    <item>@string/sub_menu_name_edit_delete</item>
+    <item>@string/sub_menu_name_edit_filter</item>
+    <item>@string/sub_menu_name_edit_adjust</item>
+    <item>@string/sub_menu_name_edit_opacity</item>
+    <item>@string/sub_menu_name_edit_rotation</item>
+    <item>@string/sub_menu_name_edit_cut</item>
+    <item>@string/sub_menu_name_edit_mirror</item>
+    <item>@string/sub_menu_name_edit_copy</item>
+    <item>@string/sub_menu_name_edit_reverse</item>
+    <item>@string/sub_menu_name_edit_freeze_frame</item>
+    <item>@string/sub_menu_name_edit_beauty</item>
+  </string-array>
+  <array name="sub_effect_menu_icon">
+    <item>@mipmap/ic_effect_lively</item>
+    <item>@mipmap/ic_effect_shaking</item>
+    <item>@mipmap/ic_effect_dream</item>
+    <item>@mipmap/ic_effect_frame</item>
+  </array>
+  <string-array name="sub_effect_menu_name">
+    <item>@string/effect_lively</item>
+    <item>@string/effect_shaking</item>
+    <item>@string/effect_dream</item>
+    <item>@string/effect_frame</item>
+  </string-array>
+  <array name="sub_filter_menu_icon">
+    <item>@mipmap/main_menu_ic_filter</item>
+    <item>@mipmap/main_menu_ic_adjust</item>
+  </array>
+  <string-array name="sub_filter_menu_name">
+    <item>@string/main_menu_name_filter</item>
+    <item>@string/main_menu_name_adjust</item>
+  </string-array>
+  <string-array name="sub_main_menu_name">
+    <item>@string/main_menu_name_add_theme</item>
+  </string-array>
+  <array name="sub_menu_theme_icon">
+    <item>@mipmap/main_menu_ic_theme</item>
+  </array>
+  <array name="sub_pic_in_menu_icon">
+    <item>@mipmap/main_menu_ic_pic_in_pic</item>
+  </array>
+  <string-array name="sub_pic_in_menu_name">
+    <item>@string/sub_pic_in_menu_add_pic</item>
+  </string-array>
+  <array name="sub_watermark_menu_icon">
+    <item>@mipmap/ic_sub_watermark</item>
+    <item>@mipmap/ic_sub_watermark_effect</item>
+  </array>
+  <string-array name="sub_watermark_menu_name">
+    <item>@string/main_menu_name_water_mark</item>
+    <item>@string/sub_menu_comb_name_effect</item>
+  </string-array>
+  <array name="test">
+    <item>@mipmap/bank_thumbnail_local</item>
+  </array>
+</resources>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:height="@dimen/dp53" android:width="@dimen/dp87">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/animate_sticker_bottom_bg" />
+            <corners android:radius="@dimen/dp4" />
+        </shape>
+    </item>
+</selector>

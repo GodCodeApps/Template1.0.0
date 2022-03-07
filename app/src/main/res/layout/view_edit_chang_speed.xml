@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@+id/ll_speed_container" android:background="@color/menu_bg" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <androidx.recyclerview.widget.RecyclerView android:id="@+id/icon_recycleView" android:layout_width="wrap_content" android:layout_height="40.5dip" />
+    <androidx.recyclerview.widget.RecyclerView android:id="@+id/text_recycleView" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <include layout="@layout/include_view_edit_confirm" />
+</LinearLayout>

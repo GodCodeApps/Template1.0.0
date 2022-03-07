@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@drawable/shape_corn_select_ratio" android:layout_width="266.0dip" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="15.0sp" android:textColor="@color/white_8" android:layout_gravity="center_horizontal" android:id="@+id/dialog_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:text="@string/prompt" android:layout_alignParentTop="true" android:layout_centerHorizontal="true" />
+    <View android:id="@+id/title_line" android:background="#ff979797" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginLeft="7.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="7.0dip" />
+    <TextView android:textSize="17.0sp" android:textColor="@color/white_8" android:layout_gravity="center_horizontal" android:id="@+id/dialog_first_tip" android:layout_width="240.0dip" android:layout_height="wrap_content" android:layout_marginTop="18.0dip" android:text="@string/stayTuned" />
+    <TextView android:textSize="12.0sp" android:textColor="#ffffffff" android:layout_gravity="center_horizontal" android:id="@+id/dialog_second_tip" android:visibility="gone" android:layout_width="240.0dip" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:text="@string/contactBusiness" />
+    <View android:background="#ff979797" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginLeft="7.0dip" android:layout_marginTop="17.0dip" android:layout_marginRight="7.0dip" />
+    <LinearLayout android:orientation="horizontal" android:id="@+id/btn_layout" android:background="@null" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_marginBottom="10.0dip">
+        <RelativeLayout android:id="@+id/left_btn_layout" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <Button android:textSize="15.0sp" android:textColor="#ff4a90e2" android:id="@+id/left_btn" android:background="@null" android:layout_width="50.0dip" android:layout_height="20.0dip" android:text="@string/cancel" android:layout_centerInParent="true" />
+        </RelativeLayout>
+        <RelativeLayout android:id="@+id/right_btn_layout" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <Button android:textSize="15.0sp" android:textColor="#ff4a90e2" android:id="@+id/right_btn" android:background="@null" android:layout_width="50.0dip" android:layout_height="20.0dip" android:text="@string/i_know" android:layout_centerInParent="true" />
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

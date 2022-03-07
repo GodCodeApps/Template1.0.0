@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <style name="Base.Widget.MaterialComponents.TextInputEditText" parent="@style/Widget.AppCompat.EditText">
+    <item name="android:paddingLeft">12.0dip</item>
+    <item name="android:paddingTop">16.0dip</item>
+    <item name="android:paddingRight">12.0dip</item>
+    <item name="android:paddingBottom">16.0dip</item>
+    <item name="android:paddingStart">12.0dip</item>
+    <item name="android:paddingEnd">12.0dip</item>
+  </style>
+</resources>

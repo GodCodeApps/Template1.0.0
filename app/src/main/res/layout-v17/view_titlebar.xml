@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@+id/main_layout" android:background="#ff000000" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@+id/backLayout" android:layout_width="64.0dip" android:layout_height="fill_parent" />
+    <ImageView android:id="@+id/back_layout_imageView" android:layout_width="@dimen/title_icon_back_width" android:layout_height="@dimen/title_icon_back_height" android:layout_marginLeft="@dimen/dp13" android:src="@mipmap/icon_edit_back" android:layout_centerVertical="true" />
+    <TextView android:textSize="16.0sp" android:textColor="@color/title_center_text_color" android:id="@+id/text_center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/videoEdit" android:layout_centerHorizontal="true" android:layout_centerVertical="true" />
+    <RelativeLayout android:id="@+id/forwardLayout" android:layout_width="90.0dip" android:layout_height="wrap_content" android:layout_alignParentRight="true">
+        <TextView android:textSize="@dimen/sp16" android:textColor="#ff4a90e2" android:id="@+id/text_right" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/dp13" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" android:layout_marginEnd="@dimen/dp13" android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+</RelativeLayout>

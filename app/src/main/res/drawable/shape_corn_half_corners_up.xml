@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape android:shape="rectangle"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="#ff212223" />
+    <corners android:topLeftRadius="@dimen/edit_change_voice_item_bg_corner" android:topRightRadius="@dimen/edit_change_voice_item_bg_corner" />
+</shape>

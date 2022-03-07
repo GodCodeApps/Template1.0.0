@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/menu_bg" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/dp15" android:layout_marginTop="@dimen/dp35" android:layout_marginRight="@dimen/dp15">
+        <ImageView android:id="@+id/image_setting_back" android:background="@mipmap/icon_setting_close" android:layout_width="@dimen/dp16" android:layout_height="@dimen/dp16" />
+        <TextView android:textSize="@dimen/sp12" android:textColor="@color/white_8" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp43" android:text="@string/captureResolution" />
+        <RadioGroup android:orientation="vertical" android:id="@+id/rg_ratio" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="30.0dip">
+            <RelativeLayout android:paddingTop="@dimen/dp15" android:paddingBottom="@dimen/dp15" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <RadioButton android:layout_gravity="center|right" android:id="@+id/rb_ratio_1080" android:background="@drawable/setting_radio_button" android:paddingLeft="@dimen/dp6" android:paddingTop="@dimen/dp6" android:paddingBottom="@dimen/dp6" android:clickable="true" android:layout_width="15.0dip" android:layout_height="15.0dip" android:checked="false" android:layout_alignParentRight="true" android:layout_centerVertical="true" style="@style/CustomCheckBoxTheme" />
+                <TextView android:textSize="14.0sp" android:textColor="@color/white_8" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/int1080" />
+            </RelativeLayout>
+            <RelativeLayout android:paddingTop="@dimen/dp15" android:paddingBottom="@dimen/dp15" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <RadioButton android:layout_gravity="center" android:id="@+id/rb_ratio_720" android:background="@drawable/setting_radio_button" android:paddingLeft="@dimen/dp6" android:paddingTop="@dimen/dp6" android:paddingBottom="@dimen/dp6" android:clickable="true" android:layout_width="15.0dip" android:layout_height="15.0dip" android:checked="true" android:layout_alignParentRight="true" android:layout_centerVertical="true" style="@style/CustomCheckBoxTheme" />
+                <TextView android:textSize="14.0sp" android:textColor="@color/white_8" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/int720" />
+            </RelativeLayout>
+        </RadioGroup>
+        <View android:background="@color/color_white_33" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/dp0p5" android:layout_marginTop="@dimen/dp15" />
+        <RelativeLayout android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp15" android:layout_marginBottom="@dimen/dp15">
+            <TextView android:textSize="@dimen/sp12" android:textColor="@color/white_8" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/setting_auto_append" android:layout_centerVertical="true" />
+            <Switch android:id="@+id/setting_append" android:layout_width="wrap_content" android:layout_height="@dimen/dp15" android:checked="false" android:textOn="" android:textOff="" android:thumb="@drawable/thumb" android:layout_alignParentRight="true" android:track="@drawable/track" android:switchMinWidth="50.0dip" />
+        </RelativeLayout>
+        <View android:background="@color/color_white_33" android:layout_width="fill_parent" android:layout_height="@dimen/dp0p5" />
+        <RelativeLayout android:id="@+id/real_feed_back" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp15" android:layout_marginBottom="@dimen/dp15">
+            <TextView android:textSize="@dimen/sp12" android:textColor="@color/white_8" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/setting_feed_back" android:layout_centerVertical="true" />
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@mipmap/setting_next" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        </RelativeLayout>
+        <View android:background="@color/color_white_33" android:layout_width="fill_parent" android:layout_height="@dimen/dp0p5" />
+        <RelativeLayout android:id="@+id/real_user_agreements" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp15" android:layout_marginBottom="@dimen/dp15">
+            <TextView android:textSize="@dimen/sp12" android:textColor="@color/white_8" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/setting_user_agreements" android:layout_centerVertical="true" />
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@mipmap/setting_next" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        </RelativeLayout>
+        <View android:background="@color/color_white_33" android:layout_width="fill_parent" android:layout_height="@dimen/dp0p5" />
+        <RelativeLayout android:id="@+id/real_privacy_policy" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp15" android:layout_marginBottom="@dimen/dp15">
+            <TextView android:textSize="@dimen/sp12" android:textColor="@color/white_8" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/setting_privacy_policy" android:layout_centerVertical="true" />
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@mipmap/setting_next" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        </RelativeLayout>
+        <View android:background="@color/color_white_33" android:layout_width="fill_parent" android:layout_height="@dimen/dp0p5" />
+        <RelativeLayout android:id="@+id/real_versin_code" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp15" android:layout_marginBottom="@dimen/dp15">
+            <TextView android:textSize="@dimen/sp12" android:textColor="@color/white_8" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/setting_versin_code" android:layout_centerVertical="true" />
+            <TextView android:textSize="@dimen/sp12" android:textColor="@color/white_8" android:id="@+id/tv_versin_code" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

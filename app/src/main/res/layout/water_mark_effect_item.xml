@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:background="@drawable/asset_effect_bg" android:layout_width="@dimen/dp64" android:layout_height="@dimen/dp64">
+        <ImageView android:id="@+id/iv_effect" android:layout_width="@dimen/dp20" android:layout_height="@dimen/dp20" android:layout_marginTop="@dimen/dp14" android:layout_centerHorizontal="true" />
+        <RelativeLayout android:background="@color/text_bg_color" android:layout_width="fill_parent" android:layout_height="@dimen/dp17" android:layout_alignParentBottom="true">
+            <TextView android:textSize="@dimen/sp10" android:textColor="@color/white_8" android:id="@+id/tv_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/more" android:layout_centerInParent="true" />
+        </RelativeLayout>
+    </RelativeLayout>
+    <ImageView android:id="@+id/image_cover" android:background="@mipmap/bg_recouse_select" android:layout_width="@dimen/dp64" android:layout_height="@dimen/dp64" />
+</RelativeLayout>

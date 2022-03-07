@@ -1,0 +1,58 @@
+{
+  "record_fx": [
+    {
+      "name": "原声",
+      "builtin_fx_name": "",
+      "rank": 0,
+      "image_path": "icon_audio_change_none"
+    },
+    {
+      "name": "女声",
+      "builtin_fx_name": "Female Voice",
+      "rank": 1,
+      "image_path": "icon_audio_change_female"
+    },
+    {
+      "name": "男声",
+      "builtin_fx_name": "Male Voice",
+      "rank": 2,
+      "image_path": "icon_audio_change_male"
+    },
+    {
+      "name": "混响",
+      "builtin_fx_name": "Audio Reverb",
+      "rank": 3,
+      "image_path": "icon_audio_change_reverb"
+    },
+    {
+      "name": "电子",
+      "builtin_fx_name": "Audio Wahwah",
+      "rank": 4,
+      "image_path": "icon_audio_change_wahwah"
+    },
+    {
+      "name": "礼堂",
+      "builtin_fx_name": "Fast Cartoon Voice",
+      "rank": 5,
+      "image_path": "icon_audio_change_fast_cartoon"
+    },
+    {
+      "name": "回声",
+      "builtin_fx_name": "Audio Echo",
+      "rank": 6,
+      "image_path": "icon_audio_change_echo"
+    },
+    {
+      "name": "怪兽",
+      "builtin_fx_name": "Monster Voice",
+      "rank": 7,
+      "image_path": "icon_audio_change_monster"
+    },
+    {
+      "name": "卡通",
+      "builtin_fx_name": "Cartoon Voice",
+      "rank": 8,
+      "image_path": "icon_audio_change_cartoon"
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/black" android:layout_width="fill_parent" android:layout_height="@dimen/dp92"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@+id/rl_with_confirm_menu" android:layout_width="fill_parent" android:layout_height="@dimen/dp92">
+        <LinearLayout android:orientation="horizontal" android:id="@+id/ll_top_seek_menu" android:layout_width="fill_parent" android:layout_height="@dimen/dp56">
+            <com.meishe.myvideo.view.MYSeekBarView android:layout_gravity="center_vertical" android:id="@+id/view_seek_bar" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

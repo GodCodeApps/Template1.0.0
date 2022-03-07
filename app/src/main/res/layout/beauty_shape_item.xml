@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:layout_width="@dimen/dp56" android:layout_height="@dimen/dp56"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:orientation="vertical" android:id="@+id/rl_beauty_container" android:background="@drawable/beauty_select_bg" android:layout_width="@dimen/dp56" android:layout_height="@dimen/dp56">
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/real_bg">
+            <ImageView android:id="@+id/iv_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp8" android:layout_centerInParent="true" />
+        </RelativeLayout>
+        <RelativeLayout android:id="@+id/real_bg" android:background="@color/text_bg_color" android:layout_width="fill_parent" android:layout_height="@dimen/dp17" android:layout_alignParentBottom="true">
+            <TextView android:textSize="@dimen/sp10" android:textColor="@color/white_8" android:id="@+id/tv_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" />
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>
