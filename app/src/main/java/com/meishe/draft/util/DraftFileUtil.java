@@ -7,6 +7,7 @@ import android.util.Log;
 
 import com.meishe.common.utils.Logger;
 import com.meishe.draft.data.DraftFileData;
+import com.meishe.myvideo.util.FileUtil;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
@@ -169,6 +170,7 @@ public class DraftFileUtil {
         InputStreamReader inputStreamReader;
         IOException e;
         InputStreamReader inputStreamReader2;
+        StringBuilder sb = new StringBuilder();
         try {
             try {
                 inputStreamReader2 = new InputStreamReader(new FileInputStream(new File(str)), "utf-8");
@@ -179,12 +181,11 @@ public class DraftFileUtil {
             try {
                 BufferedReader bufferedReader2 = new BufferedReader(inputStreamReader2);
                 try {
-                    StringBuilder sb = new StringBuilder();
                     while (true) {
                         String readLine = bufferedReader2.readLine();
                         if (readLine != null) {
                             sb.append(readLine);
-                            sb.append("/");
+                            sb.append("\n");
                         } else {
                             String sb2 = sb.toString();
                             close(null);
@@ -254,7 +255,7 @@ public class DraftFileUtil {
             close(inputStreamReader);
             close(bufferedReader);
         }
-        return str;
+        return sb.toString();
     }
 
     public static void deleteFolder(String str) {
@@ -280,38 +281,42 @@ public class DraftFileUtil {
         return saveToSDCard("config", str, "json", str2);
     }
 
-    /* JADX WARNING: Code restructure failed: missing block: B:26:0x005f, code lost:
-        r3 = th;
-     */
-    /* JADX WARNING: Code restructure failed: missing block: B:29:?, code lost:
-        r1.close();
-     */
-    /* JADX WARNING: Code restructure failed: missing block: B:30:0x0066, code lost:
-        r4 = move-exception;
-     */
-    /* JADX WARNING: Code restructure failed: missing block: B:31:0x0067, code lost:
-        r4.printStackTrace();
-     */
-    /* JADX WARNING: Code restructure failed: missing block: B:33:0x006b, code lost:
-        r6 = null;
-     */
-    /* JADX WARNING: Code restructure failed: missing block: B:36:0x006e, code lost:
-        r1.close();
-     */
-    /* JADX WARNING: Failed to process nested try/catch */
-    /* JADX WARNING: Removed duplicated region for block: B:26:0x005f A[ExcHandler: all (th java.lang.Throwable), Splitter:B:8:0x0020] */
-    /* JADX WARNING: Removed duplicated region for block: B:28:0x0062 A[SYNTHETIC, Splitter:B:28:0x0062] */
-    /* JADX WARNING: Removed duplicated region for block: B:36:0x006e  */
-    /* Code decompiled incorrectly, please refer to instructions dump. */
-    public static java.lang.String saveToSDCard(java.lang.String r3, java.lang.String r4, java.lang.String r5, java.lang.String r6) {
-        /*
-        // Method dump skipped, instructions count: 118
-        */
+    public static String saveToSDCard(String paramString1, String paramString2, String paramString3, String paramString4) {
+        boolean bool = Environment.getExternalStorageState().equals("mounted");
+        String str1 = null;
+        String str2 = null;
+        if (!bool)
+            return null;
+        File file = new File(paramString4);
+        if (!file.exists() && !file.mkdirs())
+            return null;
+        FileOutputStream fileOutputStream = null;
+        File file1 = null;
+        try {
+            StringBuilder stringBuilder = new StringBuilder();
+            stringBuilder.append(paramString1);
+            stringBuilder.append(".");
+            stringBuilder.append(paramString3);
+            file1 = new File(paramString4,stringBuilder.toString());
+//            if (file1.exists()) {
+//                file1.delete();
+//            }
+            file1.createNewFile();
+            fileOutputStream = new FileOutputStream(file1);
+            fileOutputStream.write(paramString2.getBytes());
+            fileOutputStream.close();
+        } catch (Exception exception) {
 
-//本方法所在的代码反编译失败，请在反编译界面按照提示打开Ejb编译器，找到当前对应的类的相应方法，替换到这里，然后进行适当的代码修复工作
-
-//throw new UnsupportedOperationException("Method not decompiled: com.meishe.draft.util.DraftFileUtil.saveToSDCard(java.lang.String, java.lang.String, java.lang.String, java.lang.String):java.lang.String");
-        return r3;
+        } finally {
+            paramString3 = str2;
+            if (paramString3 != null)
+                try {
+                    fileOutputStream.close();
+                } catch (IOException iOException) {
+                    iOException.printStackTrace();
+                }
+        }
+        return file1.getAbsolutePath();
     }
 
     public static void renameFile(String str, String str2) {
