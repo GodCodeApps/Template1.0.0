@@ -362,31 +362,31 @@ public class MainActivity extends BasePermissionActivity {
             this.mHandlerThread = new HandlerThread("handlerThread");
             this.mHandlerThread.start();
         }
-        new Handler(this.mHandlerThread.getLooper(), new Handler.Callback() {
-            /* class com.meishe.myvideo.activity.MainActivity.AnonymousClass7 */
-
-            public boolean handleMessage(Message message) {
-                boolean copyFileIfNeed = FileUtil.copyFileIfNeed(MainActivity.this, "SenseAR_ST.model", "facemode");
-                String str = MainActivity.this.TAG;
-                Logger.e(str, "copySuccess-->" + copyFileIfNeed);
-                File externalFilesDir = MainActivity.this.getApplicationContext().getExternalFilesDir(null);
-                boolean initHumanDetection = NvsStreamingContext.initHumanDetection(MeiSheApplication.getContext(), externalFilesDir + "/facemode/SenseAR_ST.model", "assets:/facemode/SenseAR_ST.lic", 19);
-                String str2 = MainActivity.this.TAG;
-                Logger.e(str2, "initSuccess-->" + initHumanDetection);
-                boolean z = NvsStreamingContext.setupHumanDetectionData(0, "assets:/facemode/fakeface.dat");
-                String str3 = MainActivity.this.TAG;
-                Logger.e(str3, "fakefaceSuccess-->" + z);
-                boolean z2 = NvsStreamingContext.setupHumanDetectionData(1, "assets:/facemode/makeup.dat");
-                String str4 = MainActivity.this.TAG;
-                Logger.e(str4, "makeupSuccess-->" + z2);
-                if (initHumanDetection) {
-                    MainActivity.this.mHandler.sendEmptyMessage(201);
-                } else {
-                    MainActivity.this.mHandler.sendEmptyMessage(MainActivity.INIT_ARSCENE_FAILURE_CODE);
-                }
-                return false;
-            }
-        }).sendEmptyMessage(1);
+//        new Handler(this.mHandlerThread.getLooper(), new Handler.Callback() {
+//            /* class com.meishe.myvideo.activity.MainActivity.AnonymousClass7 */
+//
+//            public boolean handleMessage(Message message) {
+//                boolean copyFileIfNeed = FileUtil.copyFileIfNeed(MainActivity.this, "SenseAR_ST.model", "facemode");
+//                String str = MainActivity.this.TAG;
+//                Logger.e(str, "copySuccess-->" + copyFileIfNeed);
+//                File externalFilesDir = MainActivity.this.getApplicationContext().getExternalFilesDir(null);
+//                boolean initHumanDetection = NvsStreamingContext.initHumanDetection(MeiSheApplication.getContext(), externalFilesDir + "/facemode/SenseAR_ST.model", "assets:/facemode/SenseAR_ST.lic", 19);
+//                String str2 = MainActivity.this.TAG;
+//                Logger.e(str2, "initSuccess-->" + initHumanDetection);
+//                boolean z = NvsStreamingContext.setupHumanDetectionData(0, "assets:/facemode/fakeface.dat");
+//                String str3 = MainActivity.this.TAG;
+//                Logger.e(str3, "fakefaceSuccess-->" + z);
+//                boolean z2 = NvsStreamingContext.setupHumanDetectionData(1, "assets:/facemode/makeup.dat");
+//                String str4 = MainActivity.this.TAG;
+//                Logger.e(str4, "makeupSuccess-->" + z2);
+//                if (initHumanDetection) {
+//                    MainActivity.this.mHandler.sendEmptyMessage(201);
+//                } else {
+//                    MainActivity.this.mHandler.sendEmptyMessage(MainActivity.INIT_ARSCENE_FAILURE_CODE);
+//                }
+//                return false;
+//            }
+//        }).sendEmptyMessage(1);
     }
 
     /* access modifiers changed from: protected */
