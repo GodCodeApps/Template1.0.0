@@ -56,70 +56,68 @@ public class RatioView extends RelativeLayout implements View.OnClickListener {
     public void onClick(View view) {
         int id = view.getId();
         if (id != R.id.rl_original) {
-            switch (id) {
-                case R.id.rl_16_9 /*{ENCODED_INT: 2131296676}*/:
-                    if (this.mOnRatioListener != null) {
-                        this.rl_original.setSelected(false);
-                        this.rl_1_1.setSelected(false);
-                        this.rl_3_4.setSelected(false);
-                        this.rl_4_3.setSelected(false);
-                        this.rl_9_16.setSelected(false);
-                        this.rl_16_9.setSelected(true);
-                        this.mOnRatioListener.onRatioClick(1);
-                        return;
-                    }
+            if (id == R.id.rl_16_9) { /*{ENCODED_INT: 2131296676}*/
+                if (this.mOnRatioListener != null) {
+                    this.rl_original.setSelected(false);
+                    this.rl_1_1.setSelected(false);
+                    this.rl_3_4.setSelected(false);
+                    this.rl_4_3.setSelected(false);
+                    this.rl_9_16.setSelected(false);
+                    this.rl_16_9.setSelected(true);
+                    this.mOnRatioListener.onRatioClick(1);
                     return;
-                case R.id.rl_1_1 /*{ENCODED_INT: 2131296677}*/:
-                    if (this.mOnRatioListener != null) {
-                        this.rl_original.setSelected(false);
-                        this.rl_1_1.setSelected(true);
-                        this.rl_3_4.setSelected(false);
-                        this.rl_4_3.setSelected(false);
-                        this.rl_9_16.setSelected(false);
-                        this.rl_16_9.setSelected(false);
-                        this.mOnRatioListener.onRatioClick(2);
-                        return;
-                    }
+                }
+                return;
+            } else if (id == R.id.rl_1_1) { /*{ENCODED_INT: 2131296677}*/
+                if (this.mOnRatioListener != null) {
+                    this.rl_original.setSelected(false);
+                    this.rl_1_1.setSelected(true);
+                    this.rl_3_4.setSelected(false);
+                    this.rl_4_3.setSelected(false);
+                    this.rl_9_16.setSelected(false);
+                    this.rl_16_9.setSelected(false);
+                    this.mOnRatioListener.onRatioClick(2);
                     return;
-                case R.id.rl_3_4 /*{ENCODED_INT: 2131296678}*/:
-                    if (this.mOnRatioListener != null) {
-                        this.rl_original.setSelected(false);
-                        this.rl_1_1.setSelected(false);
-                        this.rl_3_4.setSelected(true);
-                        this.rl_4_3.setSelected(false);
-                        this.rl_9_16.setSelected(false);
-                        this.rl_16_9.setSelected(false);
-                        this.mOnRatioListener.onRatioClick(16);
-                        return;
-                    }
+                }
+                return;
+            } else if (id == R.id.rl_3_4) { /*{ENCODED_INT: 2131296678}*/
+                if (this.mOnRatioListener != null) {
+                    this.rl_original.setSelected(false);
+                    this.rl_1_1.setSelected(false);
+                    this.rl_3_4.setSelected(true);
+                    this.rl_4_3.setSelected(false);
+                    this.rl_9_16.setSelected(false);
+                    this.rl_16_9.setSelected(false);
+                    this.mOnRatioListener.onRatioClick(16);
                     return;
-                case R.id.rl_4_3 /*{ENCODED_INT: 2131296679}*/:
-                    if (this.mOnRatioListener != null) {
-                        this.rl_original.setSelected(false);
-                        this.rl_1_1.setSelected(false);
-                        this.rl_3_4.setSelected(false);
-                        this.rl_4_3.setSelected(true);
-                        this.rl_9_16.setSelected(false);
-                        this.rl_16_9.setSelected(false);
-                        this.mOnRatioListener.onRatioClick(8);
-                        return;
-                    }
+                }
+                return;
+            } else if (id == R.id.rl_4_3) { /*{ENCODED_INT: 2131296679}*/
+                if (this.mOnRatioListener != null) {
+                    this.rl_original.setSelected(false);
+                    this.rl_1_1.setSelected(false);
+                    this.rl_3_4.setSelected(false);
+                    this.rl_4_3.setSelected(true);
+                    this.rl_9_16.setSelected(false);
+                    this.rl_16_9.setSelected(false);
+                    this.mOnRatioListener.onRatioClick(8);
                     return;
-                case R.id.rl_9_16 /*{ENCODED_INT: 2131296680}*/:
-                    if (this.mOnRatioListener != null) {
-                        this.rl_original.setSelected(false);
-                        this.rl_1_1.setSelected(false);
-                        this.rl_3_4.setSelected(false);
-                        this.rl_4_3.setSelected(false);
-                        this.rl_9_16.setSelected(true);
-                        this.rl_16_9.setSelected(false);
-                        this.mOnRatioListener.onRatioClick(4);
-                        return;
-                    }
+                }
+                return;
+            } else if (id == R.id.rl_9_16) { /*{ENCODED_INT: 2131296680}*/
+                if (this.mOnRatioListener != null) {
+                    this.rl_original.setSelected(false);
+                    this.rl_1_1.setSelected(false);
+                    this.rl_3_4.setSelected(false);
+                    this.rl_4_3.setSelected(false);
+                    this.rl_9_16.setSelected(true);
+                    this.rl_16_9.setSelected(false);
+                    this.mOnRatioListener.onRatioClick(4);
                     return;
-                default:
-                    return;
+                }
+                return;
             }
+            return;
         } else if (this.mOnRatioListener != null) {
             this.rl_original.setSelected(true);
             this.rl_1_1.setSelected(false);

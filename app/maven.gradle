@@ -1,0 +1,34 @@
+apply plugin: 'maven-publish'
+
+task androidSourcesJar(type: Jar) {
+//        classifier = 'sources'
+    archiveClassifier.set('sources')
+    from android.sourceSets.main.java.srcDirs
+}
+
+afterEvaluate { project ->
+    publishing {
+        publications {
+            release(MavenPublication) {
+                from components.release
+                artifact androidSourcesJar
+//                artifact androidJavadocsJar
+                groupId = GROUP_ID
+                artifactId = 'video-editor-sdk'
+                version = '0.0.1-SNAPSHOT'
+                description = '视频编辑SDK-Core'
+            }
+        }
+
+        repositories {
+            maven {
+                allowInsecureProtocol = true // 仓库默认不允许使用非https协议，所以这里设置为允许
+                url MAVEN_SNAPSHOT_URL // maven仓库地址
+                credentials {
+                    username NEXUS_USERNAME     // maven仓库账号
+                    password NEXUS_PASSWORD   // maven仓库密码
+                }
+            }
+        }
+    }
+}

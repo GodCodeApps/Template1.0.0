@@ -16,7 +16,7 @@ public class MeiSheApplication extends Application {
         super.onCreate();
         mApplication = this;
         mContext = getApplicationContext();
-        NvsStreamingContext.init(mContext, "assets:/meishesdk.lic", 1);
+//        NvsStreamingContext.init(mContext, "assets:/meishesdk.lic", 1);
 //        CrashHandler.getInstance().init(this);
 //        UMConfigure.setLogEnabled(false);
 //        UMConfigure.init(mContext, UMengUtils.APPID, "android", 1, null);

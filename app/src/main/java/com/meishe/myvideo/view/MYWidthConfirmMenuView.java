@@ -265,60 +265,58 @@ public class MYWidthConfirmMenuView extends MYBaseView {
     }
 
     public void onClick(View view) {
-        switch (view.getId()) {
-            case R.id.iv_apply_all /*{ENCODED_INT: 2131296511}*/:
-            case R.id.tv_apply_all /*{ENCODED_INT: 2131296823}*/:
-                if (this.mType == 1) {
-                    MessageEvent.sendEvent(0, (int) MessageEvent.MESSAGE_APPLY_ALL_FILTER);
-                    return;
-                }
-                MeicamVideoClip meicamVideoClip = this.mClipInfo;
-                if (meicamVideoClip != null) {
-                    MeicamAdjustData meicamAdjustData = meicamVideoClip.getMeicamAdjustData();
-                    List<MeicamVideoTrack> meicamVideoTrackList = TimelineData.getInstance().getMeicamVideoTrackList();
-                    if (!CollectionUtils.isEmpty(meicamVideoTrackList)) {
-                        for (int i = 0; i < meicamVideoTrackList.size(); i++) {
-                            List<ClipInfo> clipInfoList = meicamVideoTrackList.get(i).getClipInfoList();
-                            if (!CollectionUtils.isEmpty(clipInfoList)) {
-                                for (int i2 = 0; i2 < clipInfoList.size(); i2++) {
-                                    ClipInfo clipInfo = clipInfoList.get(i2);
-                                    if ((clipInfo instanceof MeicamVideoClip) && clipInfo != this.mClipInfo) {
-                                        MeicamVideoClip meicamVideoClip2 = (MeicamVideoClip) clipInfo;
-                                        meicamVideoClip2.getMeicamAdjustData().setAdjustData(meicamAdjustData);
-                                        meicamVideoClip2.setAdjustEffects();
-                                    }
+        int id = view.getId();/*{ENCODED_INT: 2131296511}*/
+        if (id == R.id.iv_apply_all || id == R.id.tv_apply_all) { /*{ENCODED_INT: 2131296823}*/
+            if (this.mType == 1) {
+                MessageEvent.sendEvent(0, (int) MessageEvent.MESSAGE_APPLY_ALL_FILTER);
+                return;
+            }
+            MeicamVideoClip meicamVideoClip = this.mClipInfo;
+            if (meicamVideoClip != null) {
+                MeicamAdjustData meicamAdjustData = meicamVideoClip.getMeicamAdjustData();
+                List<MeicamVideoTrack> meicamVideoTrackList = TimelineData.getInstance().getMeicamVideoTrackList();
+                if (!CollectionUtils.isEmpty(meicamVideoTrackList)) {
+                    for (int i = 0; i < meicamVideoTrackList.size(); i++) {
+                        List<ClipInfo> clipInfoList = meicamVideoTrackList.get(i).getClipInfoList();
+                        if (!CollectionUtils.isEmpty(clipInfoList)) {
+                            for (int i2 = 0; i2 < clipInfoList.size(); i2++) {
+                                ClipInfo clipInfo = clipInfoList.get(i2);
+                                if ((clipInfo instanceof MeicamVideoClip) && clipInfo != this.mClipInfo) {
+                                    MeicamVideoClip meicamVideoClip2 = (MeicamVideoClip) clipInfo;
+                                    meicamVideoClip2.getMeicamAdjustData().setAdjustData(meicamAdjustData);
+                                    meicamVideoClip2.setAdjustEffects();
                                 }
                             }
                         }
                     }
-                    ToastUtil.showCenterToast(getContext(), (int) R.string.has_been_apply_to_all);
-                    return;
                 }
+                ToastUtil.showCenterToast(getContext(), (int) R.string.has_been_apply_to_all);
                 return;
-            case R.id.iv_confirm /*{ENCODED_INT: 2131296520}*/:
-                hide();
-                MessageEvent.sendEvent(this.mType, 1024);
-                return;
-            case R.id.tv_reset /*{ENCODED_INT: 2131296859}*/:
-                MeicamVideoClip meicamVideoClip3 = this.mClipInfo;
-                if (meicamVideoClip3 != null) {
-                    meicamVideoClip3.getMeicamAdjustData().reset();
-                    this.mClipInfo.setAdjustEffects();
-                    this.mSeekBarView.setSeekProgress(50);
-                    EditorEngine.getInstance().seekTimeline(0);
-                    return;
-                }
-                return;
-            case R.id.tv_timeline_reset /*{ENCODED_INT: 2131296868}*/:
-                MeicamAdjustData meicamAdjustData2 = TimelineData.getInstance().getMeicamAdjustData();
-                meicamAdjustData2.reset();
-                TimelineData.getInstance().setMeicamAdjustData(meicamAdjustData2);
+            }
+            return;
+        } else if (id == R.id.iv_confirm) { /*{ENCODED_INT: 2131296520}*/
+            hide();
+            MessageEvent.sendEvent(this.mType, 1024);
+            return;
+        } else if (id == R.id.tv_reset) { /*{ENCODED_INT: 2131296859}*/
+            MeicamVideoClip meicamVideoClip3 = this.mClipInfo;
+            if (meicamVideoClip3 != null) {
+                meicamVideoClip3.getMeicamAdjustData().reset();
+                this.mClipInfo.setAdjustEffects();
                 this.mSeekBarView.setSeekProgress(50);
                 EditorEngine.getInstance().seekTimeline(0);
                 return;
-            default:
-                return;
+            }
+            return;
+        } else if (id == R.id.tv_timeline_reset) { /*{ENCODED_INT: 2131296868}*/
+            MeicamAdjustData meicamAdjustData2 = TimelineData.getInstance().getMeicamAdjustData();
+            meicamAdjustData2.reset();
+            TimelineData.getInstance().setMeicamAdjustData(meicamAdjustData2);
+            this.mSeekBarView.setSeekProgress(50);
+            EditorEngine.getInstance().seekTimeline(0);
+            return;
         }
+        return;
     }
 
     public void show(String str, List<BaseInfo> list, MeicamVideoClip meicamVideoClip) {

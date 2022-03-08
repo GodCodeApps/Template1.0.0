@@ -56,22 +56,20 @@ public class CaptionLetterSpacingFragment extends BaseFragment {
     public void onClick(View view) {
         int id = view.getId();
         if (id != R.id.ll_apply_to_all) {
-            switch (id) {
-                case R.id.tv_letter_space_big /*{ENCODED_INT: 2131296848}*/:
-                    setSelectedLarge(true);
-                    MessageEvent.sendEvent((float) CAPTION_LARGE_SPACING, 1015);
-                    return;
-                case R.id.tv_letter_space_more /*{ENCODED_INT: 2131296849}*/:
-                    setSelectedMore(true);
-                    MessageEvent.sendEvent((float) CAPTION_MORE_LARGE_SPACING, 1015);
-                    return;
-                case R.id.tv_letter_space_standard /*{ENCODED_INT: 2131296850}*/:
-                    setSelectedStandard(true);
-                    MessageEvent.sendEvent((float) CAPTION_STANDARD_SPACING, 1015);
-                    return;
-                default:
-                    return;
+            if (id == R.id.tv_letter_space_big) { /*{ENCODED_INT: 2131296848}*/
+                setSelectedLarge(true);
+                MessageEvent.sendEvent((float) CAPTION_LARGE_SPACING, 1015);
+                return;
+            } else if (id == R.id.tv_letter_space_more) { /*{ENCODED_INT: 2131296849}*/
+                setSelectedMore(true);
+                MessageEvent.sendEvent((float) CAPTION_MORE_LARGE_SPACING, 1015);
+                return;
+            } else if (id == R.id.tv_letter_space_standard) { /*{ENCODED_INT: 2131296850}*/
+                setSelectedStandard(true);
+                MessageEvent.sendEvent((float) CAPTION_STANDARD_SPACING, 1015);
+                return;
             }
+            return;
         } else {
             MessageEvent.sendEvent(MessageEvent.MESSAGE_APPLY_ALL_CAPTION_LETTER_SPACE);
         }

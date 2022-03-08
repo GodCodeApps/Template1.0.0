@@ -86,38 +86,34 @@ public class CaptionFontFragment extends BaseFragment {
         if (id == R.id.ll_apply_to_all) {
             MessageEvent.sendEvent(MessageEvent.MESSAGE_APPLY_ALL_CAPTION_FONT);
         } else if (id != R.id.tv_font_bold) {
-            switch (id) {
-                case R.id.rl_font_default /*{ENCODED_INT: 2131296689}*/:
-                    sendEvent("", 1011);
-                    return;
-                case R.id.rl_font_fang_jian_ti /*{ENCODED_INT: 2131296690}*/:
-                    sendEvent("font/FZFSJW.ttf", 1011);
-                    return;
-                case R.id.rl_font_shu_jian_ti /*{ENCODED_INT: 2131296691}*/:
-                    sendEvent("font/FZSSJW.TTF", 1011);
-                    return;
-                case R.id.rl_font_wen_yi_ti /*{ENCODED_INT: 2131296692}*/:
-                    sendEvent("font/ZKWYJW.TTF", 1011);
-                    return;
-                case R.id.rl_font_zhu_shi_ti /*{ENCODED_INT: 2131296693}*/:
-                    sendEvent("font/YRDZST.ttf", 1011);
-                    return;
-                default:
-                    switch (id) {
-                        case R.id.tv_font_italics /*{ENCODED_INT: 2131296841}*/:
-                            this.mIsItalics = !this.mIsItalics;
-                            updateItalicButton(this.mIsItalics);
-                            sendEvent(this.mIsItalics, 1013);
-                            return;
-                        case R.id.tv_font_shadow /*{ENCODED_INT: 2131296842}*/:
-                            this.mIsShadow = !this.mIsShadow;
-                            updateShadowButton(this.mIsShadow);
-                            sendEvent(this.mIsShadow, 1014);
-                            return;
-                        default:
-                            return;
-                    }
+            if (id == R.id.rl_font_default) { /*{ENCODED_INT: 2131296689}*/
+                sendEvent("", 1011);
+                return;
+            } else if (id == R.id.rl_font_fang_jian_ti) { /*{ENCODED_INT: 2131296690}*/
+                sendEvent("font/FZFSJW.ttf", 1011);
+                return;
+            } else if (id == R.id.rl_font_shu_jian_ti) { /*{ENCODED_INT: 2131296691}*/
+                sendEvent("font/FZSSJW.TTF", 1011);
+                return;
+            } else if (id == R.id.rl_font_wen_yi_ti) { /*{ENCODED_INT: 2131296692}*/
+                sendEvent("font/ZKWYJW.TTF", 1011);
+                return;
+            } else if (id == R.id.rl_font_zhu_shi_ti) { /*{ENCODED_INT: 2131296693}*/
+                sendEvent("font/YRDZST.ttf", 1011);
+                return;
             }
+            if (id == R.id.tv_font_italics) { /*{ENCODED_INT: 2131296841}*/
+                this.mIsItalics = !this.mIsItalics;
+                updateItalicButton(this.mIsItalics);
+                sendEvent(this.mIsItalics, 1013);
+                return;
+            } else if (id == R.id.tv_font_shadow) { /*{ENCODED_INT: 2131296842}*/
+                this.mIsShadow = !this.mIsShadow;
+                updateShadowButton(this.mIsShadow);
+                sendEvent(this.mIsShadow, 1014);
+                return;
+            }
+            return;
         } else {
             this.mIsBold = !this.mIsBold;
             updateBoldButton(this.mIsBold);

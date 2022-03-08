@@ -103,45 +103,44 @@ public class SettingActivity extends BaseActivity {
     }
 
     public void onClick(View view) {
-        switch (view.getId()) {
-            case R.id.image_setting_back /*{ENCODED_INT: 2131296502}*/:
-                setParameterSettingValues();
-                AppManager.getInstance().finishActivity();
-                return;
-            case R.id.rb_ratio_1080 /*{ENCODED_INT: 2131296654}*/:
-                this.mRb1080.setChecked(true);
-                this.mRb720.setChecked(false);
-                this.mCompileVideoRes = ParameterSettingValues.videoRes1080;
-                return;
-            case R.id.rb_ratio_720 /*{ENCODED_INT: 2131296655}*/:
-                this.mRb1080.setChecked(false);
-                this.mRb720.setChecked(true);
-                this.mCompileVideoRes = 720;
-                return;
-            case R.id.real_feed_back /*{ENCODED_INT: 2131296657}*/:
-                AppManager.getInstance().jumpActivity(this, FeedBackActivity.class);
-                return;
-            case R.id.real_privacy_policy /*{ENCODED_INT: 2131296660}*/:
-                Bundle bundle = new Bundle();
-                if (SystemUtils.isZh(this)) {
-                    bundle.putString("URL", Constants.PRIVACY_POLICY_URL);
-                } else {
-                    bundle.putString("URL", Constants.PRIVACY_POLICY_URL_EN);
-                }
-                AppManager.getInstance().jumpActivity(this, MainWebViewActivity.class, bundle);
-                return;
-            case R.id.real_user_agreements /*{ENCODED_INT: 2131296662}*/:
-                Bundle bundle2 = new Bundle();
-                if (SystemUtils.isZh(this)) {
-                    bundle2.putString("URL", Constants.USER_AGREEMENTS);
-                } else {
-                    bundle2.putString("URL", Constants.USER_AGREEMENTS_EN);
-                }
-                AppManager.getInstance().jumpActivity(this, MainWebViewActivity.class, bundle2);
-                return;
-            default:
-                return;
+        int id = view.getId();
+        if (id == R.id.image_setting_back) { /*{ENCODED_INT: 2131296502}*/
+            setParameterSettingValues();
+            AppManager.getInstance().finishActivity();
+            return;
+        } else if (id == R.id.rb_ratio_1080) { /*{ENCODED_INT: 2131296654}*/
+            this.mRb1080.setChecked(true);
+            this.mRb720.setChecked(false);
+            this.mCompileVideoRes = ParameterSettingValues.videoRes1080;
+            return;
+        } else if (id == R.id.rb_ratio_720) { /*{ENCODED_INT: 2131296655}*/
+            this.mRb1080.setChecked(false);
+            this.mRb720.setChecked(true);
+            this.mCompileVideoRes = 720;
+            return;
+        } else if (id == R.id.real_feed_back) { /*{ENCODED_INT: 2131296657}*/
+            AppManager.getInstance().jumpActivity(this, FeedBackActivity.class);
+            return;
+        } else if (id == R.id.real_privacy_policy) { /*{ENCODED_INT: 2131296660}*/
+            Bundle bundle = new Bundle();
+            if (SystemUtils.isZh(this)) {
+                bundle.putString("URL", Constants.PRIVACY_POLICY_URL);
+            } else {
+                bundle.putString("URL", Constants.PRIVACY_POLICY_URL_EN);
+            }
+            AppManager.getInstance().jumpActivity(this, MainWebViewActivity.class, bundle);
+            return;
+        } else if (id == R.id.real_user_agreements) { /*{ENCODED_INT: 2131296662}*/
+            Bundle bundle2 = new Bundle();
+            if (SystemUtils.isZh(this)) {
+                bundle2.putString("URL", Constants.USER_AGREEMENTS);
+            } else {
+                bundle2.putString("URL", Constants.USER_AGREEMENTS_EN);
+            }
+            AppManager.getInstance().jumpActivity(this, MainWebViewActivity.class, bundle2);
+            return;
         }
+        return;
     }
 
     @Override // androidx.fragment.app.FragmentActivity

@@ -65,28 +65,26 @@ public class CaptionPositionFragment extends BaseFragment {
     public void onClick(View view) {
         int id = view.getId();
         if (id != R.id.ll_apply_to_all) {
-            switch (id) {
-                case R.id.alignBottom /*{ENCODED_INT: 2131296319}*/:
-                    MessageEvent.sendEvent(5, 1016);
-                    return;
-                case R.id.alignCenterHorizontal /*{ENCODED_INT: 2131296320}*/:
-                    MessageEvent.sendEvent(1, 1016);
-                    return;
-                case R.id.alignCenterVertical /*{ENCODED_INT: 2131296321}*/:
-                    MessageEvent.sendEvent(4, 1016);
-                    return;
-                case R.id.alignLeft /*{ENCODED_INT: 2131296322}*/:
-                    MessageEvent.sendEvent(0, 1016);
-                    return;
-                case R.id.alignRight /*{ENCODED_INT: 2131296323}*/:
-                    MessageEvent.sendEvent(2, 1016);
-                    return;
-                case R.id.alignTop /*{ENCODED_INT: 2131296324}*/:
-                    MessageEvent.sendEvent(3, 1016);
-                    return;
-                default:
-                    return;
+            if (id == R.id.alignBottom) { /*{ENCODED_INT: 2131296319}*/
+                MessageEvent.sendEvent(5, 1016);
+                return;
+            } else if (id == R.id.alignCenterHorizontal) { /*{ENCODED_INT: 2131296320}*/
+                MessageEvent.sendEvent(1, 1016);
+                return;
+            } else if (id == R.id.alignCenterVertical) { /*{ENCODED_INT: 2131296321}*/
+                MessageEvent.sendEvent(4, 1016);
+                return;
+            } else if (id == R.id.alignLeft) { /*{ENCODED_INT: 2131296322}*/
+                MessageEvent.sendEvent(0, 1016);
+                return;
+            } else if (id == R.id.alignRight) { /*{ENCODED_INT: 2131296323}*/
+                MessageEvent.sendEvent(2, 1016);
+                return;
+            } else if (id == R.id.alignTop) { /*{ENCODED_INT: 2131296324}*/
+                MessageEvent.sendEvent(3, 1016);
+                return;
             }
+            return;
         } else {
             MessageEvent.sendEvent(MessageEvent.MESSAGE_APPLY_ALL_CAPTION_POSITION);
         }

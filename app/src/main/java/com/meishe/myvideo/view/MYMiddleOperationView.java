@@ -51,27 +51,26 @@ public class MYMiddleOperationView extends ConstraintLayout implements View.OnCl
 
     public void onClick(View view) {
         if (this.onMiddleOperationClickListener != null) {
-            switch (view.getId()) {
-                case R.id.iv_operation_cancel /*{ENCODED_INT: 2131296525}*/:
-                    this.onMiddleOperationClickListener.onCancelEventCallback();
+            int id = view.getId();
+            if (id == R.id.iv_operation_cancel) { /*{ENCODED_INT: 2131296525}*/
+                this.onMiddleOperationClickListener.onCancelEventCallback();
+                return;
+            } else if (id == R.id.iv_operation_play) { /*{ENCODED_INT: 2131296526}*/
+                if (NvsStreamingContext.getInstance().getStreamingEngineState() == 3) {
+                    this.onMiddleOperationClickListener.onPlayEventCallback(true);
                     return;
-                case R.id.iv_operation_play /*{ENCODED_INT: 2131296526}*/:
-                    if (NvsStreamingContext.getInstance().getStreamingEngineState() == 3) {
-                        this.onMiddleOperationClickListener.onPlayEventCallback(true);
-                        return;
-                    } else {
-                        this.onMiddleOperationClickListener.onPlayEventCallback(false);
-                        return;
-                    }
-                case R.id.iv_operation_recover /*{ENCODED_INT: 2131296527}*/:
-                    this.onMiddleOperationClickListener.onRecoverEventCallback();
+                } else {
+                    this.onMiddleOperationClickListener.onPlayEventCallback(false);
                     return;
-                case R.id.iv_operation_zoom /*{ENCODED_INT: 2131296528}*/:
-                    this.onMiddleOperationClickListener.onZoomEventCallback();
-                    return;
-                default:
-                    return;
+                }
+            } else if (id == R.id.iv_operation_recover) { /*{ENCODED_INT: 2131296527}*/
+                this.onMiddleOperationClickListener.onRecoverEventCallback();
+                return;
+            } else if (id == R.id.iv_operation_zoom) { /*{ENCODED_INT: 2131296528}*/
+                this.onMiddleOperationClickListener.onZoomEventCallback();
+                return;
             }
+            return;
         }
     }
 

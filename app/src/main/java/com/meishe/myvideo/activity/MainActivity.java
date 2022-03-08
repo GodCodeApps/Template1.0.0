@@ -198,23 +198,21 @@ public class MainActivity extends BasePermissionActivity {
     }
 
     public void onClick(View view) {
-        switch (view.getId()) {
-            case R.id.bt_delete /*{ENCODED_INT: 2131296352}*/:
-            case R.id.ll_delete /*{ENCODED_INT: 2131296561}*/:
-                if (!CollectionUtils.isEmpty(this.mManageListAdapter.getDeleteDraft())) {
-                    showConfirmDelete();
-                    return;
-                }
+        int id = view.getId();/*{ENCODED_INT: 2131296352}*/
+        if (id == R.id.bt_delete || id == R.id.ll_delete) { /*{ENCODED_INT: 2131296561}*/
+            if (!CollectionUtils.isEmpty(this.mManageListAdapter.getDeleteDraft())) {
+                showConfirmDelete();
                 return;
-            case R.id.bt_setting /*{ENCODED_INT: 2131296353}*/:
-                AppManager.getInstance().jumpActivity(this, SettingActivity.class);
-                return;
-            case R.id.manage_textView /*{ENCODED_INT: 2131296577}*/:
-                checkDraftsClickAble();
-                return;
-            default:
-                return;
+            }
+            return;
+        } else if (id == R.id.bt_setting) { /*{ENCODED_INT: 2131296353}*/
+            AppManager.getInstance().jumpActivity(this, SettingActivity.class);
+            return;
+        } else if (id == R.id.manage_textView) { /*{ENCODED_INT: 2131296577}*/
+            checkDraftsClickAble();
+            return;
         }
+        return;
     }
 
     private void initConfirmDeleteDialog() {

@@ -39,16 +39,15 @@ public class CompileActivity extends BaseActivity {
     }
 
     public void onClick(View view) {
-        switch (view.getId()) {
-            case R.id.iv_compile_back /*{ENCODED_INT: 2131296517}*/:
-                finish();
-                return;
-            case R.id.iv_compile_home /*{ENCODED_INT: 2131296518}*/:
-                AppManager.getInstance().jumpActivity(this, MainActivity.class);
-                finish();
-                return;
-            default:
-                return;
+        int id = view.getId();
+        if (id == R.id.iv_compile_back) { /*{ENCODED_INT: 2131296517}*/
+            finish();
+            return;
+        } else if (id == R.id.iv_compile_home) { /*{ENCODED_INT: 2131296518}*/
+            AppManager.getInstance().jumpActivity(this, MainActivity.class);
+            finish();
+            return;
         }
+        return;
     }
 }

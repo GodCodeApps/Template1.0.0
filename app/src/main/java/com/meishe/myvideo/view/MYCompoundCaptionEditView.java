@@ -187,25 +187,23 @@ public class MYCompoundCaptionEditView extends MYBaseView {
             EditorEngine.getInstance().getVideoFragment().setCurCompoundCaption(null);
             hide();
         } else if (id != R.id.iv_confirm) {
-            switch (id) {
-                case R.id.rl_font_default /*{ENCODED_INT: 2131296689}*/:
-                    EditorEngine.getInstance().setCompoundCaptionFont(this.mCompoundCaption, this.mCaptionIndex, "");
-                    return;
-                case R.id.rl_font_fang_jian_ti /*{ENCODED_INT: 2131296690}*/:
-                    EditorEngine.getInstance().setCompoundCaptionFont(this.mCompoundCaption, this.mCaptionIndex, "font/FZFSJW.ttf");
-                    return;
-                case R.id.rl_font_shu_jian_ti /*{ENCODED_INT: 2131296691}*/:
-                    EditorEngine.getInstance().setCompoundCaptionFont(this.mCompoundCaption, this.mCaptionIndex, "font/FZSSJW.TTF");
-                    return;
-                case R.id.rl_font_wen_yi_ti /*{ENCODED_INT: 2131296692}*/:
-                    EditorEngine.getInstance().setCompoundCaptionFont(this.mCompoundCaption, this.mCaptionIndex, "font/ZKWYJW.TTF");
-                    return;
-                case R.id.rl_font_zhu_shi_ti /*{ENCODED_INT: 2131296693}*/:
-                    EditorEngine.getInstance().setCompoundCaptionFont(this.mCompoundCaption, this.mCaptionIndex, "font/YRDZST.ttf");
-                    return;
-                default:
-                    return;
+            if (id == R.id.rl_font_default) { /*{ENCODED_INT: 2131296689}*/
+                EditorEngine.getInstance().setCompoundCaptionFont(this.mCompoundCaption, this.mCaptionIndex, "");
+                return;
+            } else if (id == R.id.rl_font_fang_jian_ti) { /*{ENCODED_INT: 2131296690}*/
+                EditorEngine.getInstance().setCompoundCaptionFont(this.mCompoundCaption, this.mCaptionIndex, "font/FZFSJW.ttf");
+                return;
+            } else if (id == R.id.rl_font_shu_jian_ti) { /*{ENCODED_INT: 2131296691}*/
+                EditorEngine.getInstance().setCompoundCaptionFont(this.mCompoundCaption, this.mCaptionIndex, "font/FZSSJW.TTF");
+                return;
+            } else if (id == R.id.rl_font_wen_yi_ti) { /*{ENCODED_INT: 2131296692}*/
+                EditorEngine.getInstance().setCompoundCaptionFont(this.mCompoundCaption, this.mCaptionIndex, "font/ZKWYJW.TTF");
+                return;
+            } else if (id == R.id.rl_font_zhu_shi_ti) { /*{ENCODED_INT: 2131296693}*/
+                EditorEngine.getInstance().setCompoundCaptionFont(this.mCompoundCaption, this.mCaptionIndex, "font/YRDZST.ttf");
+                return;
             }
+            return;
         } else {
             EditorEngine.getInstance().getVideoFragment().setDrawRectVisible(false);
             EditorEngine.getInstance().getVideoFragment().setCurCompoundCaption(null);

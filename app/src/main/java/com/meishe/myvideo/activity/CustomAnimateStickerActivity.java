@@ -171,56 +171,54 @@ public class CustomAnimateStickerActivity extends BaseActivity {
     public void onClick(View view) {
         int id = view.getId();
         if (!Util.isFastClick()) {
-            switch (id) {
-                case R.id.circleMode /*{ENCODED_INT: 2131296373}*/:
-                    if (this.mShapeMode != 2004) {
-                        this.mImageFree.setImageResource(R.mipmap.custom_free);
-                        this.mFreeText.setTextColor(Color.parseColor("#ff909293"));
-                        this.mImageCircle.setImageResource(R.mipmap.custom_circle_select);
-                        this.mCircleText.setTextColor(Color.parseColor("#ff4a90e2"));
-                        this.mImageSquare.setImageResource(R.mipmap.custom_square);
-                        this.mSquareText.setTextColor(Color.parseColor("#ff909293"));
-                        this.mShapeMode = 2004;
-                        resetDrawRectF();
-                        this.mCustomDrawRect.setDrawRect(this.mShapeDrawRectF, this.mShapeMode);
-                        return;
-                    }
+            if (id == R.id.circleMode) { /*{ENCODED_INT: 2131296373}*/
+                if (this.mShapeMode != 2004) {
+                    this.mImageFree.setImageResource(R.mipmap.custom_free);
+                    this.mFreeText.setTextColor(Color.parseColor("#ff909293"));
+                    this.mImageCircle.setImageResource(R.mipmap.custom_circle_select);
+                    this.mCircleText.setTextColor(Color.parseColor("#ff4a90e2"));
+                    this.mImageSquare.setImageResource(R.mipmap.custom_square);
+                    this.mSquareText.setTextColor(Color.parseColor("#ff909293"));
+                    this.mShapeMode = 2004;
+                    resetDrawRectF();
+                    this.mCustomDrawRect.setDrawRect(this.mShapeDrawRectF, this.mShapeMode);
                     return;
-                case R.id.customStickerFinish /*{ENCODED_INT: 2131296389}*/:
-                    this.mCustomStickerFinish.setClickable(false);
-                    new Thread(this.mSaveBitmapRunnable).start();
+                }
+                return;
+            } else if (id == R.id.customStickerFinish) { /*{ENCODED_INT: 2131296389}*/
+                this.mCustomStickerFinish.setClickable(false);
+                new Thread(this.mSaveBitmapRunnable).start();
+                return;
+            } else if (id == R.id.freeMode) { /*{ENCODED_INT: 2131296473}*/
+                if (this.mShapeMode != 2003) {
+                    this.mImageFree.setImageResource(R.mipmap.custom_free_select);
+                    this.mFreeText.setTextColor(Color.parseColor("#ff4a90e2"));
+                    this.mImageCircle.setImageResource(R.mipmap.custom_circle);
+                    this.mCircleText.setTextColor(Color.parseColor("#ff909293"));
+                    this.mImageSquare.setImageResource(R.mipmap.custom_square);
+                    this.mSquareText.setTextColor(Color.parseColor("#ff909293"));
+                    this.mShapeMode = 2003;
+                    resetDrawRectF();
+                    this.mCustomDrawRect.setDrawRect(this.mShapeDrawRectF, this.mShapeMode);
                     return;
-                case R.id.freeMode /*{ENCODED_INT: 2131296473}*/:
-                    if (this.mShapeMode != 2003) {
-                        this.mImageFree.setImageResource(R.mipmap.custom_free_select);
-                        this.mFreeText.setTextColor(Color.parseColor("#ff4a90e2"));
-                        this.mImageCircle.setImageResource(R.mipmap.custom_circle);
-                        this.mCircleText.setTextColor(Color.parseColor("#ff909293"));
-                        this.mImageSquare.setImageResource(R.mipmap.custom_square);
-                        this.mSquareText.setTextColor(Color.parseColor("#ff909293"));
-                        this.mShapeMode = 2003;
-                        resetDrawRectF();
-                        this.mCustomDrawRect.setDrawRect(this.mShapeDrawRectF, this.mShapeMode);
-                        return;
-                    }
+                }
+                return;
+            } else if (id == R.id.squareMode) { /*{ENCODED_INT: 2131296752}*/
+                if (this.mShapeMode != 2005) {
+                    this.mImageFree.setImageResource(R.mipmap.custom_free);
+                    this.mFreeText.setTextColor(Color.parseColor("#ff909293"));
+                    this.mImageCircle.setImageResource(R.mipmap.custom_circle);
+                    this.mCircleText.setTextColor(Color.parseColor("#ff909293"));
+                    this.mImageSquare.setImageResource(R.mipmap.custom_square_select);
+                    this.mSquareText.setTextColor(Color.parseColor("#ff4a90e2"));
+                    this.mShapeMode = 2005;
+                    resetDrawRectF();
+                    this.mCustomDrawRect.setDrawRect(this.mShapeDrawRectF, this.mShapeMode);
                     return;
-                case R.id.squareMode /*{ENCODED_INT: 2131296752}*/:
-                    if (this.mShapeMode != 2005) {
-                        this.mImageFree.setImageResource(R.mipmap.custom_free);
-                        this.mFreeText.setTextColor(Color.parseColor("#ff909293"));
-                        this.mImageCircle.setImageResource(R.mipmap.custom_circle);
-                        this.mCircleText.setTextColor(Color.parseColor("#ff909293"));
-                        this.mImageSquare.setImageResource(R.mipmap.custom_square_select);
-                        this.mSquareText.setTextColor(Color.parseColor("#ff4a90e2"));
-                        this.mShapeMode = 2005;
-                        resetDrawRectF();
-                        this.mCustomDrawRect.setDrawRect(this.mShapeDrawRectF, this.mShapeMode);
-                        return;
-                    }
-                    return;
-                default:
-                    return;
+                }
+                return;
             }
+            return;
         }
     }
 

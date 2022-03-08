@@ -150,28 +150,27 @@ public class BeautyFragment extends BaseFragment {
     }
 
     public void onClick(View view) {
-        switch (view.getId()) {
-            case R.id.iv_apply_all /*{ENCODED_INT: 2131296511}*/:
-                applyAllClip();
-                return;
-            case R.id.rl_buffing /*{ENCODED_INT: 2131296684}*/:
-                selectBuffing();
-                return;
-            case R.id.rl_ruddy /*{ENCODED_INT: 2131296698}*/:
-                selectRuddy();
-                return;
-            case R.id.rl_whitening /*{ENCODED_INT: 2131296701}*/:
-                selectWhitening();
-                return;
-            case R.id.tv_apply_all /*{ENCODED_INT: 2131296823}*/:
-                applyAllClip();
-                return;
-            case R.id.tv_reset /*{ENCODED_INT: 2131296859}*/:
-                arSceneReset();
-                return;
-            default:
-                return;
+        int id = view.getId();
+        if (id == R.id.iv_apply_all) { /*{ENCODED_INT: 2131296511}*/
+            applyAllClip();
+            return;
+        } else if (id == R.id.rl_buffing) { /*{ENCODED_INT: 2131296684}*/
+            selectBuffing();
+            return;
+        } else if (id == R.id.rl_ruddy) { /*{ENCODED_INT: 2131296698}*/
+            selectRuddy();
+            return;
+        } else if (id == R.id.rl_whitening) { /*{ENCODED_INT: 2131296701}*/
+            selectWhitening();
+            return;
+        } else if (id == R.id.tv_apply_all) { /*{ENCODED_INT: 2131296823}*/
+            applyAllClip();
+            return;
+        } else if (id == R.id.tv_reset) { /*{ENCODED_INT: 2131296859}*/
+            arSceneReset();
+            return;
         }
+        return;
     }
 
     private void applyAllClip() {
