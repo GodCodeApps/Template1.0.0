@@ -4,11 +4,12 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+
 import androidx.recyclerview.widget.RecyclerView;
+
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.bumptech.glide.request.RequestOptions;
-import com.meishe.myvideo.application.MeiSheApplication;
 import com.meishe.myvideo.bean.MediaData;
 import com.meishe.myvideo.interfaces.OnItemClick;
 import com.meishe.myvideo.util.ScreenUtils;
@@ -32,9 +33,9 @@ public class AgendaItemViewHolder extends RecyclerView.ViewHolder {
     }
 
     public void render(MediaData mediaData, final int i, final int i2, final OnItemClick onItemClick) {
-        int windowWidth = (((ScreenUtils.getWindowWidth(MeiSheApplication.getContext()) - (((int) MeiSheApplication.getContext().getResources().getDimension(R.dimen.select_recycle_marginLeftAndRight)) * 2)) - (((int) MeiSheApplication.getContext().getResources().getDimension(R.dimen.select_item_start_end)) * 2)) - (((int) MeiSheApplication.getContext().getResources().getDimension(R.dimen.select_item_between)) * 3)) / 4;
+        int windowWidth = (((ScreenUtils.getWindowWidth(itemView.getContext()) - (((int) itemView.getContext().getResources().getDimension(R.dimen.select_recycle_marginLeftAndRight)) * 2)) - (((int) itemView.getContext().getResources().getDimension(R.dimen.select_item_start_end)) * 2)) - (((int) itemView.getContext().getResources().getDimension(R.dimen.select_item_between)) * 3)) / 4;
         RecyclerView.LayoutParams layoutParams = new RecyclerView.LayoutParams(windowWidth, windowWidth);
-        int dip2px = ScreenUtils.dip2px(MeiSheApplication.getContext(), 4.0f) / 2;
+        int dip2px = ScreenUtils.dip2px(itemView.getContext(), 4.0f) / 2;
         int i3 = 0;
         if (i2 < 4) {
             dip2px = 0;
@@ -76,6 +77,6 @@ public class AgendaItemViewHolder extends RecyclerView.ViewHolder {
     }
 
     private void setImageByFile(String str, int i) {
-        Glide.with(MeiSheApplication.getContext()).asBitmap().load(str).apply(new RequestOptions().centerCrop().placeholder(R.mipmap.bank_thumbnail_local).dontAnimate().diskCacheStrategy(DiskCacheStrategy.AUTOMATIC).override(i, i)).into(this.iv_item_image);
+        Glide.with(itemView.getContext()).asBitmap().load(str).apply(new RequestOptions().centerCrop().placeholder(R.mipmap.bank_thumbnail_local).dontAnimate().diskCacheStrategy(DiskCacheStrategy.AUTOMATIC).override(i, i)).into(this.iv_item_image);
     }
 }

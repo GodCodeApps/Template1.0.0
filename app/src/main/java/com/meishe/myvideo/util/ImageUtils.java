@@ -5,12 +5,13 @@ import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.view.View;
 import android.widget.ImageView;
+
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.bumptech.glide.request.RequestOptions;
 import com.meishe.common.utils.Logger;
-import com.meishe.myvideo.application.MeiSheApplication;
 import com.meishe.myvideoapp.R;
+
 import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileOutputStream;
@@ -21,11 +22,11 @@ public class ImageUtils {
     private static final String TAG = "ImageUtils";
 
     public static void setImageByPath(ImageView imageView, String str) {
-        Glide.with(MeiSheApplication.getContext()).asBitmap().load(str).apply(new RequestOptions().centerCrop().placeholder(R.mipmap.icon_feed_back_pic).dontAnimate().diskCacheStrategy(DiskCacheStrategy.AUTOMATIC)).into(imageView);
+        Glide.with(imageView.getContext()).asBitmap().load(str).apply(new RequestOptions().centerCrop().placeholder(R.mipmap.icon_feed_back_pic).dontAnimate().diskCacheStrategy(DiskCacheStrategy.AUTOMATIC)).into(imageView);
     }
 
     public static void setImageByPathAndWidth(ImageView imageView, String str, int i) {
-        Glide.with(MeiSheApplication.getContext()).asBitmap().load(str).apply(new RequestOptions().centerCrop().dontAnimate().diskCacheStrategy(DiskCacheStrategy.AUTOMATIC).override(i, i)).into(imageView);
+        Glide.with(imageView.getContext()).asBitmap().load(str).apply(new RequestOptions().centerCrop().dontAnimate().diskCacheStrategy(DiskCacheStrategy.AUTOMATIC).override(i, i)).into(imageView);
     }
 
     /* JADX WARNING: Removed duplicated region for block: B:19:0x002c A[SYNTHETIC, Splitter:B:19:0x002c] */
@@ -87,7 +88,7 @@ public class ImageUtils {
         L_0x004a:
             throw r3
         */
-        
+
 //本方法所在的代码反编译失败，请在反编译界面按照提示打开Ejb编译器，找到当前对应的类的相应方法，替换到这里，然后进行适当的代码修复工作
 
 //throw new UnsupportedOperationException("Method not decompiled: com.meishe.myvideo.util.ImageUtils.getImageBase64Str(java.lang.String):java.lang.String");

@@ -6,7 +6,8 @@ import android.media.MediaScannerConnection;
 import android.net.Uri;
 import android.text.TextUtils;
 import android.util.Log;
-import com.meishe.myvideo.application.MeiSheApplication;
+
+
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
@@ -17,7 +18,7 @@ public class MediaScannerUtil {
     private static final String TAG = "MediaScannerUtil";
     private static List<MediaScannerCallBack> callBackList = new ArrayList();
     private static final MediaScannerClient client = new MediaScannerClient();
-    private static MediaScannerConnection mediaScanConn = new MediaScannerConnection(MeiSheApplication.getContext().getApplicationContext(), client);
+    private static MediaScannerConnection mediaScanConn;
     private static final Queue<Entity> sPendingScanList = new ConcurrentLinkedQueue();
 
     public static abstract class MediaScannerCallBack {
@@ -49,7 +50,8 @@ public class MediaScannerUtil {
         Log.e(TAG, String.format("onScanCompleted and disconnect", new Object[0]));
     }
 
-    public static void scanFile(String str, String str2) {
+    public static void scanFile(Context context, String str, String str2) {
+        mediaScanConn = new MediaScannerConnection(context, client);
         if (str != null && !str.isEmpty()) {
             scan(new Entity(str, str2));
         }

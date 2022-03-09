@@ -5,12 +5,15 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.RemoteException;
 import android.util.Log;
+
 import com.example.net.interfaces.DownloadListener;
 import com.example.net.interfaces.NetListener;
 import com.meishe.myvideo.MSApi;
-import com.meishe.myvideo.application.MeiSheApplication;
 import com.meishe.myvideo.bean.down.AssetListDownResponse;
 import com.meishe.myvideo.util.ThreadPoolUtils;
+
+import org.json.JSONException;
+
 import java.io.File;
 import java.io.IOException;
 import java.security.KeyManagementException;
@@ -20,8 +23,8 @@ import java.security.UnrecoverableKeyException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.concurrent.ExecutorService;
+
 import okhttp3.ResponseBody;
-import org.json.JSONException;
 import retrofit2.Response;
 
 public class NvHttpRequest {
@@ -131,11 +134,7 @@ public class NvHttpRequest {
         }
         hashMap.put("page", String.valueOf(i4));
         hashMap.put("pageSize", String.valueOf(i5));
-        if (isZh(MeiSheApplication.getContext())) {
-            hashMap.put("lang", "zh_CN");
-        } else {
-            hashMap.put("lang", "en");
-        }
+        hashMap.put("lang", "zh_CN");
 //        if (i == 1) {
 //            hashMap.put(b.x, String.valueOf(1));
 //        } else if (i == 2) {
@@ -231,7 +230,7 @@ public class NvHttpRequest {
         /*
         // Method dump skipped, instructions count: 323
         */
-        
+
 //本方法所在的代码反编译失败，请在反编译界面按照提示打开Ejb编译器，找到当前对应的类的相应方法，替换到这里，然后进行适当的代码修复工作
 
 //throw new UnsupportedOperationException("Method not decompiled: com.meishe.myvideo.util.asset.NvHttpRequest.writeAssetToDisc(retrofit2.Response, java.lang.String, java.lang.String, java.lang.String, com.meishe.myvideo.util.asset.NvHttpRequest$NvHttpRequestListener, int, java.lang.String):void");

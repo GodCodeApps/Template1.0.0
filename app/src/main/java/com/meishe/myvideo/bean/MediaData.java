@@ -1,7 +1,5 @@
 package com.meishe.myvideo.bean;
 
-import com.meishe.myvideo.application.MeiSheApplication;
-import com.meishe.myvideoapp.R;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -54,7 +52,7 @@ public class MediaData {
     }
 
     public String getDate() {
-        return new SimpleDateFormat(MeiSheApplication.getContext().getResources().getString(R.string.yearMonthDate)).format(new Date(this.data));
+        return new SimpleDateFormat("yyyy-MM-dd").format(new Date(this.data));
     }
 
     public int getId() {

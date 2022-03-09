@@ -10,8 +10,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
+
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
 import com.meicam.sdk.NvsVideoClip;
@@ -19,11 +21,11 @@ import com.meicam.sdk.NvsVideoTrack;
 import com.meicam.sdk.NvsVideoTransition;
 import com.meishe.common.utils.CollectionUtils;
 import com.meishe.common.utils.Logger;
-import com.meishe.myvideo.application.MeiSheApplication;
 import com.meishe.myvideo.bean.BaseInfo;
 import com.meishe.myvideo.bean.TransitionInfo;
 import com.meishe.myvideo.manager.MenuDataManager;
 import com.meishe.myvideoapp.R;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -202,7 +204,7 @@ public class EditorTimelineTransitionAdapter extends RecyclerView.Adapter {
             } else if (TextUtils.isEmpty(this.mItemLengthList.get(i).getIconPath())) {
                 midHolder.backgroundView.setBackgroundResource(R.drawable.icon_transtion_default);
             } else {
-                Glide.with(MeiSheApplication.getContext()).asBitmap().load(this.mItemLengthList.get(i).getIconPath()).apply(new RequestOptions().centerInside().skipMemoryCache(false)).into(midHolder.backgroundView);
+                Glide.with(mContext).asBitmap().load(this.mItemLengthList.get(i).getIconPath()).apply(new RequestOptions().centerInside().skipMemoryCache(false)).into(midHolder.backgroundView);
             }
         }
     }

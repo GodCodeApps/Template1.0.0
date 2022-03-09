@@ -44,7 +44,7 @@ public class CompileActivity extends BaseActivity {
             finish();
             return;
         } else if (id == R.id.iv_compile_home) { /*{ENCODED_INT: 2131296518}*/
-            AppManager.getInstance().jumpActivity(this, MainActivity.class);
+            AppManager.getInstance().jumpActivity(this, DraftListActivity.class);
             finish();
             return;
         }

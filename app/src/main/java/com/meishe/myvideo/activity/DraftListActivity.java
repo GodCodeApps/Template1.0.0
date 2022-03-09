@@ -28,10 +28,8 @@ import com.meishe.draft.data.DraftData;
 import com.meishe.draft.util.DraftFileUtil;
 import com.meishe.engine.bean.TimelineData;
 import com.meishe.myvideo.adapter.ManageListAdapter;
-import com.meishe.myvideo.application.MeiSheApplication;
 import com.meishe.myvideo.decoration.SpaceItemDecoration;
 import com.meishe.myvideo.util.AppManager;
-import com.meishe.myvideo.util.FileUtil;
 import com.meishe.myvideo.util.ParameterSettingValues;
 import com.meishe.myvideo.util.SpUtil;
 import com.meishe.myvideo.util.SystemUtils;
@@ -42,17 +40,16 @@ import com.meishe.myvideo.view.PrivacyPolicyDialog;
 import com.meishe.myvideoapp.R;
 import com.meishe.player.common.Constants;
 
-import java.io.File;
 import java.lang.ref.WeakReference;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends BasePermissionActivity {
+public class DraftListActivity extends BasePermissionActivity {
     public static final int AD_SPANNER_CHANGE_CODE = 203;
     public static final int INIT_ARSCENE_COMPLETE_CODE = 201;
     public static final int INIT_ARSCENE_FAILURE_CODE = 202;
     public static final int REQUEST_CAMERA_PERMISSION_CODE = 200;
-    private String TAG = MainActivity.class.getSimpleName();
+    private String TAG = DraftListActivity.class.getSimpleName();
     private boolean arSceneFinished = false;
     private boolean initARSceneing = true;
     private int mCanUseARFaceType = 0;
@@ -76,7 +73,7 @@ public class MainActivity extends BasePermissionActivity {
     /* access modifiers changed from: protected */
     @Override // com.meishe.myvideo.activity.BaseActivity
     public int initRootView() {
-        return R.layout.activity_main;
+        return R.layout.activity_draft_list;
     }
 
     /* access modifiers changed from: protected */
@@ -86,9 +83,9 @@ public class MainActivity extends BasePermissionActivity {
 
     /* access modifiers changed from: package-private */
     public class MainActivityHandler extends Handler {
-        WeakReference<MainActivity> mWeakReference;
+        WeakReference<DraftListActivity> mWeakReference;
 
-        public MainActivityHandler(MainActivity mainActivity) {
+        public MainActivityHandler(DraftListActivity mainActivity) {
             this.mWeakReference = new WeakReference<>(mainActivity);
         }
 
@@ -96,14 +93,14 @@ public class MainActivity extends BasePermissionActivity {
             if (this.mWeakReference.get() != null) {
                 switch (message.what) {
                     case 201:
-                        MainActivity.this.arSceneFinished = true;
-                        MainActivity.this.initARSceneing = false;
+                        DraftListActivity.this.arSceneFinished = true;
+                        DraftListActivity.this.initARSceneing = false;
                         return;
-                    case MainActivity.INIT_ARSCENE_FAILURE_CODE /*{ENCODED_INT: 202}*/:
-                        MainActivity.this.arSceneFinished = false;
-                        MainActivity.this.initARSceneing = false;
+                    case DraftListActivity.INIT_ARSCENE_FAILURE_CODE /*{ENCODED_INT: 202}*/:
+                        DraftListActivity.this.arSceneFinished = false;
+                        DraftListActivity.this.initARSceneing = false;
                         return;
-                    case MainActivity.AD_SPANNER_CHANGE_CODE /*{ENCODED_INT: 203}*/:
+                    case DraftListActivity.AD_SPANNER_CHANGE_CODE /*{ENCODED_INT: 203}*/:
                     default:
                         return;
                 }
@@ -126,8 +123,8 @@ public class MainActivity extends BasePermissionActivity {
                 TimelineData.getInstance().fromJson(draftData.getJsonData());
                 Bundle bundle = new Bundle();
                 bundle.putInt("from_type", 1);
-                bundle.putString(DraftEditActivity.INTENT_KEY_DRAFT_DIR, ((DraftData) MainActivity.this.mDraftData.get(i)).getDirPath());
-                AppManager.getInstance().jumpActivity(MainActivity.this, DraftEditActivity.class, bundle);
+                bundle.putString(DraftEditActivity.INTENT_KEY_DRAFT_DIR, ((DraftData) DraftListActivity.this.mDraftData.get(i)).getDirPath());
+                AppManager.getInstance().jumpActivity(DraftListActivity.this, DraftEditActivity.class, bundle);
             }
         });
         this.mManageListAdapter.setOnMoreClickListener(new ManageListAdapter.OnMoreClickListener() {
@@ -135,7 +132,7 @@ public class MainActivity extends BasePermissionActivity {
 
             @Override // com.meishe.myvideo.adapter.ManageListAdapter.OnMoreClickListener
             public void onClick(int i, DraftData draftData) {
-                MainActivity.this.showMoreDialog(i, draftData);
+                DraftListActivity.this.showMoreDialog(i, draftData);
             }
         });
         this.mManageListview.setAdapter(this.mManageListAdapter);
@@ -181,7 +178,7 @@ public class MainActivity extends BasePermissionActivity {
     @Override // com.meishe.myvideo.activity.BaseActivity
     public void initData() {
         if (hasAllPermission()) {
-            showPrivacyDialog();
+//            showPrivacyDialog();
             initARSceneEffect();
             prepareEffectAssets();
         } else {
@@ -224,27 +221,27 @@ public class MainActivity extends BasePermissionActivity {
             /* class com.meishe.myvideo.activity.MainActivity.AnonymousClass3 */
 
             public void onClick(View view) {
-                MainActivity.this.mManageListAdapter.deleteCheckedDrafts(new ManageListAdapter.OnDeleteListener() {
+                DraftListActivity.this.mManageListAdapter.deleteCheckedDrafts(new ManageListAdapter.OnDeleteListener() {
                     /* class com.meishe.myvideo.activity.MainActivity.AnonymousClass3.AnonymousClass1 */
 
                     @Override // com.meishe.myvideo.adapter.ManageListAdapter.OnDeleteListener
                     public void onComplete() {
-                        MainActivity.this.checkDraftsClickAble();
+                        DraftListActivity.this.checkDraftsClickAble();
                     }
 
                     @Override // com.meishe.myvideo.adapter.ManageListAdapter.OnDeleteListener
                     public void onStart(List<DraftData> list) {
-                        MainActivity.this.deleteAllDraft(list);
+                        DraftListActivity.this.deleteAllDraft(list);
                     }
                 });
-                MainActivity.this.closeConfirmDelete();
+                DraftListActivity.this.closeConfirmDelete();
             }
         });
         inflate.findViewById(R.id.bt_cancel).setOnClickListener(new View.OnClickListener() {
             /* class com.meishe.myvideo.activity.MainActivity.AnonymousClass4 */
 
             public void onClick(View view) {
-                MainActivity.this.closeConfirmDelete();
+                DraftListActivity.this.closeConfirmDelete();
             }
         });
         this.mConfirmDeleteDialog = CustomDialogUtil.getCustomWrapDialog(this.mContext, inflate, CustomDialogUtil.SHOW_POSITION.CENTER);
@@ -260,15 +257,15 @@ public class MainActivity extends BasePermissionActivity {
                 /* class com.meishe.myvideo.activity.MainActivity.AnonymousClass5 */
 
                 public void onClick(View view) {
-                    MainActivity.this.renameDraft(editText.getText().toString());
-                    MainActivity.this.closeRenameDialog();
+                    DraftListActivity.this.renameDraft(editText.getText().toString());
+                    DraftListActivity.this.closeRenameDialog();
                 }
             });
             inflate.findViewById(R.id.iv_cancel).setOnClickListener(new View.OnClickListener() {
                 /* class com.meishe.myvideo.activity.MainActivity.AnonymousClass6 */
 
                 public void onClick(View view) {
-                    MainActivity.this.closeRenameDialog();
+                    DraftListActivity.this.closeRenameDialog();
                 }
             });
             this.mRenameDialog = CustomDialogUtil.getCustomWrapDialog(this.mContext, inflate, CustomDialogUtil.SHOW_POSITION.CENTER);
@@ -426,24 +423,24 @@ public class MainActivity extends BasePermissionActivity {
             /* class com.meishe.myvideo.activity.MainActivity.AnonymousClass8 */
 
             public void onClick(View view) {
-                MainActivity.this.closeMoreDialog();
-                MainActivity.this.showRenameDialog();
+                DraftListActivity.this.closeMoreDialog();
+                DraftListActivity.this.showRenameDialog();
             }
         });
         findViewById2.setOnClickListener(new View.OnClickListener() {
             /* class com.meishe.myvideo.activity.MainActivity.AnonymousClass9 */
 
             public void onClick(View view) {
-                MainActivity.this.copyDraft();
-                MainActivity.this.closeMoreDialog();
+                DraftListActivity.this.copyDraft();
+                DraftListActivity.this.closeMoreDialog();
             }
         });
         findViewById3.setOnClickListener(new View.OnClickListener() {
             /* class com.meishe.myvideo.activity.MainActivity.AnonymousClass10 */
 
             public void onClick(View view) {
-                MainActivity.this.deleteDraft();
-                MainActivity.this.closeMoreDialog();
+                DraftListActivity.this.deleteDraft();
+                DraftListActivity.this.closeMoreDialog();
             }
         });
         this.mManagerMoreDialog = CustomDialogUtil.getCustomDialog(this.mContext, inflate, CustomDialogUtil.SHOW_POSITION.BOTTOM);
@@ -552,17 +549,17 @@ public class MainActivity extends BasePermissionActivity {
                 @Override // com.meishe.myvideo.view.PrivacyPolicyDialog.OnPrivacyClickListener
                 public void pageJumpToWeb(String str) {
                     String str2;
-                    String string = MainActivity.this.getString(R.string.service_agreement);
-                    String string2 = MainActivity.this.getString(R.string.privacy_policy);
+                    String string = DraftListActivity.this.getString(R.string.service_agreement);
+                    String string2 = DraftListActivity.this.getString(R.string.privacy_policy);
                     if (str.contains(string)) {
-                        str2 = SystemUtils.isZh(MainActivity.this) ? Constants.USER_AGREEMENTS : Constants.USER_AGREEMENTS_EN;
+                        str2 = SystemUtils.isZh(DraftListActivity.this) ? Constants.USER_AGREEMENTS : Constants.USER_AGREEMENTS_EN;
                     } else {
-                        str2 = str.contains(string2) ? SystemUtils.isZh(MainActivity.this) ? Constants.PRIVACY_POLICY_URL : Constants.PRIVACY_POLICY_URL_EN : "";
+                        str2 = str.contains(string2) ? SystemUtils.isZh(DraftListActivity.this) ? Constants.PRIVACY_POLICY_URL : Constants.PRIVACY_POLICY_URL_EN : "";
                     }
                     if (!TextUtils.isEmpty(str2)) {
                         Bundle bundle = new Bundle();
                         bundle.putString("URL", str2);
-                        AppManager.getInstance().jumpActivity(MainActivity.this, MainWebViewActivity.class, bundle);
+                        AppManager.getInstance().jumpActivity(DraftListActivity.this, MainWebViewActivity.class, bundle);
                     }
                 }
             });

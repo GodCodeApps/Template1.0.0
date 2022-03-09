@@ -5,15 +5,17 @@ import android.graphics.Point;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
 import androidx.recyclerview.widget.RecyclerView;
+
 import com.meishe.common.utils.Logger;
-import com.meishe.myvideo.application.MeiSheApplication;
 import com.meishe.myvideo.bean.MediaData;
 import com.meishe.myvideo.fragment.MediaFragment;
 import com.meishe.myvideo.holder.AgendaItemViewHolder;
 import com.meishe.myvideo.interfaces.OnItemClick;
 import com.meishe.myvideo.interfaces.OnTotalNumChange;
 import com.meishe.myvideoapp.R;
+
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -72,7 +74,7 @@ public class AgendaSimpleSectionAdapter extends SimpleSectionedAdapter<AgendaIte
     /* access modifiers changed from: protected */
     @Override // com.meishe.myvideo.adapter.SimpleSectionedAdapter
     public String getSectionHeaderTitle(int i) {
-        return new SimpleDateFormat(MeiSheApplication.getContext().getResources().getString(R.string.yearMonthDate)).format(new Date()).equals(this.listOfParent.get(i).getDate()) ? MeiSheApplication.getContext().getResources().getString(R.string.today) : this.listOfParent.get(i).getDate();
+        return new SimpleDateFormat(mActivity.getString(R.string.yearMonthDate)).format(new Date()).equals(this.listOfParent.get(i).getDate()) ? mActivity.getResources().getString(R.string.today) : this.listOfParent.get(i).getDate();
     }
 
     /* access modifiers changed from: protected */

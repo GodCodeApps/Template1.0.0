@@ -2,9 +2,10 @@ package com.meishe.myvideo.holder;
 
 import android.view.View;
 import android.widget.TextView;
+
 import androidx.annotation.IdRes;
 import androidx.recyclerview.widget.RecyclerView;
-import com.meishe.myvideo.application.MeiSheApplication;
+
 import com.meishe.myvideo.interfaces.OnItemClick;
 import com.meishe.myvideoapp.R;
 
@@ -30,8 +31,8 @@ public class HeaderViewHolder extends RecyclerView.ViewHolder {
                 this.select_all.setText("");
                 return;
             }
-            String string = MeiSheApplication.getContext().getResources().getString(R.string.checkAll);
-            String string2 = MeiSheApplication.getContext().getResources().getString(R.string.cancelCheckAll);
+            String string = itemView.getContext().getResources().getString(R.string.checkAll);
+            String string2 = titleText.getContext().getResources().getString(R.string.cancelCheckAll);
             TextView textView = this.select_all;
             if (z) {
                 string = string2;

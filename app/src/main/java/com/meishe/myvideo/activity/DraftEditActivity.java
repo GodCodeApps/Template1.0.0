@@ -15,11 +15,13 @@ import android.view.View;
 import android.view.ViewTreeObserver;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
+
 import com.meicam.sdk.NvsAudioClip;
 import com.meicam.sdk.NvsAudioTrack;
 import com.meicam.sdk.NvsColor;
@@ -51,7 +53,6 @@ import com.meishe.engine.bean.TimelineData;
 import com.meishe.engine.bean.TimelineDataUtil;
 import com.meishe.engine.util.StoryboardUtil;
 import com.meishe.myvideo.adapter.EditorTimelineTransitionAdapter;
-import com.meishe.myvideo.application.MeiSheApplication;
 import com.meishe.myvideo.bean.BaseInfo;
 import com.meishe.myvideo.bean.MediaData;
 import com.meishe.myvideo.bean.MusicInfo;
@@ -120,14 +121,16 @@ import com.meishe.myvideo.view.editview.EditChangeVoiceView;
 import com.meishe.myvideo.view.editview.EditChangeVolumeView;
 import com.meishe.myvideoapp.R;
 import com.meishe.player.view.VideoFragment;
+
+import org.greenrobot.eventbus.EventBus;
+import org.greenrobot.eventbus.Subscribe;
+import org.greenrobot.eventbus.ThreadMode;
+
 import java.io.File;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
-import org.greenrobot.eventbus.EventBus;
-import org.greenrobot.eventbus.Subscribe;
-import org.greenrobot.eventbus.ThreadMode;
 
 public class DraftEditActivity extends BaseActivity implements NvsStreamingContext.SeekingCallback, MYEditorTimeLine.OnTimeLineEditorListener, TransitionFragment.TransitionRefreshListener, OnMiddleOperationClickListener, MenuView.OnMenuClickListener, MYEditorTimeLine.OnHandAction, TrackViewLayout.OnTrackViewScrollListener, TrackViewLayout.OnTrackViewDragListener, EditorEngine.OnTimelineChangeListener, HandView.OnHandChangeListener, PixelPerMicrosecondUtil.PixelPerMicrosecondChangeListener {
     private static final int FLAG_PLAY = 1;
@@ -358,7 +361,7 @@ public class DraftEditActivity extends BaseActivity implements NvsStreamingConte
             @Override // com.meicam.sdk.NvsStreamingContext.CompileCallback
             public void onCompileFinished(NvsTimeline nvsTimeline) {
                 if (new File(DraftEditActivity.this.mVideoSavePath).exists()) {
-                    MediaScannerUtil.scanFile(DraftEditActivity.this.mVideoSavePath, "video/mp4");
+                    MediaScannerUtil.scanFile(DraftEditActivity.this.getApplicationContext(),DraftEditActivity.this.mVideoSavePath, "video/mp4");
                 }
             }
         });
@@ -396,7 +399,8 @@ public class DraftEditActivity extends BaseActivity implements NvsStreamingConte
     }
 
     /* access modifiers changed from: protected */
-    @Override // com.meishe.myvideo.activity.BaseActivity, androidx.appcompat.app.AppCompatActivity, androidx.fragment.app.FragmentActivity
+    @Override
+    // com.meishe.myvideo.activity.BaseActivity, androidx.appcompat.app.AppCompatActivity, androidx.fragment.app.FragmentActivity
     public void onDestroy() {
         super.onDestroy();
         EventBus.getDefault().unregister(this);
@@ -497,7 +501,8 @@ public class DraftEditActivity extends BaseActivity implements NvsStreamingConte
     }
 
     /* access modifiers changed from: protected */
-    @Override // androidx.core.app.ComponentActivity, com.meishe.myvideo.activity.BaseActivity, androidx.appcompat.app.AppCompatActivity, androidx.fragment.app.FragmentActivity
+    @Override
+    // androidx.core.app.ComponentActivity, com.meishe.myvideo.activity.BaseActivity, androidx.appcompat.app.AppCompatActivity, androidx.fragment.app.FragmentActivity
     public void onCreate(@Nullable Bundle bundle) {
         PixelPerMicrosecondUtil.init(this);
         super.onCreate(bundle);
@@ -505,7 +510,8 @@ public class DraftEditActivity extends BaseActivity implements NvsStreamingConte
     }
 
     /* access modifiers changed from: protected */
-    @Override // androidx.core.app.ComponentActivity, androidx.appcompat.app.AppCompatActivity, androidx.fragment.app.FragmentActivity
+    @Override
+    // androidx.core.app.ComponentActivity, androidx.appcompat.app.AppCompatActivity, androidx.fragment.app.FragmentActivity
     public void onSaveInstanceState(Bundle bundle) {
         super.onSaveInstanceState(bundle);
         Logger.d(TAG, "onSaveInstanceState happen.:timeline = " + this.mTimeline);
@@ -1298,7 +1304,7 @@ public class DraftEditActivity extends BaseActivity implements NvsStreamingConte
     }
 
     private void createAndSaveVideo() {
-        UMengUtils.onEvent(MeiSheApplication.getContext());
+        UMengUtils.onEvent(this);
         int streamingEngineState = this.mStreamingContext.getStreamingEngineState();
         if (streamingEngineState == 3) {
             this.mStreamingContext.stop();
@@ -1400,7 +1406,8 @@ public class DraftEditActivity extends BaseActivity implements NvsStreamingConte
     }
 
     /* access modifiers changed from: protected */
-    @Override // com.meishe.myvideo.activity.BaseActivity, androidx.appcompat.app.AppCompatActivity, androidx.fragment.app.FragmentActivity
+    @Override
+    // com.meishe.myvideo.activity.BaseActivity, androidx.appcompat.app.AppCompatActivity, androidx.fragment.app.FragmentActivity
     public void onStop() {
         super.onStop();
     }
@@ -1994,7 +2001,7 @@ public class DraftEditActivity extends BaseActivity implements NvsStreamingConte
     }
 
     private void showWaterView(int i) {
-        ArrayList< Fragment> arrayList = new ArrayList<>();
+        ArrayList<Fragment> arrayList = new ArrayList<>();
         this.mWaterFragment = new WaterFragment();
         arrayList.add(this.mWaterFragment);
         this.mWaterEffectFragment = new WaterEffectFragment();
@@ -2026,7 +2033,7 @@ public class DraftEditActivity extends BaseActivity implements NvsStreamingConte
     /* access modifiers changed from: public */
     private void showTransitionView(int i) {
         hideBottomView();
-        ArrayList< Fragment> arrayList = new ArrayList<>();
+        ArrayList<Fragment> arrayList = new ArrayList<>();
         arrayList.add(new TransitionGeneralFragment(this.mTargetTransitionIndex, this));
         arrayList.add(new Transition3DFragment(this.mTargetTransitionIndex, this));
         arrayList.add(new TransitionEffectFragment(this.mTargetTransitionIndex, this));

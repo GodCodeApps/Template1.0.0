@@ -123,8 +123,10 @@ public class TimelineUtil {
             return;
         }
         NvsTimelineVideoFx addBuiltinTimelineVideoFx = nvsTimeline.addBuiltinTimelineVideoFx(0, nvsTimeline.getDuration(), str2);
-        addBuiltinTimelineVideoFx.setAttachment(str2, str2);
-        addBuiltinTimelineVideoFx.setFloatVal(str, (double) f);
+       if (addBuiltinTimelineVideoFx!=null){
+           addBuiltinTimelineVideoFx.setAttachment(str2, str2);
+           addBuiltinTimelineVideoFx.setFloatVal(str, (double) f);
+       }
     }
 
     private static void buildTimelineMasicEffect(NvsTimeline nvsTimeline) {

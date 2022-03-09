@@ -11,9 +11,10 @@ import android.text.style.ClickableSpan;
 import android.text.style.ForegroundColorSpan;
 import android.view.View;
 import android.widget.TextView;
-import com.meishe.myvideo.application.MeiSheApplication;
+
 import com.meishe.myvideo.util.SystemUtils;
 import com.meishe.myvideoapp.R;
+
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -22,7 +23,7 @@ public class PrivacyPolicyDialog extends Dialog {
     private static final String PRIVACY_MATCH_RULE_EN = "\".*?\"";
     private static final String TAG = "PrivacyPolicyDialog";
     private TextView mAgreeButton;
-    private Context mContext = MeiSheApplication.getContext();
+    private Context mContext;
     private TextView mNotUsedButton;
     private OnPrivacyClickListener mPrivacyListener;
     private TextView mStatementContent;
@@ -44,6 +45,7 @@ public class PrivacyPolicyDialog extends Dialog {
     /* access modifiers changed from: protected */
     public void onCreate(Bundle bundle) {
         super.onCreate(bundle);
+        mContext = getContext();
         setContentView(R.layout.privacy_policy_dialog_layout);
         setCanceledOnTouchOutside(false);
         setCancelable(false);
