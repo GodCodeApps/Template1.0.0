@@ -1,8 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <RelativeLayout android:id="@+id/rl_content" android:background="@mipmap/ic_blur_strength_bg" android:layout_width="@dimen/dp32" android:layout_height="@dimen/dp32">
-        <TextView android:textSize="@dimen/sp16" android:textColor="@color/white_8" android:gravity="center" android:id="@+id/tv_content" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" />
-        <View android:id="@+id/mask" android:background="@drawable/edit_blur_background_mask" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/rl_content"
+        android:layout_width="@dimen/dp32"
+        android:layout_height="@dimen/dp32"
+        android:background="@mipmap/ic_blur_strength_bg">
+
+        <TextView
+            android:id="@+id/tv_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:textColor="@color/white_8"
+            android:textSize="@dimen/sp16" />
+
+        <View
+            android:id="@+id/mask"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@drawable/edit_blur_background_mask" />
     </RelativeLayout>
 </RelativeLayout>

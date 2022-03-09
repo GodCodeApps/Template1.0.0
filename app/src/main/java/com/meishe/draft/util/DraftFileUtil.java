@@ -298,9 +298,9 @@ public class DraftFileUtil {
             stringBuilder.append(".");
             stringBuilder.append(paramString3);
             file1 = new File(paramString4,stringBuilder.toString());
-//            if (file1.exists()) {
-//                file1.delete();
-//            }
+            if (file1.exists()) {
+                file1.delete();
+            }
             file1.createNewFile();
             fileOutputStream = new FileOutputStream(file1);
             fileOutputStream.write(paramString2.getBytes());

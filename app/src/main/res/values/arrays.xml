@@ -1,34 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
   <array name="main_menu_icon">
-    <item>@mipmap/main_menu_ic_theme</item>
+<!--    <item>@mipmap/main_menu_ic_theme</item>-->
     <item>@mipmap/main_menu_ic_edit</item>
-    <item>@mipmap/main_menu_ic_filter</item>
-    <item>@mipmap/main_menu_ic_fx</item>
+<!--    <item>@mipmap/main_menu_ic_filter</item>-->
+<!--    <item>@mipmap/main_menu_ic_fx</item>-->
     <item>@mipmap/main_menu_ic_sticker</item>
     <item>@mipmap/main_menu_ic_caption</item>
-    <item>@mipmap/main_menu_ic_com_caption</item>
-    <item>@mipmap/main_menu_ic_water_mark</item>
+<!--    <item>@mipmap/main_menu_ic_com_caption</item>-->
+<!--    <item>@mipmap/main_menu_ic_water_mark</item>-->
     <item>@mipmap/main_menu_ic_music</item>
     <item>@mipmap/main_menu_ic_dubbing</item>
     <item>@mipmap/main_menu_ic_pic_in_pic</item>
-    <item>@mipmap/main_menu_ic_background</item>
+<!--    <item>@mipmap/main_menu_ic_background</item>-->
     <item>@mipmap/main_menu_ic_adjust</item>
     <item>@mipmap/main_menu_ic_ratio</item>
   </array>
   <string-array name="main_menu_name">
-    <item>@string/main_menu_name_theme</item>
+<!--    <item>@string/main_menu_name_theme</item>-->
     <item>@string/main_menu_name_edit</item>
-    <item>@string/main_menu_name_filter</item>
-    <item>@string/main_menu_name_fx</item>
+<!--    <item>@string/main_menu_name_filter</item>-->
+<!--    <item>@string/main_menu_name_fx</item>-->
     <item>@string/main_menu_name_sticker</item>
     <item>@string/main_menu_name_caption</item>
-    <item>@string/main_menu_name_com_caption</item>
-    <item>@string/main_menu_name_water_mark</item>
+<!--    <item>@string/main_menu_name_com_caption</item>-->
+<!--    <item>@string/main_menu_name_water_mark</item>-->
     <item>@string/main_menu_name_music</item>
     <item>@string/main_menu_name_dubbing</item>
     <item>@string/main_menu_name_picture_in_picture</item>
-    <item>@string/main_menu_name_background</item>
+<!--    <item>@string/main_menu_name_background</item>-->
     <item>@string/main_menu_name_adjust</item>
     <item>@string/main_menu_name_ratio</item>
   </string-array>

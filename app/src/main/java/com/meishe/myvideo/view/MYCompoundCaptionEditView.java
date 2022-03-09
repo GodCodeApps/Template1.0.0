@@ -86,11 +86,11 @@ public class MYCompoundCaptionEditView extends MYBaseView {
 
     @Override // com.meishe.myvideo.view.MYBaseView
     public void initData() {
-        TypefaceUtil instance = TypefaceUtil.getInstance(this.mContext);
-        instance.setTypeface(this.mTvFontFangJianTi, "font/FZFSJW.ttf");
-        instance.setTypeface(this.mTvFontShuJianTi, "font/FZSSJW.TTF");
-        instance.setTypeface(this.mTvFontZhuShiTi, "font/YRDZST.ttf");
-        instance.setTypeface(this.mTvFontWenYiTi, "font/ZKWYJW.TTF");
+//        TypefaceUtil instance = TypefaceUtil.getInstance(this.mContext);
+//        instance.setTypeface(this.mTvFontFangJianTi, "font/FZFSJW.ttf");
+//        instance.setTypeface(this.mTvFontShuJianTi, "font/FZSSJW.TTF");
+//        instance.setTypeface(this.mTvFontZhuShiTi, "font/YRDZST.ttf");
+//        instance.setTypeface(this.mTvFontWenYiTi, "font/ZKWYJW.TTF");
     }
 
     @Override // com.meishe.myvideo.view.MYBaseView

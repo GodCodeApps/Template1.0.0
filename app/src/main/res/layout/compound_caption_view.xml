@@ -1,10 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <RelativeLayout android:layout_width="fill_parent" android:layout_height="@dimen/dp44">
-        <TextView android:textSize="@dimen/sp10" android:textColor="@color/white_8" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/change_caption_content" android:layout_centerInParent="true" />
-        <ImageView android:id="@+id/iv_confirm" android:background="@mipmap/ic_confirm" android:layout_width="@dimen/dp25" android:layout_height="@dimen/dp25" android:layout_marginRight="@dimen/dp15" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/dp44">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/change_caption_content"
+            android:textColor="@color/white_8"
+            android:textSize="@dimen/sp10" />
+
+        <ImageView
+            android:id="@+id/iv_confirm"
+            android:layout_width="@dimen/dp25"
+            android:layout_height="@dimen/dp25"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dp15"
+            android:background="@mipmap/ic_confirm" />
     </RelativeLayout>
-    <View android:background="@color/menu_divide_color" android:layout_width="fill_parent" android:layout_height="@dimen/dp0p2" />
-    <androidx.recyclerview.widget.RecyclerView android:id="@+id/recyclerView" android:layout_width="fill_parent" android:layout_height="@dimen/dp217" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/dp0p2"
+        android:background="@color/menu_divide_color" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/dp217" />
 </LinearLayout>

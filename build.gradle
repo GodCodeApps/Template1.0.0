@@ -1,37 +1,29 @@
 buildscript {
     repositories {
         google()
-        jcenter()
-        flatDir {
-            dirs 'libs'
-        }
-        maven { url 'https://dl.bintray.com/umsdk/release' }
-        maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
-        jcenter() { url 'http://jcenter.bintray.com/' }
+        mavenCentral()
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:4.1.3'
-        //Gradle Android Maven plugin
-        classpath 'com.github.dcendents:android-maven-gradle-plugin:2.1'
-        //Gradle Bintray Plugin
-        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.8.0'
-
-        classpath 'com.google.gms:google-services:3.2.0'
+//        //Gradle Android Maven plugin
+//        classpath 'com.github.dcendents:android-maven-gradle-plugin:2.1'
+//        //Gradle Bintray Plugin
+//        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.8.0'
+//
+//        classpath 'com.google.gms:google-services:3.2.0'
     }
 }
 
 allprojects {
     repositories {
+        mavenCentral()
         google()
-        jcenter()
-//        maven { url 'https://maven.google.com' }
-        maven { url "https://jitpack.io" }
-        maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
-        maven {
-            url "http://mvn.mob.com/android"
-        }
         maven { url 'https://jitpack.io' }
-        jcenter() { url 'http://jcenter.bintray.com/' }
+        maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
+        maven { url 'http://maven.aliyun.com/nexus/content/repositories/jcenter' }
+        maven { url 'https://repo1.maven.org/maven2/' }
+        maven { url 'http://maven.aliyun.com/nexus/content/repositories/releases/' }
+        maven { url "http://maven.1216.top/repository/zchd-android/" }
     }
 }
 

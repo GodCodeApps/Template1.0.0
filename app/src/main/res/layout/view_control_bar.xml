@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <ImageView android:id="@+id/paly_btn" android:padding="@dimen/control_bar_play_icon_padding" android:layout_width="@dimen/control_bar_play_icon_width" android:layout_height="@dimen/control_bar_play_icon_height" android:src="@mipmap/control_bar_ic_play" android:layout_centerInParent="true" />
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@android:color/transparent">
+
+    <ImageView
+        android:id="@+id/paly_btn"
+        android:layout_width="@dimen/control_bar_play_icon_width"
+        android:layout_height="@dimen/control_bar_play_icon_height"
+        android:layout_centerInParent="true"
+        android:padding="@dimen/control_bar_play_icon_padding"
+        android:src="@mipmap/control_bar_ic_play" />
 </RelativeLayout>

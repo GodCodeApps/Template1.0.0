@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:id="@+id/editor_thumbnail_marking_layout" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <TextView android:textSize="@dimen/sp9" android:textColor="@color/white_half" android:id="@+id/tv_time_marking_line" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" />
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/editor_thumbnail_marking_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <TextView
+        android:id="@+id/tv_time_marking_line"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:textColor="@color/white_half"
+        android:textSize="@dimen/sp9" />
 </RelativeLayout>

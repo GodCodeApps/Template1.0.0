@@ -1,14 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <ImageView android:id="@+id/editor_timeline_view_left_handle" android:background="@mipmap/ic_thumbnail_left_hand" android:layout_width="@dimen/editor_timeline_view_hand_width" android:layout_height="fill_parent" android:layout_alignParentLeft="true" android:contentDescription="@null" />
-    <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toRightOf="@id/editor_timeline_view_left_handle" android:layout_toEndOf="@id/editor_timeline_view_left_handle">
-        <TextView android:textSize="8.0sp" android:textColor="@color/white_8" android:id="@+id/tv_editor_timeline_time_text" android:paddingLeft="3.0dip" android:paddingRight="3.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="@dimen/dp3" android:text="7.4s" android:textAlignment="gravity" />
-        <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@+id/layout_editor_timeline_speed" android:background="@drawable/bg_audio_draw_text" android:paddingLeft="3.0dip" android:paddingRight="3.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3.0dip">
-            <ImageView android:layout_gravity="center_vertical" android:background="@mipmap/sub_menu_icon_edit_speed" android:layout_width="7.0dip" android:layout_height="7.0dip" />
-            <TextView android:textSize="8.0sp" android:textColor="@color/white_8" android:id="@+id/tv_editor_timeline_speed_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="2.0dip" android:text="0.2x" />
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <ImageView
+        android:id="@+id/editor_timeline_view_left_handle"
+        android:layout_width="@dimen/editor_timeline_view_hand_width"
+        android:layout_height="fill_parent"
+        android:layout_alignParentLeft="true"
+        android:background="@mipmap/ic_thumbnail_left_hand"
+        android:contentDescription="@null" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/editor_timeline_view_left_handle"
+        android:layout_toRightOf="@id/editor_timeline_view_left_handle"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_editor_timeline_time_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp3"
+            android:paddingLeft="3.0dip"
+            android:paddingRight="3.0dip"
+            android:text="7.4s"
+            android:textAlignment="gravity"
+            android:textColor="@color/white_8"
+            android:textSize="8.0sp" />
+
+        <LinearLayout
+            android:id="@+id/layout_editor_timeline_speed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3.0dip"
+            android:background="@drawable/bg_audio_draw_text"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingLeft="3.0dip"
+            android:paddingRight="3.0dip">
+
+            <ImageView
+                android:layout_width="7.0dip"
+                android:layout_height="7.0dip"
+                android:layout_gravity="center_vertical"
+                android:background="@mipmap/sub_menu_icon_edit_speed" />
+
+            <TextView
+                android:id="@+id/tv_editor_timeline_speed_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2.0dip"
+                android:text="0.2x"
+                android:textColor="@color/white_8"
+                android:textSize="8.0sp" />
         </LinearLayout>
     </LinearLayout>
-    <ImageView android:id="@+id/editor_timeline_view_right_handle" android:background="@mipmap/ic_thumbnail_right_hand" android:layout_width="@dimen/editor_timeline_view_hand_width" android:layout_height="fill_parent" android:layout_alignParentRight="true" android:contentDescription="@null" android:layout_alignParentEnd="true" />
-    <View android:background="@drawable/editor_drawable_corner_white" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/editor_timeline_view_hand_width" android:layout_marginRight="@dimen/editor_timeline_view_hand_width" android:layout_alignParentLeft="true" android:layout_alignParentRight="true" />
+
+    <ImageView
+        android:id="@+id/editor_timeline_view_right_handle"
+        android:layout_width="@dimen/editor_timeline_view_hand_width"
+        android:layout_height="fill_parent"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:background="@mipmap/ic_thumbnail_right_hand"
+        android:contentDescription="@null" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="@dimen/editor_timeline_view_hand_width"
+        android:layout_marginRight="@dimen/editor_timeline_view_hand_width"
+        android:background="@drawable/editor_drawable_corner_white" />
 </RelativeLayout>

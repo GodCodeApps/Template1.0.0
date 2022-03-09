@@ -1,10 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <com.meishe.myvideo.view.MYMultiColorView android:id="@+id/multi_color_view" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp12" android:layout_marginTop="@dimen/dp15" />
-    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="@dimen/dp15" android:layout_marginLeft="@dimen/dp12" android:layout_marginTop="@dimen/dp35">
-        <TextView android:textSize="@dimen/sp10" android:textColor="@color/white_8" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/color_opacity" />
-        <SeekBar android:layout_gravity="center_vertical" android:id="@+id/sb_opacity" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp13" android:layout_marginRight="@dimen/dp15" />
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <com.meishe.myvideo.view.MYMultiColorView
+        android:id="@+id/multi_color_view"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp12"
+        android:layout_marginTop="@dimen/dp15" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/dp15"
+        android:layout_marginLeft="@dimen/dp12"
+        android:layout_marginTop="@dimen/dp35"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/color_opacity"
+            android:textColor="@color/white_8"
+            android:textSize="@dimen/sp10" />
+
+        <SeekBar
+            android:id="@+id/sb_opacity"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/dp13"
+            android:layout_marginRight="@dimen/dp15" />
     </LinearLayout>
+
     <include layout="@layout/caption_apply_to_all" />
 </LinearLayout>

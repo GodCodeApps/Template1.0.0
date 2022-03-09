@@ -1,28 +1,181 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:orientation="vertical" android:background="@color/black" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <RelativeLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp12" android:layout_marginTop="@dimen/dp22">
-        <ImageView android:id="@+id/iv_apply_all" android:background="@mipmap/ic_multi_trans" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" />
-        <TextView android:textSize="@dimen/sp10" android:textColor="@color/white_8" android:layout_gravity="center_vertical" android:id="@+id/tv_apply_all" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp5" android:text="@string/apply_all_clip" android:shadowColor="@color/black" android:shadowDx="0.0" android:shadowDy="1.0" android:shadowRadius="3.0" android:layout_toRightOf="@id/iv_apply_all" android:layout_centerVertical="true" />
-        <RelativeLayout android:id="@+id/rl_seek_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toLeftOf="@id/tv_reset" android:layout_toRightOf="@id/tv_apply_all" android:layout_centerVertical="true">
-            <TextView android:textSize="10.0sp" android:textColor="@color/white_8" android:gravity="center" android:id="@+id/tv_start_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp13" android:layout_marginRight="-7.5dip" android:text="0.0" android:layout_centerVertical="true" />
-            <SeekBar android:id="@+id/seek_bar" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp7" android:maxHeight="2.5dip" android:progressDrawable="@drawable/edit_seek_bar" android:thumb="@drawable/edit_seek_bar_ball" android:layout_toLeftOf="@id/tv_end_text" android:layout_toRightOf="@id/tv_start_text" android:layout_centerVertical="true" />
-            <TextView android:textSize="10.0sp" android:textColor="@color/white_8" android:gravity="center" android:id="@+id/tv_end_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="-7.5dip" android:layout_marginRight="@dimen/dp15" android:text="1" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/black"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp12"
+        android:layout_marginTop="@dimen/dp22"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/iv_apply_all"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@mipmap/ic_multi_trans" />
+
+        <TextView
+            android:id="@+id/tv_apply_all"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/dp5"
+            android:layout_toRightOf="@id/iv_apply_all"
+            android:shadowColor="@color/black"
+            android:shadowDx="0.0"
+            android:shadowDy="1.0"
+            android:shadowRadius="3.0"
+            android:text="@string/apply_all_clip"
+            android:textColor="@color/white_8"
+            android:textSize="@dimen/sp10" />
+
+        <RelativeLayout
+            android:id="@+id/rl_seek_container"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/tv_reset"
+            android:layout_toRightOf="@id/tv_apply_all">
+
+            <TextView
+                android:id="@+id/tv_start_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dp13"
+                android:layout_marginRight="-7.5dip"
+                android:gravity="center"
+                android:text="0.0"
+                android:textColor="@color/white_8"
+                android:textSize="10.0sp" />
+
+            <SeekBar
+                android:id="@+id/seek_bar"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dp7"
+                android:layout_toLeftOf="@id/tv_end_text"
+                android:layout_toRightOf="@id/tv_start_text"
+                android:maxHeight="2.5dip"
+                android:progressDrawable="@drawable/edit_seek_bar"
+                android:thumb="@drawable/edit_seek_bar_ball" />
+
+            <TextView
+                android:id="@+id/tv_end_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="-7.5dip"
+                android:layout_marginRight="@dimen/dp15"
+                android:gravity="center"
+                android:text="1"
+                android:textColor="@color/white_8"
+                android:textSize="10.0sp" />
         </RelativeLayout>
-        <TextView android:textSize="@dimen/sp10" android:textColor="@drawable/tv_reset" android:gravity="center_horizontal" android:id="@+id/tv_reset" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/dp14" android:text="@string/adjust_reset" android:drawableTop="@drawable/icon_reset" android:layout_alignParentRight="true" />
+
+        <TextView
+            android:id="@+id/tv_reset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/dp14"
+            android:drawableTop="@drawable/icon_reset"
+            android:gravity="center_horizontal"
+            android:text="@string/adjust_reset"
+            android:textColor="@drawable/tv_reset"
+            android:textSize="@dimen/sp10" />
     </RelativeLayout>
-    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp35">
-        <RelativeLayout android:id="@+id/rl_buffing" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0">
-            <ImageView android:id="@+id/iv_buffing" android:background="@drawable/buffing_bg" android:layout_width="@dimen/dp16" android:layout_height="@dimen/dp16" android:button="@null" android:layout_centerHorizontal="true" />
-            <TextView android:textSize="@dimen/sp10" android:textColor="@color/white_8" android:id="@+id/tv_buffing" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp8" android:text="@string/beauty_buffing" android:layout_below="@id/iv_buffing" android:layout_centerHorizontal="true" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp35"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/rl_buffing"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0">
+
+            <ImageView
+                android:id="@+id/iv_buffing"
+                android:layout_width="@dimen/dp16"
+                android:layout_height="@dimen/dp16"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/buffing_bg"
+                android:button="@null" />
+
+            <TextView
+                android:id="@+id/tv_buffing"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_buffing"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/dp8"
+                android:text="@string/beauty_buffing"
+                android:textColor="@color/white_8"
+                android:textSize="@dimen/sp10" />
         </RelativeLayout>
-        <RelativeLayout android:id="@+id/rl_whitening" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0">
-            <ImageView android:id="@+id/iv_whitening" android:background="@drawable/whitening_bg" android:layout_width="@dimen/dp16" android:layout_height="@dimen/dp16" android:button="@null" android:layout_centerHorizontal="true" />
-            <TextView android:textSize="@dimen/sp10" android:textColor="@color/white_8" android:id="@+id/tv_whitening" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp8" android:text="@string/beauty_whitening" android:layout_below="@id/iv_whitening" android:layout_centerHorizontal="true" />
+
+        <RelativeLayout
+            android:id="@+id/rl_whitening"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0">
+
+            <ImageView
+                android:id="@+id/iv_whitening"
+                android:layout_width="@dimen/dp16"
+                android:layout_height="@dimen/dp16"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/whitening_bg"
+                android:button="@null" />
+
+            <TextView
+                android:id="@+id/tv_whitening"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_whitening"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/dp8"
+                android:text="@string/beauty_whitening"
+                android:textColor="@color/white_8"
+                android:textSize="@dimen/sp10" />
         </RelativeLayout>
-        <RelativeLayout android:id="@+id/rl_ruddy" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0">
-            <ImageView android:id="@+id/iv_ruddy" android:background="@drawable/ruddy_bg" android:layout_width="@dimen/dp16" android:layout_height="@dimen/dp16" android:button="@null" android:layout_centerHorizontal="true" />
-            <TextView android:textSize="@dimen/sp10" android:textColor="@color/white_8" android:id="@+id/tv_ruddy" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp8" android:text="@string/beauty_ruddy" android:layout_below="@id/iv_ruddy" android:layout_centerHorizontal="true" />
+
+        <RelativeLayout
+            android:id="@+id/rl_ruddy"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0">
+
+            <ImageView
+                android:id="@+id/iv_ruddy"
+                android:layout_width="@dimen/dp16"
+                android:layout_height="@dimen/dp16"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/ruddy_bg"
+                android:button="@null" />
+
+            <TextView
+                android:id="@+id/tv_ruddy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_ruddy"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/dp8"
+                android:text="@string/beauty_ruddy"
+                android:textColor="@color/white_8"
+                android:textSize="@dimen/sp10" />
         </RelativeLayout>
     </LinearLayout>
 </LinearLayout>

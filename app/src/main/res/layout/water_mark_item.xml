@@ -1,14 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <RelativeLayout android:orientation="vertical" android:id="@+id/rl_add" android:background="@drawable/asset_effect_bg" android:visibility="gone" android:layout_width="@dimen/dp64" android:layout_height="@dimen/dp64">
-        <ImageView android:background="@mipmap/ic_add" android:layout_width="@dimen/dp20" android:layout_height="@dimen/dp20" android:layout_marginTop="@dimen/dp14" android:layout_centerHorizontal="true" />
-        <RelativeLayout android:background="@color/text_bg_color" android:layout_width="fill_parent" android:layout_height="@dimen/dp17" android:layout_alignParentBottom="true">
-            <TextView android:textSize="@dimen/sp10" android:textColor="@color/white_8" android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/add" android:layout_centerInParent="true" />
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_add"
+        android:layout_width="@dimen/dp64"
+        android:layout_height="@dimen/dp64"
+        android:background="@drawable/asset_effect_bg"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="@dimen/dp20"
+            android:layout_height="@dimen/dp20"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp14"
+            android:background="@mipmap/ic_add" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/dp17"
+            android:layout_alignParentBottom="true"
+            android:background="@color/text_bg_color">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text="@string/add"
+                android:textColor="@color/white_8"
+                android:textSize="@dimen/sp10" />
         </RelativeLayout>
     </RelativeLayout>
-    <RelativeLayout android:id="@+id/real_image" android:background="@drawable/asset_effect_bg" android:layout_width="@dimen/dp64" android:layout_height="@dimen/dp64">
-        <ImageView android:id="@+id/iv_water_mark" android:layout_width="@dimen/dp52" android:layout_height="@dimen/dp52" android:layout_centerInParent="true" />
+
+    <RelativeLayout
+        android:id="@+id/real_image"
+        android:layout_width="@dimen/dp64"
+        android:layout_height="@dimen/dp64"
+        android:background="@drawable/asset_effect_bg">
+
+        <ImageView
+            android:id="@+id/iv_water_mark"
+            android:layout_width="@dimen/dp52"
+            android:layout_height="@dimen/dp52"
+            android:layout_centerInParent="true" />
     </RelativeLayout>
-    <ImageView android:id="@+id/image_cover" android:background="@mipmap/bg_recouse_select" android:layout_width="@dimen/dp64" android:layout_height="@dimen/dp64" />
+
+    <ImageView
+        android:id="@+id/image_cover"
+        android:layout_width="@dimen/dp64"
+        android:layout_height="@dimen/dp64"
+        android:background="@mipmap/bg_recouse_select" />
 </RelativeLayout>

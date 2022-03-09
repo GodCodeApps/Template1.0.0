@@ -1,25 +1,112 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:background="@android:color/transparent" android:layout_width="wrap_content" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <RelativeLayout android:layout_width="@dimen/dp56" android:layout_height="@dimen/dp56">
-        <RelativeLayout android:id="@+id/rl_more" android:visibility="gone" android:layout_width="@dimen/dp56" android:layout_height="@dimen/dp56">
-            <ImageView android:background="@mipmap/ic_more" android:layout_width="@dimen/dp20" android:layout_height="@dimen/dp20" android:layout_marginTop="@dimen/dp10" android:layout_centerHorizontal="true" />
-            <RelativeLayout android:background="@color/effect_name_bg" android:layout_width="fill_parent" android:layout_height="@dimen/dp15" android:layout_alignParentBottom="true">
-                <TextView android:textSize="@dimen/menu_item_text_size" android:textColor="@color/white_8" android:ellipsize="end" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/more" android:singleLine="true" android:layout_centerInParent="true" />
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent">
+
+    <RelativeLayout
+        android:layout_width="@dimen/dp56"
+        android:layout_height="@dimen/dp56">
+
+        <RelativeLayout
+            android:id="@+id/rl_more"
+            android:layout_width="@dimen/dp56"
+            android:layout_height="@dimen/dp56"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="@dimen/dp20"
+                android:layout_height="@dimen/dp20"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/dp10"
+                android:background="@mipmap/ic_more" />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/dp15"
+                android:layout_alignParentBottom="true"
+                android:background="@color/effect_name_bg">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text="@string/more"
+                    android:textColor="@color/white_8"
+                    android:textSize="@dimen/menu_item_text_size" />
             </RelativeLayout>
         </RelativeLayout>
-        <RelativeLayout android:id="@+id/rl_no" android:visibility="gone" android:layout_width="@dimen/dp56" android:layout_height="@dimen/dp56">
-            <ImageView android:id="@+id/iv_select_bg_no" android:layout_width="@dimen/dp56" android:layout_height="@dimen/dp56" />
-            <ImageView android:background="@mipmap/ic_no" android:layout_width="@dimen/dp20" android:layout_height="@dimen/dp20" android:layout_marginTop="@dimen/dp10" android:layout_centerHorizontal="true" />
-            <RelativeLayout android:background="@color/effect_name_bg" android:layout_width="fill_parent" android:layout_height="@dimen/dp15" android:layout_alignParentBottom="true">
-                <TextView android:textSize="@dimen/menu_item_text_size" android:textColor="@color/white_8" android:ellipsize="end" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/no" android:singleLine="true" android:layout_centerInParent="true" />
+
+        <RelativeLayout
+            android:id="@+id/rl_no"
+            android:layout_width="@dimen/dp56"
+            android:layout_height="@dimen/dp56"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/iv_select_bg_no"
+                android:layout_width="@dimen/dp56"
+                android:layout_height="@dimen/dp56" />
+
+            <ImageView
+                android:layout_width="@dimen/dp20"
+                android:layout_height="@dimen/dp20"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/dp10"
+                android:background="@mipmap/ic_no" />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/dp15"
+                android:layout_alignParentBottom="true"
+                android:background="@color/effect_name_bg">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text="@string/no"
+                    android:textColor="@color/white_8"
+                    android:textSize="@dimen/menu_item_text_size" />
             </RelativeLayout>
         </RelativeLayout>
-        <RelativeLayout android:id="@+id/rl_content" android:layout_width="@dimen/dp56" android:layout_height="@dimen/dp56">
-            <ImageView android:id="@+id/icon" android:layout_width="@dimen/dp28" android:layout_height="@dimen/dp28" android:layout_marginTop="@dimen/dp8" android:layout_centerHorizontal="true" />
-            <ImageView android:id="@+id/iv_select_bg" android:layout_width="@dimen/dp56" android:layout_height="@dimen/dp56" />
-            <RelativeLayout android:background="@color/effect_name_bg" android:layout_width="fill_parent" android:layout_height="@dimen/dp15" android:layout_alignParentBottom="true">
-                <TextView android:textSize="@dimen/menu_item_text_size" android:textColor="@color/white_8" android:ellipsize="end" android:id="@+id/name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:layout_centerInParent="true" />
+
+        <RelativeLayout
+            android:id="@+id/rl_content"
+            android:layout_width="@dimen/dp56"
+            android:layout_height="@dimen/dp56">
+
+            <ImageView
+                android:id="@+id/icon"
+                android:layout_width="@dimen/dp28"
+                android:layout_height="@dimen/dp28"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/dp8" />
+
+            <ImageView
+                android:id="@+id/iv_select_bg"
+                android:layout_width="@dimen/dp56"
+                android:layout_height="@dimen/dp56" />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/dp15"
+                android:layout_alignParentBottom="true"
+                android:background="@color/effect_name_bg">
+
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:textColor="@color/white_8"
+                    android:textSize="@dimen/menu_item_text_size" />
             </RelativeLayout>
         </RelativeLayout>
     </RelativeLayout>

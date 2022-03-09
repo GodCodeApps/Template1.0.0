@@ -1,6 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:background="@color/menu_bg" android:layout_width="fill_parent" android:layout_height="70.0dip"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <Switch android:id="@+id/switch_view" android:layout_width="wrap_content" android:layout_height="fill_parent" android:thumb="@drawable/switch_thumb" android:layout_centerVertical="true" android:track="@drawable/switch_track" />
-    <TextView android:textSize="@dimen/switch_hint_text_size" android:textColor="@color/switch_text_hint_color" android:gravity="center|right" android:id="@+id/switch_hint" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_centerVertical="true" />
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="70.0dip"
+    android:background="@color/menu_bg">
+
+    <Switch
+        android:id="@+id/switch_view"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_centerVertical="true"
+        android:thumb="@drawable/switch_thumb"
+        android:track="@drawable/switch_track" />
+
+    <TextView
+        android:id="@+id/switch_hint"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_centerVertical="true"
+        android:gravity="center|right"
+        android:textColor="@color/switch_text_hint_color"
+        android:textSize="@dimen/switch_hint_text_size" />
 </RelativeLayout>

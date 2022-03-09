@@ -15,7 +15,7 @@ afterEvaluate { project ->
 //                artifact androidJavadocsJar
                 groupId = GROUP_ID
                 artifactId = 'video-editor-sdk'
-                version = '0.0.1-SNAPSHOT'
+                version = '0.0.13-SNAPSHOT'
                 description = '视频编辑SDK-Core'
             }
         }

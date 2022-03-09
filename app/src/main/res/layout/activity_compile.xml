@@ -1,10 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout android:background="#ff101010" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <ImageView android:id="@+id/iv_video" android:layout_width="@dimen/dp77" android:layout_height="@dimen/dp77" android:layout_marginTop="@dimen/dp30" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
-    <ImageView android:background="@mipmap/ic_compile_completed" android:layout_width="@dimen/dp50" android:layout_height="@dimen/dp50" android:layout_marginTop="@dimen/dp25" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/iv_video" />
-    <TextView android:textSize="@dimen/sp12" android:textColor="#fffc2b55" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp85" android:text="@string/saved" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/iv_video" />
-    <View android:background="#7c979797" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginTop="220.0dip" app:layout_constraintTop_toTopOf="parent" />
-    <ImageView android:id="@+id/iv_compile_back" android:background="@mipmap/ic_draft_back" android:layout_width="@dimen/dp18" android:layout_height="@dimen/dp18" android:layout_marginLeft="@dimen/dp13" android:layout_marginTop="@dimen/dp32" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
-    <ImageView android:id="@+id/iv_compile_home" android:background="@mipmap/ic_compile_home" android:layout_width="@dimen/dp18" android:layout_height="@dimen/dp18" android:layout_marginRight="@dimen/dp13" app:layout_constraintBottom_toBottomOf="@id/iv_compile_back" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="@id/iv_compile_back" />
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ff101010">
+
+    <ImageView
+        android:id="@+id/iv_video"
+        android:layout_width="@dimen/dp77"
+        android:layout_height="@dimen/dp77"
+        android:layout_marginTop="@dimen/dp30"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:layout_width="@dimen/dp50"
+        android:layout_height="@dimen/dp50"
+        android:layout_marginTop="@dimen/dp25"
+        android:background="@mipmap/ic_compile_completed"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_video" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp85"
+        android:text="@string/saved"
+        android:textColor="#fffc2b55"
+        android:textSize="@dimen/sp12"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_video" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1.0dip"
+        android:layout_marginTop="220.0dip"
+        android:background="#7c979797"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/iv_compile_back"
+        android:layout_width="@dimen/dp18"
+        android:layout_height="@dimen/dp18"
+        android:layout_marginLeft="@dimen/dp13"
+        android:layout_marginTop="@dimen/dp32"
+        android:background="@mipmap/ic_draft_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_compile_home"
+        android:layout_width="@dimen/dp18"
+        android:layout_height="@dimen/dp18"
+        android:layout_marginRight="@dimen/dp13"
+        android:background="@mipmap/ic_compile_home"
+        app:layout_constraintBottom_toBottomOf="@id/iv_compile_back"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/iv_compile_back" />
 </androidx.constraintlayout.widget.ConstraintLayout>

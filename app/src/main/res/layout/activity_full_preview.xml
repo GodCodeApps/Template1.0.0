@@ -1,12 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <RelativeLayout android:id="@+id/edit_preview_view" android:layout_width="fill_parent" android:layout_height="fill_parent" />
-    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="55.0dip" android:layout_alignParentBottom="true">
-        <ImageView android:id="@+id/full_preview_play" android:layout_width="@dimen/dp18" android:layout_height="@dimen/dp18" android:layout_marginLeft="@dimen/dp17p5" app:srcCompat="@mipmap/control_bar_ic_play" />
-        <TextView android:textColor="#ccffffff" android:id="@+id/full_preview_now" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="7.0dip" android:layout_marginRight="7.0dip" android:text="00:00" />
-        <SeekBar android:id="@+id/full_preview_seekBar" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" />
-        <TextView android:textColor="#ccffffff" android:id="@+id/full_preview_total" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="7.0dip" android:layout_marginRight="7.0dip" android:text="00:00" />
-        <ImageView android:id="@+id/full_preview_close" android:layout_width="@dimen/dp18" android:layout_height="@dimen/dp18" android:layout_marginRight="@dimen/dp17p5" app:srcCompat="@drawable/pack_up" />
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <RelativeLayout
+        android:id="@+id/edit_preview_view"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="55.0dip"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/full_preview_play"
+            android:layout_width="@dimen/dp18"
+            android:layout_height="@dimen/dp18"
+            android:layout_marginLeft="@dimen/dp17p5"
+            app:srcCompat="@mipmap/control_bar_ic_play" />
+
+        <TextView
+            android:id="@+id/full_preview_now"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="7.0dip"
+            android:layout_marginRight="7.0dip"
+            android:text="00:00"
+            android:textColor="#ccffffff" />
+
+        <SeekBar
+            android:id="@+id/full_preview_seekBar"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0" />
+
+        <TextView
+            android:id="@+id/full_preview_total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="7.0dip"
+            android:layout_marginRight="7.0dip"
+            android:text="00:00"
+            android:textColor="#ccffffff" />
+
+        <ImageView
+            android:id="@+id/full_preview_close"
+            android:layout_width="@dimen/dp18"
+            android:layout_height="@dimen/dp18"
+            android:layout_marginRight="@dimen/dp17p5"
+            app:srcCompat="@drawable/pack_up" />
     </LinearLayout>
 </RelativeLayout>

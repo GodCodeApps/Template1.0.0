@@ -1,21 +1,122 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:id="@+id/main_layout" android:background="#00000000" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <View android:id="@+id/view_base_line" android:background="#ff494949" android:layout_width="fill_parent" android:layout_height="5.0dip" android:layout_marginTop="8.0dip" android:layout_centerVertical="true" />
-    <View android:id="@+id/view_base_line_top" android:background="#ff494949" android:layout_width="0.0dip" android:layout_height="5.0dip" android:layout_marginTop="8.0dip" android:layout_centerVertical="true" />
-    <View android:id="@+id/indicator_view" android:background="#ffd0021b" android:layout_width="2.0dip" android:layout_height="10.0dip" android:layout_marginLeft="10.0dip" android:layout_marginTop="@dimen/dp20" android:layout_centerVertical="true" />
-    <RelativeLayout android:id="@+id/handle_layout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp10" android:layout_centerVertical="true">
-        <ImageView android:id="@+id/leftHandle" android:background="@mipmap/ic_music_seek_bar" android:layout_width="10.0dip" android:layout_height="20.0dip" />
-        <ImageView android:id="@+id/rightHandle" android:background="@mipmap/ic_music_seek_bar" android:layout_width="10.0dip" android:layout_height="20.0dip" android:layout_alignParentRight="true" />
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#00000000">
+
+    <View
+        android:id="@+id/view_base_line"
+        android:layout_width="fill_parent"
+        android:layout_height="5.0dip"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="8.0dip"
+        android:background="#ff494949" />
+
+    <View
+        android:id="@+id/view_base_line_top"
+        android:layout_width="0.0dip"
+        android:layout_height="5.0dip"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="8.0dip"
+        android:background="#ff494949" />
+
+    <View
+        android:id="@+id/indicator_view"
+        android:layout_width="2.0dip"
+        android:layout_height="10.0dip"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10.0dip"
+        android:layout_marginTop="@dimen/dp20"
+        android:background="#ffd0021b" />
+
+    <RelativeLayout
+        android:id="@+id/handle_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="@dimen/dp10">
+
+        <ImageView
+            android:id="@+id/leftHandle"
+            android:layout_width="10.0dip"
+            android:layout_height="20.0dip"
+            android:background="@mipmap/ic_music_seek_bar" />
+
+        <ImageView
+            android:id="@+id/rightHandle"
+            android:layout_width="10.0dip"
+            android:layout_height="20.0dip"
+            android:layout_alignParentRight="true"
+            android:background="@mipmap/ic_music_seek_bar" />
     </RelativeLayout>
-    <TextView android:textSize="12.0sp" android:textColor="@color/white_8" android:id="@+id/select_music_time" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2.0dip" android:text="00:00" android:layout_below="@id/handle_layout" />
-    <RelativeLayout android:id="@+id/real_follow_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2.0dip" android:layout_below="@id/handle_layout">
-        <TextView android:textSize="12.0sp" android:textColor="@color/white_8" android:id="@+id/tv_follow_left" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="00:00" />
-        <TextView android:textSize="12.0sp" android:textColor="@color/white_8" android:id="@+id/tv_follow_right" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="00:00" android:layout_alignParentRight="true" />
+
+    <TextView
+        android:id="@+id/select_music_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/handle_layout"
+        android:layout_marginTop="2.0dip"
+        android:text="00:00"
+        android:textColor="@color/white_8"
+        android:textSize="12.0sp"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/real_follow_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/handle_layout"
+        android:layout_marginTop="2.0dip">
+
+        <TextView
+            android:id="@+id/tv_follow_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="00:00"
+            android:textColor="@color/white_8"
+            android:textSize="12.0sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_follow_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="00:00"
+            android:textColor="@color/white_8"
+            android:textSize="12.0sp"
+            android:visibility="gone" />
     </RelativeLayout>
-    <TextView android:textSize="12.0sp" android:textColor="@color/white_8" android:id="@+id/tv_music_time_follow" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2.0dip" android:layout_below="@id/handle_layout" />
-    <RelativeLayout android:id="@+id/bottom_time_layout" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true">
-        <TextView android:textColor="@color/white_8" android:id="@+id/leftTime" android:layout_width="10.0dip" android:layout_height="20.0dip" />
-        <TextView android:textColor="@color/white_8" android:id="@+id/rightTime" android:layout_width="10.0dip" android:layout_height="20.0dip" android:layout_alignParentRight="true" />
+
+    <TextView
+        android:id="@+id/tv_music_time_follow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/handle_layout"
+        android:layout_marginTop="2.0dip"
+        android:textColor="@color/white_8"
+        android:textSize="12.0sp"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/bottom_time_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/leftTime"
+            android:layout_width="10.0dip"
+            android:layout_height="20.0dip"
+            android:textColor="@color/white_8" />
+
+        <TextView
+            android:id="@+id/rightTime"
+            android:layout_width="10.0dip"
+            android:layout_height="20.0dip"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/white_8" />
     </RelativeLayout>
 </RelativeLayout>

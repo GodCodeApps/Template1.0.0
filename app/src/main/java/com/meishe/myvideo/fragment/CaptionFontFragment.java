@@ -60,11 +60,11 @@ public class CaptionFontFragment extends BaseFragment {
     /* access modifiers changed from: protected */
     @Override // com.meishe.myvideo.fragment.BaseFragment
     public void onLazyLoad() {
-        TypefaceUtil instance = TypefaceUtil.getInstance(getContext());
-        instance.setTypeface(this.mTvFontFangJianTi, "font/FZFSJW.ttf");
-        instance.setTypeface(this.mTvFontShuJianTi, "font/FZSSJW.TTF");
-        instance.setTypeface(this.mTvFontZhuShiTi, "font/YRDZST.ttf");
-        instance.setTypeface(this.mTvFontWenYiTi, "font/ZKWYJW.TTF");
+//        TypefaceUtil instance = TypefaceUtil.getInstance(getContext());
+//        instance.setTypeface(this.mTvFontFangJianTi, "font/FZFSJW.ttf");
+//        instance.setTypeface(this.mTvFontShuJianTi, "font/FZSSJW.TTF");
+//        instance.setTypeface(this.mTvFontZhuShiTi, "font/YRDZST.ttf");
+//        instance.setTypeface(this.mTvFontWenYiTi, "font/ZKWYJW.TTF");
     }
 
     /* access modifiers changed from: protected */

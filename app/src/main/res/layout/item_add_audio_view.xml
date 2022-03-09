@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <com.meicam.sdk.NvsWaveformView android:id="@+id/view_sdk_wave_form" android:layout_width="fill_parent" android:layout_height="@dimen/track_view_real_height" />
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="horizontal">
+
+    <com.meicam.sdk.NvsWaveformView
+        android:id="@+id/view_sdk_wave_form"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/track_view_real_height" />
 </LinearLayout>

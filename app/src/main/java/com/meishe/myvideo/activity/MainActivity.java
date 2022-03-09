@@ -15,8 +15,10 @@ import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
+
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
 import com.meicam.sdk.NvsStreamingContext;
 import com.meishe.common.utils.CollectionUtils;
 import com.meishe.common.utils.CustomDialogUtil;
@@ -39,6 +41,7 @@ import com.meishe.myvideo.util.asset.NvAssetManager;
 import com.meishe.myvideo.view.PrivacyPolicyDialog;
 import com.meishe.myvideoapp.R;
 import com.meishe.player.common.Constants;
+
 import java.io.File;
 import java.lang.ref.WeakReference;
 import java.util.ArrayList;
@@ -111,11 +114,11 @@ public class MainActivity extends BasePermissionActivity {
     /* access modifiers changed from: protected */
     @Override // com.meishe.myvideo.activity.BaseActivity
     public void initViews() {
-        this.mManageListview = (RecyclerView) findViewById(R.id.manage_listview);
-        this.mSettingButton = (ImageButton) findViewById(R.id.bt_setting);
-        this.mManageListview.setLayoutManager(new LinearLayoutManager(this.mContext, 1, false));
-        this.mManageListAdapter = new ManageListAdapter(this, this.mDraftData);
-        this.mManageListAdapter.setOnItemClickListener(new ManageListAdapter.OnItemClickListener() {
+        mManageListview = findViewById(R.id.manage_listview);
+        mSettingButton = findViewById(R.id.bt_setting);
+        mManageListview.setLayoutManager(new LinearLayoutManager(this, RecyclerView.VERTICAL, false));
+        mManageListAdapter = new ManageListAdapter(this, this.mDraftData);
+        mManageListAdapter.setOnItemClickListener(new ManageListAdapter.OnItemClickListener() {
             /* class com.meishe.myvideo.activity.MainActivity.AnonymousClass1 */
 
             @Override // com.meishe.myvideo.adapter.ManageListAdapter.OnItemClickListener
@@ -139,7 +142,7 @@ public class MainActivity extends BasePermissionActivity {
         this.mManageListview.addItemDecoration(new SpaceItemDecoration(0, 0));
         this.mLlDelete = findViewById(R.id.ll_delete);
         findViewById(R.id.bt_delete).setOnClickListener(this);
-        this.mLlDelete.setVisibility(8);
+        this.mLlDelete.setVisibility(View.GONE);
         this.mLlDelete.setOnClickListener(this);
         this.mManageTextView = (TextView) findViewById(R.id.manage_textView);
         this.mManageTextView.setOnClickListener(this);
@@ -524,11 +527,11 @@ public class MainActivity extends BasePermissionActivity {
     }
 
     private void showDeleteDialog() {
-        this.mLlDelete.setVisibility(0);
+        this.mLlDelete.setVisibility(View.VISIBLE);
     }
 
     private void closeDeleteDialog() {
-        this.mLlDelete.setVisibility(8);
+        this.mLlDelete.setVisibility(View.GONE);
     }
 
     private void showPrivacyDialog() {

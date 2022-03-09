@@ -1,10 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:background="@color/black" android:layout_width="fill_parent" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <RelativeLayout android:id="@+id/bottom_layout" android:layout_width="fill_parent" android:layout_height="@dimen/dp261">
-        <EditText android:textSize="@dimen/sp16" android:textColor="@color/white_8" android:id="@+id/et_caption_input" android:background="@drawable/editor_caption_input_corner" android:paddingLeft="@dimen/dp5" android:paddingRight="@dimen/dp5" android:layout_width="fill_parent" android:layout_height="@dimen/dp40" android:layout_marginLeft="@dimen/dp13" android:layout_marginTop="@dimen/dp5" android:layout_marginRight="@dimen/dp13" android:layout_marginBottom="@dimen/dp5" android:textCursorDrawable="@drawable/editor_caption_input_cursor" />
-        <com.google.android.material.tabs.TabLayout android:layout_gravity="left" android:id="@+id/captionStyleTab" android:layout_width="fill_parent" android:layout_height="@dimen/dp40" android:layout_toLeftOf="@id/iv_confirm" android:layout_below="@id/et_caption_input" app:tabIndicatorColor="#ff4a90e2" app:tabMode="scrollable" app:tabSelectedTextColor="#ff4a90e2" app:tabTextAppearance="@style/tabLayoutTextStyle" app:tabTextColor="#ff909293" />
-        <com.meishe.myvideo.view.CustomViewPager android:id="@+id/viewPager" android:layout_width="fill_parent" android:layout_height="@dimen/dp170" android:layout_below="@id/captionStyleTab" />
-        <ImageView android:id="@+id/iv_confirm" android:background="@mipmap/ic_record_confirm" android:layout_width="@dimen/dp25" android:layout_height="@dimen/dp25" android:layout_marginLeft="@dimen/dp12" android:layout_marginTop="@dimen/dp56" android:layout_alignParentTop="true" android:layout_alignParentRight="true" />
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/black">
+
+    <RelativeLayout
+        android:id="@+id/bottom_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/dp261">
+
+        <EditText
+            android:id="@+id/et_caption_input"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/dp40"
+            android:layout_marginLeft="@dimen/dp13"
+            android:layout_marginTop="@dimen/dp5"
+            android:layout_marginRight="@dimen/dp13"
+            android:layout_marginBottom="@dimen/dp5"
+            android:background="@drawable/editor_caption_input_corner"
+            android:paddingLeft="@dimen/dp5"
+            android:paddingRight="@dimen/dp5"
+            android:textColor="@color/white_8"
+            android:textCursorDrawable="@drawable/editor_caption_input_cursor"
+            android:textSize="@dimen/sp16" />
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/captionStyleTab"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/dp40"
+            android:layout_below="@id/et_caption_input"
+            android:layout_gravity="left"
+            android:layout_toLeftOf="@id/iv_confirm"
+            app:tabIndicatorColor="#ff4a90e2"
+            app:tabMode="scrollable"
+            app:tabSelectedTextColor="#ff4a90e2"
+            app:tabTextAppearance="@style/tabLayoutTextStyle"
+            app:tabTextColor="#ff909293" />
+
+        <com.meishe.myvideo.view.CustomViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/dp170"
+            android:layout_below="@id/captionStyleTab" />
+
+        <ImageView
+            android:id="@+id/iv_confirm"
+            android:layout_width="@dimen/dp25"
+            android:layout_height="@dimen/dp25"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="@dimen/dp12"
+            android:layout_marginTop="@dimen/dp56"
+            android:background="@mipmap/ic_record_confirm" />
     </RelativeLayout>
 </RelativeLayout>

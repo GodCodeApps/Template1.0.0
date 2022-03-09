@@ -1,25 +1,128 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:layout_width="fill_parent" android:layout_height="@dimen/dp70"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <HorizontalScrollView android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="@dimen/dp45" android:layout_centerVertical="true">
-        <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="fill_parent">
-            <RelativeLayout android:id="@+id/rl_original" android:background="@drawable/ratio_bg" android:layout_width="@dimen/dp35" android:layout_height="@dimen/dp45" android:layout_marginLeft="@dimen/dp13">
-                <TextView android:textSize="10.0sp" android:textColor="@drawable/view_ratio_text_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="原始" android:shadowColor="#ff000000" android:shadowRadius="3.0" android:layout_centerInParent="true" />
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="@dimen/dp70">
+
+    <HorizontalScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/dp45"
+        android:layout_centerVertical="true"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/rl_original"
+                android:layout_width="@dimen/dp35"
+                android:layout_height="@dimen/dp45"
+                android:layout_marginLeft="@dimen/dp13"
+                android:background="@drawable/ratio_bg">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:shadowColor="#ff000000"
+                    android:shadowRadius="3.0"
+                    android:text="原始"
+                    android:textColor="@drawable/view_ratio_text_color"
+                    android:textSize="10.0sp" />
             </RelativeLayout>
-            <RelativeLayout android:id="@+id/rl_9_16" android:background="@drawable/ratio_bg" android:layout_width="@dimen/dp30" android:layout_height="@dimen/dp45" android:layout_marginLeft="@dimen/dp15">
-                <TextView android:textSize="10.0sp" android:textColor="@drawable/view_ratio_text_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="9:16" android:shadowColor="#ff000000" android:shadowRadius="3.0" android:layout_centerInParent="true" />
+
+            <RelativeLayout
+                android:id="@+id/rl_9_16"
+                android:layout_width="@dimen/dp30"
+                android:layout_height="@dimen/dp45"
+                android:layout_marginLeft="@dimen/dp15"
+                android:background="@drawable/ratio_bg">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:shadowColor="#ff000000"
+                    android:shadowRadius="3.0"
+                    android:text="9:16"
+                    android:textColor="@drawable/view_ratio_text_color"
+                    android:textSize="10.0sp" />
             </RelativeLayout>
-            <RelativeLayout android:id="@+id/rl_3_4" android:background="@drawable/ratio_bg" android:layout_width="@dimen/dp34" android:layout_height="@dimen/dp45" android:layout_marginLeft="@dimen/dp15">
-                <TextView android:textSize="10.0sp" android:textColor="@drawable/view_ratio_text_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="3:4" android:shadowColor="#ff000000" android:shadowRadius="3.0" android:layout_centerInParent="true" />
+
+            <RelativeLayout
+                android:id="@+id/rl_3_4"
+                android:layout_width="@dimen/dp34"
+                android:layout_height="@dimen/dp45"
+                android:layout_marginLeft="@dimen/dp15"
+                android:background="@drawable/ratio_bg">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:shadowColor="#ff000000"
+                    android:shadowRadius="3.0"
+                    android:text="3:4"
+                    android:textColor="@drawable/view_ratio_text_color"
+                    android:textSize="10.0sp" />
             </RelativeLayout>
-            <RelativeLayout android:id="@+id/rl_1_1" android:background="@drawable/ratio_bg" android:layout_width="@dimen/dp45" android:layout_height="@dimen/dp45" android:layout_marginLeft="@dimen/dp15">
-                <TextView android:textSize="10.0sp" android:textColor="@drawable/view_ratio_text_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="1:1" android:shadowColor="#ff000000" android:shadowRadius="3.0" android:layout_centerInParent="true" />
+
+            <RelativeLayout
+                android:id="@+id/rl_1_1"
+                android:layout_width="@dimen/dp45"
+                android:layout_height="@dimen/dp45"
+                android:layout_marginLeft="@dimen/dp15"
+                android:background="@drawable/ratio_bg">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:shadowColor="#ff000000"
+                    android:shadowRadius="3.0"
+                    android:text="1:1"
+                    android:textColor="@drawable/view_ratio_text_color"
+                    android:textSize="10.0sp" />
             </RelativeLayout>
-            <RelativeLayout android:layout_gravity="bottom" android:id="@+id/rl_4_3" android:background="@drawable/ratio_bg" android:layout_width="@dimen/dp45" android:layout_height="@dimen/dp34" android:layout_marginLeft="@dimen/dp15">
-                <TextView android:textSize="10.0sp" android:textColor="@drawable/view_ratio_text_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="4:3" android:shadowColor="#ff000000" android:shadowRadius="3.0" android:layout_centerInParent="true" />
+
+            <RelativeLayout
+                android:id="@+id/rl_4_3"
+                android:layout_width="@dimen/dp45"
+                android:layout_height="@dimen/dp34"
+                android:layout_gravity="bottom"
+                android:layout_marginLeft="@dimen/dp15"
+                android:background="@drawable/ratio_bg">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:shadowColor="#ff000000"
+                    android:shadowRadius="3.0"
+                    android:text="4:3"
+                    android:textColor="@drawable/view_ratio_text_color"
+                    android:textSize="10.0sp" />
             </RelativeLayout>
-            <RelativeLayout android:id="@+id/rl_16_9" android:background="@drawable/ratio_bg" android:layout_width="@dimen/dp45" android:layout_height="@dimen/dp26" android:layout_marginLeft="@dimen/dp15" android:layout_marginTop="@dimen/dp19" android:layout_marginRight="@dimen/dp30">
-                <TextView android:textSize="10.0sp" android:textColor="@drawable/view_ratio_text_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="16:9" android:shadowColor="#ff000000" android:shadowRadius="3.0" android:layout_centerInParent="true" />
+
+            <RelativeLayout
+                android:id="@+id/rl_16_9"
+                android:layout_width="@dimen/dp45"
+                android:layout_height="@dimen/dp26"
+                android:layout_marginLeft="@dimen/dp15"
+                android:layout_marginTop="@dimen/dp19"
+                android:layout_marginRight="@dimen/dp30"
+                android:background="@drawable/ratio_bg">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:shadowColor="#ff000000"
+                    android:shadowRadius="3.0"
+                    android:text="16:9"
+                    android:textColor="@drawable/view_ratio_text_color"
+                    android:textSize="10.0sp" />
             </RelativeLayout>
         </LinearLayout>
     </HorizontalScrollView>

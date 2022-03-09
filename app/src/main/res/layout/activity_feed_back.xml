@@ -1,18 +1,113 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:orientation="vertical" android:background="@color/menu_bg" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <RelativeLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@+id/top_operation_bar_layout" android:paddingLeft="@dimen/dp13" android:paddingTop="@dimen/dp37" android:paddingRight="@dimen/dp13" android:layout_width="fill_parent" android:layout_height="wrap_content">
-        <ImageView android:id="@+id/icon_back" android:background="@mipmap/ic_draft_back" android:layout_width="@dimen/dp21" android:layout_height="@dimen/dp21" />
-        <TextView android:textSize="@dimen/sp16" android:textColor="@color/white_8" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/setting_feed_back" android:layout_centerHorizontal="true" />
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/menu_bg"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/top_operation_bar_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/dp13"
+        android:paddingTop="@dimen/dp37"
+        android:paddingRight="@dimen/dp13">
+
+        <ImageView
+            android:id="@+id/icon_back"
+            android:layout_width="@dimen/dp21"
+            android:layout_height="@dimen/dp21"
+            android:background="@mipmap/ic_draft_back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="@string/setting_feed_back"
+            android:textColor="@color/white_8"
+            android:textSize="@dimen/sp16" />
     </RelativeLayout>
-    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/dp15" android:layout_marginTop="@dimen/dp44" android:layout_marginRight="@dimen/dp15">
-        <TextView android:textSize="@dimen/sp14" android:textColor="@color/white_8" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/feedback_ques_desc" />
-        <RelativeLayout android:orientation="vertical" android:background="@drawable/feed_back_bg" android:layout_width="fill_parent" android:layout_height="212.0dip" android:layout_marginTop="@dimen/dp12">
-            <EditText android:textSize="@dimen/sp14" android:textColor="@color/white_8" android:textColorHint="@color/color_white_33" android:gravity="start" android:id="@+id/edit_input_content" android:background="@null" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/dp15" android:layout_marginTop="@dimen/dp13" android:layout_marginRight="@dimen/dp15" android:hint="@string/feed_back_desc" android:layout_above="@id/image_select" />
-            <ImageView android:id="@+id/image_select" android:layout_width="@dimen/dp40" android:layout_height="@dimen/dp40" android:layout_marginLeft="@dimen/dp15" android:layout_marginBottom="@dimen/dp15" android:src="@mipmap/icon_feed_back_pic" android:layout_alignParentBottom="true" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginLeft="@dimen/dp15"
+        android:layout_marginTop="@dimen/dp44"
+        android:layout_marginRight="@dimen/dp15"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/feedback_ques_desc"
+            android:textColor="@color/white_8"
+            android:textSize="@dimen/sp14" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="212.0dip"
+            android:layout_marginTop="@dimen/dp12"
+            android:background="@drawable/feed_back_bg"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/edit_input_content"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_above="@id/image_select"
+                android:layout_marginLeft="@dimen/dp15"
+                android:layout_marginTop="@dimen/dp13"
+                android:layout_marginRight="@dimen/dp15"
+                android:background="@null"
+                android:gravity="start"
+                android:hint="@string/feed_back_desc"
+                android:textColor="@color/white_8"
+                android:textColorHint="@color/color_white_33"
+                android:textSize="@dimen/sp14" />
+
+            <ImageView
+                android:id="@+id/image_select"
+                android:layout_width="@dimen/dp40"
+                android:layout_height="@dimen/dp40"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="@dimen/dp15"
+                android:layout_marginBottom="@dimen/dp15"
+                android:src="@mipmap/icon_feed_back_pic" />
         </RelativeLayout>
-        <TextView android:textSize="@dimen/sp14" android:textColor="@color/white_8" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp30" android:text="@string/feed_back_contact_way" />
-        <EditText android:textSize="@dimen/sp14" android:textColor="@color/white_8" android:textColorHint="@color/color_white_33" android:gravity="center_vertical" android:id="@+id/edit_input_phone" android:background="@drawable/feed_back_bg" android:paddingLeft="@dimen/dp15" android:layout_width="fill_parent" android:layout_height="@dimen/dp53" android:layout_marginTop="@dimen/dp15" android:hint="@string/feed_back_input_contact_way" />
-        <TextView android:textSize="@dimen/sp16" android:textColor="@color/white_8" android:gravity="center" android:id="@+id/tv_submit" android:background="@drawable/feed_back_commit_bg" android:clickable="false" android:layout_width="fill_parent" android:layout_height="@dimen/dp45" android:layout_marginTop="@dimen/dp60" android:text="@string/feed_back_submit" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp30"
+            android:text="@string/feed_back_contact_way"
+            android:textColor="@color/white_8"
+            android:textSize="@dimen/sp14" />
+
+        <EditText
+            android:id="@+id/edit_input_phone"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/dp53"
+            android:layout_marginTop="@dimen/dp15"
+            android:background="@drawable/feed_back_bg"
+            android:gravity="center_vertical"
+            android:hint="@string/feed_back_input_contact_way"
+            android:paddingLeft="@dimen/dp15"
+            android:textColor="@color/white_8"
+            android:textColorHint="@color/color_white_33"
+            android:textSize="@dimen/sp14" />
+
+        <TextView
+            android:id="@+id/tv_submit"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/dp45"
+            android:layout_marginTop="@dimen/dp60"
+            android:background="@drawable/feed_back_commit_bg"
+            android:clickable="false"
+            android:gravity="center"
+            android:text="@string/feed_back_submit"
+            android:textColor="@color/white_8"
+            android:textSize="@dimen/sp16" />
     </LinearLayout>
 </LinearLayout>

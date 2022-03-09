@@ -1,11 +1,82 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/item_main" android:background="@color/black" android:paddingLeft="@dimen/dp15" android:layout_width="fill_parent" android:layout_height="165.0dip"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <View android:layout_width="1.0dip" android:layout_height="165.0dip" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
-    <TextView android:textSize="@dimen/sp12" android:textColor="@color/white_8" android:gravity="center_vertical" android:id="@+id/tv_rename" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginLeft="@dimen/dp35" android:text="@string/draft_manage_rename" app:layout_constraintBottom_toTopOf="@id/tv_copy" app:layout_constraintTop_toTopOf="parent" />
-    <ImageView android:background="@mipmap/draft_manager_rename" android:layout_width="@dimen/dp15" android:layout_height="@dimen/dp15" android:layout_marginRight="@dimen/dp20" app:layout_constraintBottom_toBottomOf="@id/tv_rename" app:layout_constraintEnd_toStartOf="@id/tv_rename" app:layout_constraintTop_toTopOf="@id/tv_rename" />
-    <ImageView android:background="@mipmap/draft_manager_copy" android:layout_width="@dimen/dp15" android:layout_height="@dimen/dp15" android:layout_marginRight="@dimen/dp20" app:layout_constraintBottom_toBottomOf="@id/tv_copy" app:layout_constraintEnd_toStartOf="@id/tv_copy" app:layout_constraintTop_toTopOf="@id/tv_copy" />
-    <TextView android:textSize="@dimen/sp12" android:textColor="@color/white_8" android:gravity="center_vertical" android:id="@+id/tv_copy" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginLeft="@dimen/dp35" android:text="@string/draft_manager_copy" app:layout_constraintBottom_toTopOf="@id/tv_delete" app:layout_constraintTop_toBottomOf="@id/tv_rename" />
-    <ImageView android:background="@mipmap/draft_manager_delete" android:layout_width="@dimen/dp15" android:layout_height="@dimen/dp15" android:layout_marginRight="@dimen/dp20" app:layout_constraintBottom_toBottomOf="@id/tv_delete" app:layout_constraintEnd_toStartOf="@id/tv_delete" app:layout_constraintTop_toTopOf="@id/tv_delete" />
-    <TextView android:textSize="@dimen/sp12" android:textColor="@color/white_8" android:gravity="center_vertical" android:id="@+id/tv_delete" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginLeft="@dimen/dp35" android:text="@string/draft_manager_delete" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toBottomOf="@id/tv_copy" />
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/item_main"
+    android:layout_width="fill_parent"
+    android:layout_height="165.0dip"
+    android:background="@color/black"
+    android:paddingLeft="@dimen/dp15">
+
+    <View
+        android:layout_width="1.0dip"
+        android:layout_height="165.0dip"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_rename"
+        android:layout_width="fill_parent"
+        android:layout_height="0.0dip"
+        android:layout_marginLeft="@dimen/dp35"
+        android:gravity="center_vertical"
+        android:text="@string/draft_manage_rename"
+        android:textColor="@color/white_8"
+        android:textSize="@dimen/sp12"
+        app:layout_constraintBottom_toTopOf="@id/tv_copy"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:layout_width="@dimen/dp15"
+        android:layout_height="@dimen/dp15"
+        android:layout_marginRight="@dimen/dp20"
+        android:background="@mipmap/draft_manager_rename"
+        app:layout_constraintBottom_toBottomOf="@id/tv_rename"
+        app:layout_constraintEnd_toStartOf="@id/tv_rename"
+        app:layout_constraintTop_toTopOf="@id/tv_rename" />
+
+    <ImageView
+        android:layout_width="@dimen/dp15"
+        android:layout_height="@dimen/dp15"
+        android:layout_marginRight="@dimen/dp20"
+        android:background="@mipmap/draft_manager_copy"
+        app:layout_constraintBottom_toBottomOf="@id/tv_copy"
+        app:layout_constraintEnd_toStartOf="@id/tv_copy"
+        app:layout_constraintTop_toTopOf="@id/tv_copy" />
+
+    <TextView
+        android:id="@+id/tv_copy"
+        android:layout_width="fill_parent"
+        android:layout_height="0.0dip"
+        android:layout_marginLeft="@dimen/dp35"
+        android:gravity="center_vertical"
+        android:text="@string/draft_manager_copy"
+        android:textColor="@color/white_8"
+        android:textSize="@dimen/sp12"
+        app:layout_constraintBottom_toTopOf="@id/tv_delete"
+        app:layout_constraintTop_toBottomOf="@id/tv_rename"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:layout_width="@dimen/dp15"
+        android:layout_height="@dimen/dp15"
+        android:layout_marginRight="@dimen/dp20"
+        android:background="@mipmap/draft_manager_delete"
+        app:layout_constraintBottom_toBottomOf="@id/tv_delete"
+        app:layout_constraintEnd_toStartOf="@id/tv_delete"
+        app:layout_constraintTop_toTopOf="@id/tv_delete" />
+
+    <TextView
+        android:id="@+id/tv_delete"
+        android:layout_width="fill_parent"
+        android:layout_height="0.0dip"
+        android:layout_marginLeft="@dimen/dp35"
+        android:gravity="center_vertical"
+        android:text="@string/draft_manager_delete"
+        android:textColor="@color/white_8"
+        android:textSize="@dimen/sp12"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_copy"
+        tools:ignore="MissingConstraints" />
 </androidx.constraintlayout.widget.ConstraintLayout>

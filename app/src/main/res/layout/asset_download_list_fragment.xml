@@ -1,15 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:background="@color/menu_bg" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout android:id="@+id/swipe_refresh_layout" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="fill_parent">
-        <androidx.recyclerview.widget.RecyclerView android:id="@+id/asset_recyclerviewList" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/menu_bg">
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_refresh_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:visibility="visible">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/asset_recyclerviewList"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
     </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
-    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/preloadingLayout" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="fill_parent">
-        <ProgressBar android:layout_width="50.0dip" android:layout_height="50.0dip" android:indeterminateDrawable="@drawable/progress_eight_petal_xml" android:indeterminateBehavior="repeat" />
-        <TextView android:textSize="19.0sp" android:textColor="#ff4d4f51" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="17.0dip" android:text="@string/asset_loading" />
+
+    <LinearLayout
+        android:id="@+id/preloadingLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#ffffffff"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ProgressBar
+            android:layout_width="50.0dip"
+            android:layout_height="50.0dip"
+            android:indeterminateBehavior="repeat"
+            android:indeterminateDrawable="@drawable/progress_eight_petal_xml" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="17.0dip"
+            android:text="@string/asset_loading"
+            android:textColor="#ff4d4f51"
+            android:textSize="19.0sp" />
     </LinearLayout>
-    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/loadFailedLayout" android:background="#ffffffff" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
-        <TextView android:textSize="19.0sp" android:textColor="#ffd0021b" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/asset_loadfailed" />
-        <Button android:textSize="12.0sp" android:textColor="#ffffffff" android:layout_gravity="center_horizontal" android:id="@+id/reloadAsset" android:background="#ff4a90e2" android:layout_width="80.0dip" android:layout_height="27.0dip" android:layout_marginTop="44.0dip" android:text="@string/retry" android:textAllCaps="false" />
+
+    <LinearLayout
+        android:id="@+id/loadFailedLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#ffffffff"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/asset_loadfailed"
+            android:textColor="#ffd0021b"
+            android:textSize="19.0sp" />
+
+        <Button
+            android:id="@+id/reloadAsset"
+            android:layout_width="80.0dip"
+            android:layout_height="27.0dip"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="44.0dip"
+            android:background="#ff4a90e2"
+            android:text="@string/retry"
+            android:textAllCaps="false"
+            android:textColor="#ffffffff"
+            android:textSize="12.0sp" />
     </LinearLayout>
 </RelativeLayout>

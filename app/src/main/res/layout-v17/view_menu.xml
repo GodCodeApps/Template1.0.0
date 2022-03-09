@@ -1,28 +1,142 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:background="@color/menu_bg" android:layout_width="fill_parent" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <LinearLayout android:orientation="horizontal" android:id="@+id/ll_menu_top" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="37.0dip">
-        <com.google.android.material.tabs.TabLayout android:id="@+id/tl_menu_top" android:layout_width="fill_parent" android:layout_height="wrap_content" app:tabIndicatorColor="@color/white" app:tabMode="scrollable" app:tabSelectedTextColor="@color/white" app:tabTextColor="@color/white_half_trans" />
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/menu_bg">
+
+    <LinearLayout
+        android:id="@+id/ll_menu_top"
+        android:layout_width="fill_parent"
+        android:layout_height="37.0dip"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tl_menu_top"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            app:tabIndicatorColor="@color/white"
+            app:tabMode="scrollable"
+            app:tabSelectedTextColor="@color/white"
+            app:tabTextColor="@color/white_half_trans" />
     </LinearLayout>
-    <LinearLayout android:orientation="horizontal" android:id="@+id/ll_menu_beauty_top" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="37.0dip">
-        <com.google.android.material.tabs.TabLayout android:layout_width="fill_parent" android:layout_height="wrap_content" app:tabIndicatorColor="@color/white" app:tabMode="scrollable" app:tabSelectedTextColor="@color/white_8" app:tabTextColor="@color/white_half_trans">
-            <com.google.android.material.tabs.TabItem android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="美颜" />
-            <com.google.android.material.tabs.TabItem android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="美妆" />
+
+    <LinearLayout
+        android:id="@+id/ll_menu_beauty_top"
+        android:layout_width="fill_parent"
+        android:layout_height="37.0dip"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <com.google.android.material.tabs.TabLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            app:tabIndicatorColor="@color/white"
+            app:tabMode="scrollable"
+            app:tabSelectedTextColor="@color/white_8"
+            app:tabTextColor="@color/white_half_trans">
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="美颜" />
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="美妆" />
         </com.google.android.material.tabs.TabLayout>
     </LinearLayout>
-    <LinearLayout android:orientation="horizontal" android:id="@+id/ll_middle_menu" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="60.0dip" android:layout_below="@id/ll_menu_top">
-        <ImageView android:layout_gravity="center_vertical" android:background="@mipmap/ic_multi_trans" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp10" />
-        <TextView android:textSize="@dimen/sp10" android:textColor="@color/white_8" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp10" android:text="@string/apply_all_clip" />
-        <com.meishe.myvideo.view.MYSeekBarView android:layout_gravity="center_vertical" android:id="@+id/editor_change_seek_bar" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp20" android:layout_marginRight="@dimen/dp20" />
+
+    <LinearLayout
+        android:id="@+id/ll_middle_menu"
+        android:layout_width="fill_parent"
+        android:layout_height="60.0dip"
+        android:layout_below="@id/ll_menu_top"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/dp10"
+            android:background="@mipmap/ic_multi_trans" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/dp10"
+            android:text="@string/apply_all_clip"
+            android:textColor="@color/white_8"
+            android:textSize="@dimen/sp10" />
+
+        <com.meishe.myvideo.view.MYSeekBarView
+            android:id="@+id/editor_change_seek_bar"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/dp20"
+            android:layout_marginRight="@dimen/dp20" />
     </LinearLayout>
-    <RelativeLayout android:layout_width="fill_parent" android:layout_height="@dimen/dp70" android:layout_below="@id/ll_middle_menu" android:layout_alignParentBottom="true">
-        <androidx.recyclerview.widget.RecyclerView android:id="@+id/menu_recycleView" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerInParent="true" />
-        <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@+id/linear_sub_recy" android:background="@color/black" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
-            <androidx.recyclerview.widget.RecyclerView android:id="@+id/sub_menu_recycleView" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/dp70"
+        android:layout_below="@id/ll_middle_menu"
+        android:layout_alignParentBottom="true">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/menu_recycleView"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" />
+
+        <LinearLayout
+            android:id="@+id/linear_sub_recy"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@color/black"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/sub_menu_recycleView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
         </LinearLayout>
-        <com.meishe.myvideo.view.RatioView android:id="@+id/ratio_view" android:background="@color/menu_bg" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/dp70" android:layout_toRightOf="@id/back_btn" android:layout_alignParentBottom="true" android:layout_toEndOf="@id/back_btn" />
-        <RelativeLayout android:id="@+id/back_btn" android:background="@drawable/shape_menu_back_bg" android:visibility="gone" android:layout_width="@dimen/menu_back_btn_width" android:layout_height="@dimen/menu_back_btn_height" android:layout_marginLeft="@dimen/menu_back_btn_margin_start" android:layout_marginRight="@dimen/menu_back_btn_margin_end" android:layout_centerVertical="true" android:layout_marginStart="@dimen/menu_back_btn_margin_start" android:layout_marginEnd="@dimen/menu_back_btn_margin_end" android:layout_alignParentStart="true">
-            <ImageView android:layout_width="@dimen/menu_back_btn_ic_width" android:layout_height="@dimen/menu_back_btn_ic_height" android:src="@mipmap/main_menu_ic_back" android:layout_centerInParent="true" />
+
+        <com.meishe.myvideo.view.RatioView
+            android:id="@+id/ratio_view"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/dp70"
+            android:layout_alignParentBottom="true"
+            android:layout_toEndOf="@id/back_btn"
+            android:layout_toRightOf="@id/back_btn"
+            android:background="@color/menu_bg"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:id="@+id/back_btn"
+            android:layout_width="@dimen/menu_back_btn_width"
+            android:layout_height="@dimen/menu_back_btn_height"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/menu_back_btn_margin_start"
+            android:layout_marginLeft="@dimen/menu_back_btn_margin_start"
+            android:layout_marginEnd="@dimen/menu_back_btn_margin_end"
+            android:layout_marginRight="@dimen/menu_back_btn_margin_end"
+            android:background="@drawable/shape_menu_back_bg"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="@dimen/menu_back_btn_ic_width"
+                android:layout_height="@dimen/menu_back_btn_ic_height"
+                android:layout_centerInParent="true"
+                android:src="@mipmap/main_menu_ic_back" />
         </RelativeLayout>
     </RelativeLayout>
 </RelativeLayout>

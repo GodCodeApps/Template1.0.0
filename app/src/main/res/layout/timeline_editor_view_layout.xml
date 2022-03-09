@@ -1,21 +1,95 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <com.meishe.myvideo.view.MYTimelineEditorRecyclerView android:id="@+id/editor_timeline_view_time_making_line_recycler" android:layout_width="fill_parent" android:layout_height="20.0dip" android:layout_marginTop="5.0dip" />
-    <RelativeLayout android:id="@+id/editor_main_track_parent" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/multi_thumbnail_sequence_main_margin">
-        <com.meishe.myvideo.ui.trackview.MultiThumbnailSequenceView android:id="@+id/editor_multi_thumbnail_sequence_view" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="@dimen/multi_thumbnail_sequence_height" android:overScrollMode="never" />
-        <com.meishe.myvideo.view.MYTimelineEditorRecyclerView android:id="@+id/editor_timeline_view_trans_recycler" android:layout_width="fill_parent" android:layout_height="@dimen/multi_thumbnail_sequence_height" />
-        <com.meishe.myvideo.view.MYTimelineEditorRecyclerView android:id="@+id/editor_timeline_view_cover_recycler" android:layout_width="fill_parent" android:layout_height="@dimen/multi_thumbnail_sequence_height" />
-        <LinearLayout android:orientation="horizontal" android:id="@+id/editor_timeline_view_linear_layout" android:layout_width="fill_parent" android:layout_height="@dimen/multi_thumbnail_sequence_height">
-            <RelativeLayout android:id="@+id/editor_timeline_view_container_relative" android:layout_width="wrap_content" android:layout_height="fill_parent" android:splitMotionEvents="false" />
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <com.meishe.myvideo.view.MYTimelineEditorRecyclerView
+        android:id="@+id/editor_timeline_view_time_making_line_recycler"
+        android:layout_width="fill_parent"
+        android:layout_height="20.0dip"
+        android:layout_marginTop="5.0dip" />
+
+    <RelativeLayout
+        android:id="@+id/editor_main_track_parent"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/multi_thumbnail_sequence_main_margin">
+
+        <com.meishe.myvideo.ui.trackview.MultiThumbnailSequenceView
+            android:id="@+id/editor_multi_thumbnail_sequence_view"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/multi_thumbnail_sequence_height"
+            android:overScrollMode="never"
+            android:scrollbars="none" />
+
+        <com.meishe.myvideo.view.MYTimelineEditorRecyclerView
+            android:id="@+id/editor_timeline_view_trans_recycler"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/multi_thumbnail_sequence_height" />
+
+        <com.meishe.myvideo.view.MYTimelineEditorRecyclerView
+            android:id="@+id/editor_timeline_view_cover_recycler"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/multi_thumbnail_sequence_height" />
+
+        <LinearLayout
+            android:id="@+id/editor_timeline_view_linear_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/multi_thumbnail_sequence_height"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/editor_timeline_view_container_relative"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:splitMotionEvents="false" />
         </LinearLayout>
-        <RelativeLayout android:id="@+id/rl_close_voice_root" android:layout_width="wrap_content" android:layout_height="@dimen/multi_thumbnail_sequence_height">
-            <LinearLayout android:orientation="vertical" android:id="@+id/ll_close_voice" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true">
-                <Button android:layout_gravity="center_horizontal" android:id="@+id/btn_close_original_voice" android:background="@drawable/cb_close_voice" android:layout_width="@dimen/menu_item_image_width" android:layout_height="@dimen/menu_item_image_height" />
-                <TextView android:textSize="@dimen/close_original_voice_text_size" android:textColor="@color/white_8" android:id="@+id/tv_close_voice_desc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp14" android:text="@string/close_original_voice" />
+
+        <RelativeLayout
+            android:id="@+id/rl_close_voice_root"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/multi_thumbnail_sequence_height">
+
+            <LinearLayout
+                android:id="@+id/ll_close_voice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/btn_close_original_voice"
+                    android:layout_width="@dimen/menu_item_image_width"
+                    android:layout_height="@dimen/menu_item_image_height"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/cb_close_voice" />
+
+                <TextView
+                    android:id="@+id/tv_close_voice_desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp14"
+                    android:text="@string/close_original_voice"
+                    android:textColor="@color/white_8"
+                    android:textSize="@dimen/close_original_voice_text_size" />
             </LinearLayout>
         </RelativeLayout>
-        <ImageView android:id="@+id/editor_add_clip_img" android:background="@mipmap/ic_add_material" android:layout_width="25.0dip" android:layout_height="25.0dip" android:layout_marginTop="12.0dip" android:layout_marginRight="@dimen/dp32" android:layout_alignParentRight="true" />
+
+        <ImageView
+            android:id="@+id/editor_add_clip_img"
+            android:layout_width="25.0dip"
+            android:layout_height="25.0dip"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="12.0dip"
+            android:layout_marginRight="@dimen/dp32"
+            android:background="@mipmap/ic_add_material" />
     </RelativeLayout>
-    <com.meishe.myvideo.view.MYLineView android:id="@+id/editor_line_view" android:background="@color/timeline_bg_color" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignTop="@id/editor_main_track_parent" />
+
+    <com.meishe.myvideo.view.MYLineView
+        android:id="@+id/editor_line_view"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/editor_main_track_parent"
+        android:background="@color/timeline_bg_color" />
 </RelativeLayout>

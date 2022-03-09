@@ -1,16 +1,90 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:background="#ff000000" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <RelativeLayout android:id="@+id/playerLayout" android:background="#ff000000" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="2.0dip" android:layout_marginTop="2.0dip" android:layout_marginRight="2.0dip" android:layout_marginBottom="40.0dip">
-        <com.meicam.sdk.NvsLiveWindowExt android:id="@+id/liveWindow" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_centerInParent="true" />
-        <com.meishe.player.view.CutRectLayout android:gravity="center" android:id="@+id/cut_view" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_centerInParent="true" />
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ff000000">
+
+    <RelativeLayout
+        android:id="@+id/playerLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginLeft="2.0dip"
+        android:layout_marginTop="2.0dip"
+        android:layout_marginRight="2.0dip"
+        android:layout_marginBottom="40.0dip"
+        android:background="#ff000000">
+
+        <com.meicam.sdk.NvsLiveWindowExt
+            android:id="@+id/liveWindow"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_centerInParent="true" />
+
+        <com.meishe.player.view.CutRectLayout
+            android:id="@+id/cut_view"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center" />
     </RelativeLayout>
-    <RelativeLayout android:orientation="horizontal" android:id="@+id/playBarLayout" android:background="@color/video_fragment_play_bar_bg" android:layout_width="fill_parent" android:layout_height="@dimen/video_fragment_play_bar_height" android:layout_alignParentBottom="true">
-        <RelativeLayout android:id="@+id/playLayout" android:layout_width="wrap_content" android:layout_height="fill_parent">
-            <ImageView android:id="@+id/playImage" android:background="@mipmap/icon_play" android:layout_width="@dimen/video_fragment_play_button_width" android:layout_height="@dimen/video_fragment_play_button_height" android:layout_marginLeft="@dimen/video_fragment_play_button_margin_left" android:layout_centerVertical="true" />
+
+    <RelativeLayout
+        android:id="@+id/playBarLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/video_fragment_play_bar_height"
+        android:layout_alignParentBottom="true"
+        android:background="@color/video_fragment_play_bar_bg"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/playLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent">
+
+            <ImageView
+                android:id="@+id/playImage"
+                android:layout_width="@dimen/video_fragment_play_button_width"
+                android:layout_height="@dimen/video_fragment_play_button_height"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/video_fragment_play_button_margin_left"
+                android:background="@mipmap/icon_play" />
         </RelativeLayout>
-        <TextView android:textSize="@dimen/video_fragment_play_time_text_size" android:textColor="#ccffffff" android:layout_gravity="center_vertical" android:id="@+id/currentPlaytime" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/video_fragment_current_time_text_margin_left" android:layout_marginRight="@dimen/video_fragment_current_time_text_margin_right" android:text="@string/zeroZZZ" android:layout_toRightOf="@id/playLayout" android:layout_centerVertical="true" />
-        <SeekBar android:id="@+id/playSeekBar" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxHeight="@dimen/video_fragment_seek_bar_max_min_height" android:progressDrawable="@drawable/play_seek_bar" android:minHeight="@dimen/video_fragment_seek_bar_max_min_height" android:thumb="@drawable/custom_play_seekbar_ball" android:layout_toLeftOf="@id/totalDuration" android:layout_toRightOf="@id/currentPlaytime" android:layout_centerVertical="true" />
-        <TextView android:textSize="@dimen/video_fragment_play_time_text_size" android:textColor="#ccffffff" android:id="@+id/totalDuration" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/video_fragment_total_time_text_margin_left" android:layout_marginRight="@dimen/video_fragment_total_time_text_margin_right" android:text="@string/zeroZZZ" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+
+        <TextView
+            android:id="@+id/currentPlaytime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/video_fragment_current_time_text_margin_left"
+            android:layout_marginRight="@dimen/video_fragment_current_time_text_margin_right"
+            android:layout_toRightOf="@id/playLayout"
+            android:text="@string/zeroZZZ"
+            android:textColor="#ccffffff"
+            android:textSize="@dimen/video_fragment_play_time_text_size" />
+
+        <SeekBar
+            android:id="@+id/playSeekBar"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/totalDuration"
+            android:layout_toRightOf="@id/currentPlaytime"
+            android:maxHeight="@dimen/video_fragment_seek_bar_max_min_height"
+            android:minHeight="@dimen/video_fragment_seek_bar_max_min_height"
+            android:progressDrawable="@drawable/play_seek_bar"
+            android:thumb="@drawable/custom_play_seekbar_ball" />
+
+        <TextView
+            android:id="@+id/totalDuration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/video_fragment_total_time_text_margin_left"
+            android:layout_marginRight="@dimen/video_fragment_total_time_text_margin_right"
+            android:text="@string/zeroZZZ"
+            android:textColor="#ccffffff"
+            android:textSize="@dimen/video_fragment_play_time_text_size" />
     </RelativeLayout>
 </RelativeLayout>

@@ -2,7 +2,7 @@ apply plugin: 'com.android.application'
 //apply plugin: 'com.android.library'
 //apply from: "maven.gradle"
 android {
-    compileSdkVersion 30
+    compileSdk 30
     android { useLibrary 'org.apache.http.legacy' }
     defaultConfig {
         applicationId "com.yukong.template"
@@ -10,12 +10,10 @@ android {
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
-        multiDexEnabled true
-
+//        multiDexEnabled true
         ndk {
-//            abiFilters "armeabi", "armeabi-v7a", "x86", "mips"
-            abiFilters "armeabi-v7a"
-
+            abiFilters "armeabi", "armeabi-v7a", "x86", "mips"
+//            abiFilters "armeabi-v7a"
         }
     }
     buildTypes {
@@ -25,8 +23,8 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_1_7
+        targetCompatibility JavaVersion.VERSION_1_7
     }
     sourceSets {
         main {
@@ -41,16 +39,15 @@ repositories {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation files('libs/simple-xml-2.7.1.jar')
     implementation 'androidx.appcompat:appcompat:1.3.0'
-    implementation 'androidx.multidex:multidex:2.0.0'
+//    implementation 'androidx.multidex:multidex:2.0.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
     implementation("org.greenrobot:eventbus:3.3.1")
     implementation("com.squareup.retrofit2:retrofit:2.3.0")
     implementation("com.squareup.retrofit2:converter-gson:2.3.0")
     implementation("com.squareup.retrofit2:converter-scalars:2.3.0")
     implementation 'com.github.bumptech.glide:glide:4.13.0'
-    implementation 'androidx.recyclerview:recyclerview:1.2.1'
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
     implementation 'com.google.android.material:material:1.4.0'
     implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.13.0'

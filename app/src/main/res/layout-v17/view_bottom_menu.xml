@@ -1,17 +1,141 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <androidx.recyclerview.widget.RecyclerView android:id="@+id/menu_recyclerView_main" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/dp70" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toTopOf="parent" />
-    <androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/view_menu_sub" android:background="@color/black" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_constraintBottom_toBottomOf="parent">
-        <ImageButton android:id="@+id/menu_back" android:paddingRight="@dimen/dp10" android:visibility="gone" android:layout_width="@dimen/dp35" android:layout_height="@dimen/dp56" android:layout_margin="@dimen/dp10" android:src="@mipmap/main_menu_ic_back" app:layout_constraintBottom_toBottomOf="@id/menu_recyclerView_sub" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="@id/menu_recyclerView_sub" />
-        <androidx.recyclerview.widget.RecyclerView android:id="@+id/menu_recyclerView_sub" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="@dimen/dp70" android:layout_marginLeft="@dimen/dp10" android:layout_marginRight="@dimen/dp10" app:layout_constraintBottom_toTopOf="@id/menu_break" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_weight="1.0" app:layout_constraintStart_toEndOf="@id/menu_back" />
-        <View android:id="@+id/menu_break" android:background="#ff333333" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="2.0px" android:layout_marginBottom="@dimen/dp6" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintBottom_toTopOf="@id/menu_sub_submit" />
-        <ImageButton android:id="@+id/menu_sub_submit" android:background="@mipmap/ic_record_confirm" android:visibility="gone" android:layout_width="@dimen/dp24" android:layout_height="@dimen/dp24" android:layout_marginRight="@dimen/dp13" android:layout_marginBottom="@dimen/dp6" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" />
-        <TextView android:textSize="@dimen/sp14" android:textColor="@color/white_8" android:id="@+id/tv_menu_sub_tittle" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_constraintBottom_toBottomOf="@id/menu_sub_submit" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="@id/menu_sub_submit" />
-        <com.meishe.myvideo.view.RatioView android:id="@+id/menu_ratio" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="@dimen/dp70" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toEndOf="@id/menu_back" app:layout_constraintTop_toTopOf="@id/menu_back" />
-        <androidx.appcompat.widget.AppCompatSeekBar android:id="@+id/menu_seekBar" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:progressDrawable="@drawable/edit_seek_bar" android:thumb="@drawable/edit_seek_bar_thumb" android:thumbOffset="0.0dip" android:paddingStart="10.0px" android:paddingEnd="10.0px" app:layout_constraintBottom_toTopOf="@id/menu_recyclerView_sub" app:layout_constraintTop_toTopOf="parent" />
-        <com.google.android.material.tabs.TabLayout android:id="@+id/menu_table" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="@dimen/dp44" android:layout_marginBottom="@dimen/dp10" app:layout_constraintBottom_toTopOf="@id/menu_recyclerView_table" app:layout_constraintEnd_toStartOf="@id/menu_table_submit" app:layout_constraintStart_toStartOf="parent" app:tabIndicatorColor="@color/white" app:tabIndicatorFullWidth="false" app:tabSelectedTextColor="@color/white" app:tabTextColor="#ff999999" />
-        <androidx.recyclerview.widget.RecyclerView android:id="@+id/menu_recyclerView_table" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/dp210" android:layout_margin="@dimen/dp10" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent" />
-        <ImageButton android:id="@+id/menu_table_submit" android:background="@mipmap/ic_record_confirm" android:visibility="gone" android:layout_width="@dimen/dp26" android:layout_height="@dimen/dp26" android:layout_marginRight="@dimen/dp13" android:layout_marginBottom="@dimen/dp6" app:layout_constraintBottom_toBottomOf="@id/menu_table" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="@id/menu_table" />
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/menu_recyclerView_main"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/dp70"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/view_menu_sub"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:ignore="MissingConstraints">
+
+        <ImageButton
+            android:id="@+id/menu_back"
+            android:layout_width="@dimen/dp35"
+            android:layout_height="@dimen/dp56"
+            android:layout_margin="@dimen/dp10"
+            android:paddingRight="@dimen/dp10"
+            android:src="@mipmap/main_menu_ic_back"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/menu_recyclerView_sub"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/menu_recyclerView_sub" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/menu_recyclerView_sub"
+            android:layout_width="0.0dip"
+            android:layout_height="@dimen/dp70"
+            android:layout_marginLeft="@dimen/dp10"
+            android:layout_marginRight="@dimen/dp10"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@id/menu_break"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_weight="1.0"
+            app:layout_constraintStart_toEndOf="@id/menu_back" />
+
+        <View
+            android:id="@+id/menu_break"
+            android:layout_width="fill_parent"
+            android:layout_height="2.0px"
+            android:layout_marginBottom="@dimen/dp6"
+            android:background="#ff333333"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/menu_sub_submit"
+            tools:ignore="MissingConstraints" />
+
+        <ImageButton
+            android:id="@+id/menu_sub_submit"
+            android:layout_width="@dimen/dp24"
+            android:layout_height="@dimen/dp24"
+            android:layout_marginRight="@dimen/dp13"
+            android:layout_marginBottom="@dimen/dp6"
+            android:background="@mipmap/ic_record_confirm"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_menu_sub_tittle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white_8"
+            android:textSize="@dimen/sp14"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/menu_sub_submit"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/menu_sub_submit" />
+
+        <com.meishe.myvideo.view.RatioView
+            android:id="@+id/menu_ratio"
+            android:layout_width="0.0dip"
+            android:layout_height="@dimen/dp70"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/menu_back"
+            app:layout_constraintTop_toTopOf="@id/menu_back" />
+
+        <androidx.appcompat.widget.AppCompatSeekBar
+            android:id="@+id/menu_seekBar"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="10.0px"
+            android:paddingEnd="10.0px"
+            android:progressDrawable="@drawable/edit_seek_bar"
+            android:thumb="@drawable/edit_seek_bar_thumb"
+            android:thumbOffset="0.0dip"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@id/menu_recyclerView_sub"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/menu_table"
+            android:layout_width="0.0dip"
+            android:layout_height="@dimen/dp44"
+            android:layout_marginBottom="@dimen/dp10"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@id/menu_recyclerView_table"
+            app:layout_constraintEnd_toStartOf="@id/menu_table_submit"
+            app:layout_constraintStart_toStartOf="parent"
+            app:tabIndicatorColor="@color/white"
+            app:tabIndicatorFullWidth="false"
+            app:tabSelectedTextColor="@color/white"
+            app:tabTextColor="#ff999999" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/menu_recyclerView_table"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/dp210"
+            android:layout_margin="@dimen/dp10"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageButton
+            android:id="@+id/menu_table_submit"
+            android:layout_width="@dimen/dp26"
+            android:layout_height="@dimen/dp26"
+            android:layout_marginRight="@dimen/dp13"
+            android:layout_marginBottom="@dimen/dp6"
+            android:background="@mipmap/ic_record_confirm"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/menu_table"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/menu_table" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
